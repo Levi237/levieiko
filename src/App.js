@@ -10,7 +10,9 @@ export default class App extends Component {
         <HeaderImage>
         </HeaderImage>
         <BodyContainer>
-
+<HeaderBar>
+Hello Header
+</HeaderBar>
         Hello World
         </BodyContainer>
       </AppContainer>
@@ -20,8 +22,13 @@ export default class App extends Component {
 const BodyContainer = styled.div`
 
 `;
+const HeaderBar = styled.div`
+  background-color: darkgrey;
+  color: #fff;
+  `;
 const HeaderImage = styled.div`
   position: absolute;
+  top: 80px;
   z-index: -1;
   height: 100vh;
   width: 100vw;
