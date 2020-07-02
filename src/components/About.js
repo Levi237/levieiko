@@ -69,4 +69,8 @@ const AboutContent = styled.div`
       margin: 2.5%;
     }
   }
+  @media screen and (max-width: 900px) {
+    width: 80%;
+    max-width: 80%;
+  }
 `;
