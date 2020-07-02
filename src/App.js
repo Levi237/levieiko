@@ -5,7 +5,7 @@ import Header   from './components/Header';
 import About    from './components/About';
 import Skills   from './components/Skills';
 import Clients  from './components/Clients';
-
+import Footer   from './components/Footer';
 
 export default class App extends Component {
   render (){
@@ -25,10 +25,12 @@ export default class App extends Component {
 
           <SkillsContainer>
             <Skills/>
-            <br/><br/><br/><br/>
             <Clients/>
           </SkillsContainer>
 
+          <FooterContainer>
+            <Footer/>
+          </FooterContainer>
         </BodyContainer>        
       </AppContainer>
     );
@@ -69,8 +71,13 @@ const SkillsContainer = styled.div`
   text-align: center;
   background-color: #fff;
   scroll-snap-align: start;
-  height: 100vh;
   margin-top: 0;
+`;
+const FooterContainer = styled.div`
+  scroll-snap-align: start;
+  height: 400px;
+  background-color: #fff;
+  position: relative;
 `;
 const BodyContainer = styled.div`
   height: 100vh;
@@ -80,7 +87,7 @@ const BodyContainer = styled.div`
 `;
 const AppContainer = styled.div`
   font-family: Helvetica;
-  * {
+  h1,h2,h3,ul {
     margin-block-start: 0;
     margin-block-end: 0;
     line-height: 100%;
