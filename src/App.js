@@ -5,14 +5,15 @@ import './App.css';
 
 import About from './components/About';
 import Skills from './components/Skills';
+import Clients from './components/Clients';
 
 
 export default class App extends Component {
   render (){
     return (
       <AppContainer>
-        <HeaderImage>
-        </HeaderImage>
+        <HeaderImage/>
+
         <BodyContainer class="container">
           
           <HeaderBar class="child">
@@ -31,43 +32,54 @@ export default class App extends Component {
 
           </AboutContainer>
             <Skills/>
-
+<Clients/>
         </BodyContainer>
       </AppContainer>
     );
   }
 }
-const tabletBreakpoint = "900px";
-
-
 
 const BodyContainer = styled.div`
-  overflow-y: scroll;
-  border: 1px solid gray;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(3rem);
-  scroll-snap-type: y mandatory;
   height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
 `;
 const HeaderBar = styled.div`
-scroll-snap-align: start;
   color: #fff;
-  position: relative;
+
   height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+
   h1 {
-    padding: 10px;
     font-size: 46px;
+    padding: 10px;
   }
   section {
+    text-align: right;
+
+    margin-top: -40px;
     position: absolute;
     right: 10px;
-    text-align: right;
-    margin-top: -40px;
   }
   img {
     display: block;
     margin: 30vh auto;
-
+  }
+  @media screen and (max-width: 900px){
+    h1 {
+      text-align: center;
+    }
+    section {
+      font-size: 5vw;
+      font-weight: bold;
+      background-image: linear-gradient(transparent, rgba(0,0,0,.5));
+      padding: 5%;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+    }
   }
   `;
 const HeaderImage = styled.div`
@@ -80,6 +92,10 @@ const HeaderImage = styled.div`
 
   position: fixed;
   z-index: -100;
+
+  @media screen and (max-width: 900px){
+    background-position: 23%;
+  }
 `;
 const AppContainer = styled.div`
   font-family: Helvetica;
@@ -102,4 +118,11 @@ const AboutContainer = styled.div`
   background-position: center center;
   position: relative;
   scroll-snap-align: start;
+@media screen and (max-width: 900px) {
+    background-size: cover!important;
+    background-size: auto;
+    background-position: 70% center;
+    padding-top: 5vh;
+    height: 95vh;
+}
 `;
