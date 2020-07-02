@@ -4,7 +4,7 @@ export default class About extends Component {
     render(){
         return(
 
-            <AboutContent>
+            <Container>
               <div>
               <h2>
                 About Me:
@@ -17,7 +17,7 @@ export default class About extends Component {
                 the experience of what makes a website mean something.
               </p>
               <p>
-                I built my first page when I was 15 to honor my favorite manga series 
+                I created my first page when I was 15 to honor my favorite manga series 
                 "Inu Yasha". In college I built sites for my DJ and photographer friends, 
                 including a very popular LA party website called "lamadreiswatching.com" in 2007. 
                 I always thought of web development as a hobby, like building intricate city-scapes 
@@ -35,13 +35,13 @@ export default class About extends Component {
                 <img src="icons/email.png" alt="email link"/>
               </section>
             </div>
-            </AboutContent>
+            </Container>
 
         )
     }
 }
 
-const AboutContent = styled.div`
+const Container = styled.div`
   font-size: 14px;
   position: relative;
   z-index: 10;

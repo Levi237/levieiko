@@ -1,25 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Skills =({})=> {
+const Skills =(props)=> {
     return(
-        <SkillsContainer>
+        <Container>
             <br/><br/>
             <h2>Skills</h2>
             <section>
             HTML5 | CSS3 | JavaScript | Mongoose | MongoDB | Express | React | NodeJs | Flask | Python3 | Git | GitHub | Dreamweaver | Bootstrap | jQuery | VanillaJS | Firebase | Shopify | WordPress | MailChimp |  PhotoShop
             </section>
-      </SkillsContainer>
+            {props.children}
+      </Container>
         );
 };
 
-const SkillsContainer = styled.div`
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  scroll-snap-align: start;
-  height: 100vh;
-  margin-top:
+const Container = styled.div`
   h2 {
     padding-top: 2%;
   }
