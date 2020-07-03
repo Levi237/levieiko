@@ -3,9 +3,12 @@ import styled from 'styled-components';
 
 const Projects =()=> {
     return(
-        <Container>
-
-      </Container>
+            <Container>
+                <img src="./projects/pokegen.png"/>
+                <img src="./projects/national-park.png"/>
+                <img src="./projects/la-hop.png"/>
+                <img src="./projects/blackjack.png"/>
+            </Container>
         );
 };
 

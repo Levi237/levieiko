@@ -5,6 +5,7 @@ import Header   from './components/Header';
 import About    from './components/About';
 import Skills   from './components/Skills';
 import Clients  from './components/Clients';
+import Projects from './components/Projects;
 import Footer   from './components/Footer';
 
 export default class App extends Component {
@@ -27,6 +28,10 @@ export default class App extends Component {
             <Skills/>
             <Clients/>
           </SkillsContainer>
+
+          <div>
+            <Projects/>
+          </div>
 
           <FooterContainer>
             <Footer/>
