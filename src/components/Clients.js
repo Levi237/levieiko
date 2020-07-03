@@ -4,12 +4,13 @@ import styled from 'styled-components';
 const Clients =()=> {
     return(
             <Container>
+                <h2>Clients</h2>
                 <div>
                     <MobileImg src="./clients/fitplan-giftcard.png"/>
                     <section>
-                        <h2>
+                        <h1>
                             FITPLAN:
-                        </h2>
+                        </h1>
                         <a href="#">
                             fitplanapp.com
                         </a>

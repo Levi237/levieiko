@@ -5,7 +5,7 @@ const Skills =()=> {
     return(
         <Container>
             <br/><br/>
-            <h2>Skills</h2>
+            <h1>Skills</h1>
             <section>
             HTML5 | CSS3 | JavaScript | Mongoose | MongoDB | Express | React | NodeJs | Flask | Python3 | Git | GitHub | Dreamweaver | Bootstrap | jQuery | VanillaJS | Firebase | Shopify | WordPress | MailChimp |  PhotoShop
             </section>
