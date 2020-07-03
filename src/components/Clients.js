@@ -4,14 +4,14 @@ import styled from 'styled-components';
 const Clients =()=> {
     return(
             <Container>
-                <h2>Clients</h2>
+                <h1>Clients</h1>
                 <div>
                     <MobileImg src="./clients/fitplan-giftcard.png"/>
                     <section>
-                        <h1>
+                        <h2>
                             FITPLAN:
-                        </h1>
-                        <a href="#">
+                        </h2>
+                        <a href="https://www.https://www.fitplanapp.com/">
                             fitplanapp.com
                         </a>
                         <p>
@@ -28,7 +28,7 @@ const Clients =()=> {
                                 Design & develop front-end pages, banners
                             </li>
                             <li>
-                                Trouble shoot third party websites
+                                Trouble shoot & build out third party websites
                             </li>
                         </ul>
                         <h3>
@@ -37,6 +37,7 @@ const Clients =()=> {
                         <span>
                             React, CSS, HTML, Photoshop, Figma, Zeplin
                         </span>
+                        <hr/>   
                     </section>
                     <DesktopImg src="./clients/fitplan-giftcard.png"/>
                 </div>
@@ -47,7 +48,7 @@ const Clients =()=> {
                         <h2>
                             PRANA WELLNESS:
                         </h2>
-                        <a href="#">
+                        <a href="http://www.pranawellnessworks.com">
                             pranawellnessworks.com
                         </a>
                         <p>
@@ -75,6 +76,7 @@ const Clients =()=> {
                         <span>
                             React, CSS, HTML, Firebase, Photoshop, Mailchimp
                         </span>
+                        <hr/>   
                     </section>
 
                 </div>
@@ -84,7 +86,7 @@ const Clients =()=> {
                     <h2>
                         IT After Hours:
                     </h2>
-                    <a href="#">
+                    <a href="https://www.it-afterhours.com">
                         it-afterhours.com
                     </a>
                     <p>
@@ -115,6 +117,7 @@ const Clients =()=> {
                                 Resolve web bugs (logo, etc.)
                             </li>
                         </ul>
+                        <hr/>   
                     </section>
                     <DesktopImg src="./clients/it-afterhours.png"/>
                 </div>
@@ -126,7 +129,7 @@ const Clients =()=> {
                     <h2>
                         HeatSeeker Hot Sauce:
                     </h2>
-                    <a href="#">
+                    <a href="https://www.heatseekersauce.com">
                         heatseekersauce.com
                     </a>
                     <p>
@@ -148,7 +151,9 @@ const Clients =()=> {
                             <li>
                                 Update as needed
                             </li>     
-                        </ul>             
+                        </ul>  
+                        <hr/>   
+        
                     </section>
                     
                 </div>
@@ -191,6 +196,10 @@ const Container = styled.div`
         width: 50%;
         max-width: 400px;
         margin-top: 5%;
+        box-shadow: 0 1px 12px rgba(0,0,0,.2);
+    }
+    h1 {
+        margin-bottom: 10px!important;
     }
     h3 {
         font-size: 16px;
@@ -206,10 +215,16 @@ const Container = styled.div`
     ul {
         margin-bottom: 10px!important;
     }
+    hr {
+        display: none;
+    }
     @media screen and (max-width: 900px) {
         section, img {
             width: 90%;
             margin: auto;
+        }
+        hr {
+            display: block;
         }
     }
 `;

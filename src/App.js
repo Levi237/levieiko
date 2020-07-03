@@ -92,6 +92,10 @@ const AppContainer = styled.div`
     margin-block-end: 0;
     line-height: 100%;
   }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
 `;
 const HeroImage = styled.div`
   height: 100vh;
