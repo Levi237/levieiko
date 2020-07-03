@@ -47,7 +47,7 @@ const Clients =()=> {
                             PRANA WELLNESS:
                         </h2>
                         <a href="#">
-                            pranawellness.life
+                            pranawellnessworks.com
                         </a>
                         <p>
                             “Prana is Sanskrit for breath, considered as a life-giving force.  
@@ -62,7 +62,7 @@ const Clients =()=> {
                                 Custom built website for client
                             </li>
                             <li>
-                                Allows customer to submit contact form
+                                Allows customer to submit contact form w/ automated email campaign
                             </li>
                             <li>
                                 Admin portal with authentication
@@ -72,7 +72,7 @@ const Clients =()=> {
                             Technologies: 
                         </h3>
                         <span>
-                            React, CSS, HTML, Firebase, Photoshop
+                            React, CSS, HTML, Firebase, Photoshop, Mailchimp
                         </span>
                     </section>
 
