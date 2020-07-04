@@ -28,11 +28,10 @@ export default class About extends Component {
                 professional upgrade, contact me directly by phone or email.
               </p>
               <section>
-                <img src="icons/github.png" alt="github link"/>
-                <img src="icons/linkedin.png" alt="linkedin link"/>
-                <img src="icons/instagram.png" alt="instagram link"/>
-                <img src="icons/phone.png" alt="phone link"/>
-                <img src="icons/email.png" alt="email link"/>
+                <a href="https://github.com/Levi237"><img src="icons/github.png" alt="github link"/></a>
+                <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/linkedin.png" alt="linkedin link"/></a>
+                <a href="https://www.instagram.com/levi_eiko/"><img src="icons/instagram.png" alt="instagram link"/></a>
+                <a href="mailto:levieiko@gmail.com"><img src="icons/email.png" alt="email link"/></a>
               </section>
             </div>
             </Container>
