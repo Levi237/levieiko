@@ -11,7 +11,7 @@ const Clients =()=> {
                         <h2>
                             FITPLAN:
                         </h2>
-                        <a href="https://www.https://www.fitplanapp.com/">
+                        <a target="_blank" href="https://www.https://www.fitplanapp.com/">
                             fitplanapp.com
                         </a>
                         <p>
@@ -48,7 +48,7 @@ const Clients =()=> {
                         <h2>
                             PRANA WELLNESS:
                         </h2>
-                        <a href="http://www.pranawellnessworks.com">
+                        <a target="_blank" href="https://pranawellnessworks.com/">
                             pranawellnessworks.com
                         </a>
                         <p>
@@ -86,7 +86,7 @@ const Clients =()=> {
                     <h2>
                         IT After Hours:
                     </h2>
-                    <a href="https://www.it-afterhours.com">
+                    <a target="_blank" href="https://www.it-afterhours.com">
                         it-afterhours.com
                     </a>
                     <p>
@@ -129,7 +129,7 @@ const Clients =()=> {
                     <h2>
                         HeatSeeker Hot Sauce:
                     </h2>
-                    <a href="https://www.heatseekersauce.com">
+                    <a target="_blank" href="https://www.heatseekersauce.com">
                         heatseekersauce.com
                     </a>
                     <p>
@@ -179,6 +179,7 @@ const Container = styled.div`
     div {
         margin: 0 auto;
         max-width: 800px;
+        text-align: center;
     }
     section {
         width: 40%;
@@ -186,6 +187,7 @@ const Container = styled.div`
         max-width: 400px;
         display: inline-block;
         vertical-align: top;
+        text-align: left;
     }
     img {
         width: 50%;
