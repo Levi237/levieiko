@@ -92,10 +92,14 @@ const ProjectsContainer = styled.div`
 color: #fff;
   height: 100vh;
   scroll-snap-align: start;
-  background-attachment: fixed;
+  background-attachment: local;
   background-image: url('./background/starry-night.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (max-width: 680px) {
+    overflow: scroll;
+    padding-bottom: 20px;
+  }
 `;
 const FooterContainer = styled.div`
   scroll-snap-align: start;
