@@ -105,16 +105,19 @@ const Container = styled.div`
             margin: 1%;
         }
     }
-    @media screen and (max-width: 600px) {
-        div {
-            width: 40%;
-            margin: 5%;
-        }
-    }
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 760px) {
         section {
             font-size: 9px;
         }
+    }
+    @media screen and (max-width: 680px) {
+        div {
+            width: 40vw;
+            margin: 5vw;
+        }
+        section {
+            font-size: 2.25vw;
+        } 
     }
 `;
 
