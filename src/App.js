@@ -5,7 +5,7 @@ import Header   from './components/Header';
 import About    from './components/About';
 import Skills   from './components/Skills';
 import Clients  from './components/Clients';
-import Projects from './components/Projects;
+import Projects from './components/Projects';
 import Footer   from './components/Footer';
 
 export default class App extends Component {
@@ -26,13 +26,14 @@ export default class App extends Component {
 
           <SkillsContainer>
             <Skills/>
-            <Clients/>
           </SkillsContainer>
-
-          <div>
+          <ClientsContainer>
+            <Clients/>
+          </ClientsContainer>
+          <SnappBottom/>
+          <ProjectsContainer>
             <Projects/>
-          </div>
-
+          </ProjectsContainer>
           <FooterContainer>
             <Footer/>
           </FooterContainer>
@@ -41,7 +42,16 @@ export default class App extends Component {
     );
   }
 }
+const SnappBottom = styled.div`
+height: 20px;
+background-color: #fff;
+scroll-snap-align: end; 
+`;
+const ClientsContainer = styled.div`
+  scroll-snap-align: start; 
+  background-color: #fff;
 
+`;
 const HeaderContainer = styled.div`
   color: #fff;
   height: 100vh;
@@ -78,6 +88,15 @@ const SkillsContainer = styled.div`
   scroll-snap-align: start;
   margin-top: 0;
 `;
+const ProjectsContainer = styled.div`
+color: #fff;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-attachment: fixed;
+  background-image: url('./background/starry-night.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
 const FooterContainer = styled.div`
   scroll-snap-align: start;
   height: 400px;
@@ -87,8 +106,7 @@ const FooterContainer = styled.div`
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 `;
 const AppContainer = styled.div`
   font-family: Helvetica;
