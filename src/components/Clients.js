@@ -153,27 +153,22 @@ const Clients =()=> {
                             </li>     
                         </ul>  
                         <hr/>   
-        
                     </section>
-                    
                 </div>
             </Container>
         );
 };
 const DesktopImg = styled.img`
-display: inline-block;
-@media screen and (max-width: 900px) {
-
+    display: inline-block;
+    @media screen and (max-width: 900px) {
         display: none;
-
+    }
 `;
 
 const MobileImg = styled.img`
 display: none;
 @media screen and (max-width: 900px) {
-
         display: block;
-
 `;
 const Container = styled.div`
     position: relative;
