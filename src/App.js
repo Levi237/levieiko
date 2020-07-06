@@ -5,6 +5,7 @@ import Header   from './components/Header';
 import About    from './components/About';
 import Skills   from './components/Skills';
 import Clients  from './components/Clients';
+import ProjectsFlip from './components/ProjectsFlip';
 import Projects from './components/Projects';
 import Footer   from './components/Footer';
 
@@ -33,6 +34,8 @@ export default class App extends Component {
           </ClientsContainer>
           <SnappBottom/>
           <ProjectsContainer>
+          <h1>Projects</h1>
+            <ProjectsFlip/>
             <Projects/>
           </ProjectsContainer>
           <FooterContainer>
@@ -97,6 +100,11 @@ color: #fff;
   background-image: url('./background/starry-night.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  h1,h2 {
+    color: #000;
+    text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
+    padding: 20px 0;
+}
   @media screen and (max-width: 680px) {
     overflow: scroll;
     padding-bottom: 20px;
