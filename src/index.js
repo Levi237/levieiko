@@ -15,7 +15,7 @@ firebase.initializeApp({
   storageBucket: "levieiko-com.appspot.com",
   messagingSenderId: `${process.env.REACT_APP_FIREBASE_MESSAGE_ID}`,
   appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
-  measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENT_ID}`
+  measurementId: `${process.env.REACT_APP_FIREBASE_MESSAGE_ID}`
 });
 
 ReactDOM.render(
