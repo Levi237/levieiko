@@ -6,7 +6,7 @@ const FlipCards =({projects})=> {
     const projectSpread = projects.map((p, key) => {
         return(
             <CardContainer key={key}>
-                <a target="_blank" href={p.link}>
+                <a target="_blank" rel="noopener noreferrer" href={p.link}>
                     <FlipCard>
                         <FlipCardInner>
                             <FlipCardFront>

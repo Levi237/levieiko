@@ -11,7 +11,7 @@ const Clients =()=> {
                         <h2>
                             FITPLAN:
                         </h2>
-                        <a target="_blank" href="https://www.https://www.fitplanapp.com/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.https://www.fitplanapp.com/">
                             fitplanapp.com
                         </a>
                         <p>
@@ -48,7 +48,7 @@ const Clients =()=> {
                         <h2>
                             PRANA WELLNESS:
                         </h2>
-                        <a target="_blank" href="https://pranawellnessworks.com/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://pranawellnessworks.com/">
                             pranawellnessworks.com
                         </a>
                         <p>
@@ -86,7 +86,7 @@ const Clients =()=> {
                     <h2>
                         IT After Hours:
                     </h2>
-                    <a target="_blank" href="https://www.it-afterhours.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.it-afterhours.com">
                         it-afterhours.com
                     </a>
                     <p>
@@ -129,7 +129,7 @@ const Clients =()=> {
                     <h2>
                         HeatSeeker Hot Sauce:
                     </h2>
-                    <a target="_blank" href="https://www.heatseekersauce.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.heatseekersauce.com">
                         heatseekersauce.com
                     </a>
                     <p>

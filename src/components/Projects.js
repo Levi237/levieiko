@@ -10,6 +10,7 @@ const Projects =()=> {
                     <a 
                     alt="PokeGen" 
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://pokegen.herokuapp.com/"
                     >
                     <img src="./projects/pokegen.png"/>
@@ -25,6 +26,7 @@ const Projects =()=> {
                 <a 
                 alt="Hi Sierra!" 
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://parkintel.herokuapp.com/home"
                 >
                 <img src="./projects/hi-sierra.png"/>
@@ -40,6 +42,7 @@ const Projects =()=> {
                 <a 
                 alt="Los Angeles Homeless Outreach Program" 
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://lahsa-la-hopv2.herokuapp.com/request"
                 >
                     <img src="./projects/la-hop.png"/>
@@ -55,6 +58,7 @@ const Projects =()=> {
                 <a 
                 alt="BlackJack" 
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://levi237.github.io/blackjack-reup/"
                 >
                     <img src="./projects/blackjack.png"/>
