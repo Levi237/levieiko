@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import * as firebase from "firebase";
+import * as firebase from "firebase/app";
 import 'firebase/firestore';
 
 firebase.initializeApp({
@@ -17,6 +17,7 @@ firebase.initializeApp({
   appId: "1:560687419303:web:46b4771788242575dff082",
   measurementId: "G-PSFLRM85XL"
 });
+export { firebase as default }
 
 ReactDOM.render(
   <React.StrictMode>
