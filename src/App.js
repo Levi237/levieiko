@@ -97,7 +97,7 @@ color: #fff;
   height: 100vh;
   scroll-snap-align: start;
   background-attachment: local;
-  background-image: url('./background/starry-night.jpg');
+  background-image: url('./background/milkyway.png');
   background-size: cover;
   background-repeat: no-repeat;
   h1,h2 {

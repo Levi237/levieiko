@@ -6,42 +6,6 @@ const Clients =()=> {
             <Container>
                 <h1>Clients</h1>
                 <div>
-                    <MobileImg src="./clients/fitplan-giftcard.png"/>
-                    <section>
-                        <h2>
-                            FITPLAN:
-                        </h2>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.https://www.fitplanapp.com/">
-                            fitplanapp.com
-                        </a>
-                        <p>
-                            “Workout with elite personal trainers”
-                        </p>
-                        <h3>
-                            Marketing Designer & Web Developer:
-                        </h3>
-                        <ul>
-                            <li>
-                                Create custom emails using HTML and CSS style
-                            </li>
-                            <li>
-                                Design & develop front-end pages, banners
-                            </li>
-                            <li>
-                                Trouble shoot & build out third party websites
-                            </li>
-                        </ul>
-                        <h3>
-                            Technologies: 
-                        </h3>
-                        <span>
-                            React, CSS, HTML, Photoshop, Figma, Zeplin
-                        </span>
-                        <hr/>   
-                    </section>
-                    <DesktopImg src="./clients/fitplan-giftcard.png"/>
-                </div>
-                <div>
                     <MobileImg src="./clients/prana-wellness.png"/>
                     <DesktopImg src="./clients/prana-wellness.png"/>
                     <section>
@@ -79,6 +43,75 @@ const Clients =()=> {
                         <hr/>   
                     </section>
 
+                </div>
+                <div>
+                    <MobileImg src="./clients/fitplan-giftcard.png"/>
+                    <section>
+                        <h2>
+                            FITPLAN:
+                        </h2>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.https://www.fitplanapp.com/">
+                            fitplanapp.com
+                        </a>
+                        <p>
+                            “Workout with elite personal trainers”
+                        </p>
+                        <h3>
+                            Marketing Designer & Web Developer:
+                        </h3>
+                        <ul>
+                            <li>
+                                Create custom emails using HTML and CSS style
+                            </li>
+                            <li>
+                                Design & develop front-end pages, banners
+                            </li>
+                            <li>
+                                Trouble shoot & build out third party websites
+                            </li>
+                        </ul>
+                        <h3>
+                            Technologies: 
+                        </h3>
+                        <span>
+                            React, CSS, HTML, Photoshop, Figma, Zeplin
+                        </span>
+                        <hr/>   
+                    </section>
+                    <DesktopImg src="./clients/fitplan-giftcard.png"/>
+                </div>
+                <div>
+                    <MobileImg src="./clients/heatseeker.png"/>
+                    <DesktopImg src="./clients/heatseeker.png"/>
+                    <section>
+                    <h2>
+                        HeatSeeker Hot Sauce:
+                    </h2>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.heatseekersauce.com">
+                        heatseekersauce.com
+                    </a>
+                    <p>
+                        "Bold and minimal, pure and simple. We believe that it shouldn't take 57 
+                        ingredients to create something amazing, but instead, a few, simple ingredients 
+                        expertly combined for that perfect balance of flavor and heat. That's what we do."
+                    </p>
+                    <h3>Responsibilities:</h3>
+                        <ul>
+                            <li>
+                                eCommerce Shopify w/ Wholesale
+                            </li>
+                            <li>
+                                Customized Liquid
+                            </li>
+                            <li>
+                                Streamlined content
+                            </li>
+                            <li>
+                                Update as needed
+                            </li>     
+                        </ul>  
+                        <hr/>   
+                    </section>
                 </div>
                 <div>
                     <MobileImg src="./clients/it-afterhours.png"/>
@@ -122,39 +155,7 @@ const Clients =()=> {
                     <DesktopImg src="./clients/it-afterhours.png"/>
                 </div>
                 
-                <div>
-                    <MobileImg src="./clients/heatseeker.png"/>
-                    <DesktopImg src="./clients/heatseeker.png"/>
-                    <section>
-                    <h2>
-                        HeatSeeker Hot Sauce:
-                    </h2>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.heatseekersauce.com">
-                        heatseekersauce.com
-                    </a>
-                    <p>
-                        "Bold and minimal, pure and simple. We believe that it shouldn't take 57 
-                        ingredients to create something amazing, but instead, a few, simple ingredients 
-                        expertly combined for that perfect balance of flavor and heat. That's what we do."
-                    </p>
-                    <h3>Responsibilities:</h3>
-                        <ul>
-                            <li>
-                                eCommerce Shopify w/ Wholesale
-                            </li>
-                            <li>
-                                Customized Liquid
-                            </li>
-                            <li>
-                                Streamlined content
-                            </li>
-                            <li>
-                                Update as needed
-                            </li>     
-                        </ul>  
-                        <hr/>   
-                    </section>
-                </div>
+                
             </Container>
         );
 };

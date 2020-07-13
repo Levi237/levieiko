@@ -47,4 +47,7 @@ const Container = styled.div`
         padding-bottom: 10px;
         color: rgba(255,255,255,0.9);
     }
+    @media screen and (max-width: 760px) {
+        display: none;
+    }
 `;
