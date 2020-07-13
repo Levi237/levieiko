@@ -17,7 +17,8 @@ firebase.initializeApp({
   appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
   measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENT_ID}`
 });
-export { firebase as default }
+const storage = firebase.storage();
+export { storage, firebase as default }
 
 ReactDOM.render(
   <React.StrictMode>
