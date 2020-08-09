@@ -21,17 +21,17 @@ const Clients =()=> {
                             and around the body.”
                         </p>
                         <h3>
-                            Capabilities: 
+                            Responsibilities: 
                         </h3>
                         <ul>
                             <li>
-                                Custom built website for client
+                                Build custom fullstack website for client w/ admin portal
                             </li>
                             <li>
-                                Allows customer to submit contact form w/ automated email campaign
+                                Automate email campaign with MailChimp
                             </li>
                             <li>
-                                Admin portal with authentication
+                                Update as needed
                             </li>
                         </ul>
                         <h3>
@@ -57,24 +57,24 @@ const Clients =()=> {
                             “Workout with elite personal trainers”
                         </p>
                         <h3>
-                            Marketing Designer & Web Developer:
+                            Responsibilities:
                         </h3>
                         <ul>
                             <li>
-                                Create custom emails using HTML and CSS style
+                                Create custom emails using MailChimp, HTML and CSS style
                             </li>
                             <li>
-                                Design & develop front-end pages, banners
+                                Frontend web development- design and develop
                             </li>
                             <li>
-                                Trouble shoot & build out third party websites
+                                Trouble shoot & build out athlete websites on Shopify
                             </li>
                         </ul>
                         <h3>
                             Technologies: 
                         </h3>
                         <span>
-                            React, CSS, HTML, Photoshop, Figma, Zeplin
+                            React, Liquid, CSS, HTML, Photoshop, Figma, Zeplin
                         </span>
                         <hr/>   
                     </section>
@@ -110,6 +110,12 @@ const Clients =()=> {
                                 Update as needed
                             </li>     
                         </ul>  
+                        <h3>
+                            Technologies: 
+                        </h3>
+                        <span>
+                            Shopify, Liquid, CSS, HTML, Photoshop, Figma
+                        </span>
                         <hr/>   
                     </section>
                 </div>
@@ -147,9 +153,18 @@ const Clients =()=> {
                                 Improve UX/UI experience
                             </li>
                             <li>
-                                Resolve web bugs (logo, etc.)
+                                Resolve bugs
+                            </li>
+                            <li>
+                                Currently undergoing updates
                             </li>
                         </ul>
+                        <h3>
+                            Technologies: 
+                        </h3>
+                        <span>
+                            WordPress, CSS, HTML
+                        </span>
                         <hr/>   
                     </section>
                     <DesktopImg src="./clients/it-afterhours.png"/>
