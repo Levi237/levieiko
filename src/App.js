@@ -47,9 +47,9 @@ export default class App extends Component {
   }
 }
 const SnappBottom = styled.div`
-height: 20px;
-background-color: #fff;
-scroll-snap-align: end; 
+  height: 20px;
+  background-color: #fff;
+  scroll-snap-align: end; 
 `;
 const ClientsContainer = styled.div`
   scroll-snap-align: start; 
