@@ -1,178 +1,86 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Clients =()=> {
-    return(
-            <Container>
-                <h1>Clients</h1>
-                <div>
-                    <MobileImg src="./clients/prana-wellness.png"/>
-                    <DesktopImg src="./clients/prana-wellness.png"/>
+export default class Clients extends Component {
+    state = {
+        clientList: [{
+            title: "Prana Wellness",
+            image: "./clients/prana-wellness.png",
+            link: "pranawellnessworks.com",
+            statement: "Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.",
+            responsibilities: ["Build custom fullstack website for client w/ admin portal", "Automate email campaign with MailChimp", "Update as needed"],
+            technologies: ["React", "CSS", "HTML", "Firebase", "Photoshop", "MailChimp"]
+        },{
+            title: "FITPLAN",
+            link: "fitplanapp.com",
+            image: "./clients/fitplan-giftcard.png",
+            statement: "Workout with elite personal trainers.",
+            responsibilities: ["Create custom emails using MailChimp, HTML and CSS style", "Frontend web development- design and develop", "Trouble shoot & build out athlete websites on Shopify"],
+            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","Zeplin"]
+        },{
+            title: "HeatSeeker Hot Sauce",
+            link: "heatseekersauce.com",
+            image: "./clients/heatseeker.png",
+            statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
+            responsibilities: ["eCommerce Shopify w/ Wholesale", "Customized Liquid", "Streamline content & UX", "Update as needed"],
+            technologies: ["Shopify", "Liquid", "CSS", "HTML", "Photoshop", "Figma"]
+        },{
+            title: "IT After Hours",
+            link: "it-afterhours.com",
+            image: "./clients/it-afterhours.png",
+            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology. During my time as an IT Professional, I noticed a lack of on site computer support in the San Diego area after 5pm. Sure, you can schedule an appointment at 7pm, if you’re willing to pay the “After Hours Rate” of 200%-300% the regular price. This is where I decided to step in.",
+            responsibilities: ["Streamlineexisting WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing updates"],
+            technologies: ["React", "CSS", "HTML", "Firebase", "Photoshop", "MailChimp"]
+        }]
+    }
+    render(){
+        const { clientList } = this.state
+        const mapClientList = clientList.map((client, key) => {
+            const rList = client.responsibilities.map((r, k) => {
+                return <li key={k}>{r}</li>
+            })
+            const tList = client.technologies.map((c, k) => {
+                return <span key={k}>{c} </span>
+            })
+            return(
+                <div key={key}>
+                    <MobileImg src={client.image} alt={client.title}/>
                     <section>
                         <h2>
-                            PRANA WELLNESS:
+                            {client.title}:
                         </h2>
-                        <a target="_blank" rel="noopener noreferrer" href="https://pranawellnessworks.com/">
-                            pranawellnessworks.com
+                        <a target="_blank" rel="noopener noreferrer" href={client.link}>
+                            {client.link}
                         </a>
                         <p>
-                            “Prana is Sanskrit for breath, considered as a life-giving force.  
-                            Prana is seen as a universal energy, which flows in currents in 
-                            and around the body.”
+                            “{client.statement}”
                         </p>
                         <h3>
                             Responsibilities: 
                         </h3>
                         <ul>
-                            <li>
-                                Build custom fullstack website for client w/ admin portal
-                            </li>
-                            <li>
-                                Automate email campaign with MailChimp
-                            </li>
-                            <li>
-                                Update as needed
-                            </li>
+                            {rList}
                         </ul>
                         <h3>
                             Technologies: 
                         </h3>
-                        <span>
-                            React, CSS, HTML, Firebase, Photoshop, Mailchimp
-                        </span>
+                            {tList}
                         <hr/>   
                     </section>
+                    <DesktopImg src={client.image} alt={client.title}/>
+                </div>
+            )
 
-                </div>
-                <div>
-                    <MobileImg src="./clients/fitplan-giftcard.png"/>
-                    <section>
-                        <h2>
-                            FITPLAN:
-                        </h2>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.https://www.fitplanapp.com/">
-                            fitplanapp.com
-                        </a>
-                        <p>
-                            “Workout with elite personal trainers”
-                        </p>
-                        <h3>
-                            Responsibilities:
-                        </h3>
-                        <ul>
-                            <li>
-                                Create custom emails using MailChimp, HTML and CSS style
-                            </li>
-                            <li>
-                                Frontend web development- design and develop
-                            </li>
-                            <li>
-                                Trouble shoot & build out athlete websites on Shopify
-                            </li>
-                        </ul>
-                        <h3>
-                            Technologies: 
-                        </h3>
-                        <span>
-                            React, Liquid, CSS, HTML, Photoshop, Figma, Zeplin
-                        </span>
-                        <hr/>   
-                    </section>
-                    <DesktopImg src="./clients/fitplan-giftcard.png"/>
-                </div>
-                <div>
-                    <MobileImg src="./clients/heatseeker.png"/>
-                    <DesktopImg src="./clients/heatseeker.png"/>
-                    <section>
-                    <h2>
-                        HeatSeeker Hot Sauce:
-                    </h2>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.heatseekersauce.com">
-                        heatseekersauce.com
-                    </a>
-                    <p>
-                        "Bold and minimal, pure and simple. We believe that it shouldn't take 57 
-                        ingredients to create something amazing, but instead, a few, simple ingredients 
-                        expertly combined for that perfect balance of flavor and heat. That's what we do."
-                    </p>
-                    <h3>Responsibilities:</h3>
-                        <ul>
-                            <li>
-                                eCommerce Shopify w/ Wholesale
-                            </li>
-                            <li>
-                                Customized Liquid
-                            </li>
-                            <li>
-                                Streamlined content
-                            </li>
-                            <li>
-                                Update as needed
-                            </li>     
-                        </ul>  
-                        <h3>
-                            Technologies: 
-                        </h3>
-                        <span>
-                            Shopify, Liquid, CSS, HTML, Photoshop, Figma
-                        </span>
-                        <hr/>   
-                    </section>
-                </div>
-                <div>
-                    <MobileImg src="./clients/it-afterhours.png"/>
-                    <section>
-                    <h2>
-                        IT After Hours:
-                    </h2>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.it-afterhours.com">
-                        it-afterhours.com
-                    </a>
-                    <p>
-                        "IT After Hours is the only professional, affordable computer 
-                        service company conveniently available evenings and weekends. 
-                        IT After Hours started when a passion for computers turned into a 
-                        career in Information Technology. During my time as an IT Professional, 
-                        I noticed a lack of on site computer support in the San Diego area 
-                        after 5pm. Sure, you can schedule an appointment at 7pm, if you’re willing 
-                        to pay the “After Hours Rate” of 200%-300% the regular price. This is where 
-                        I decided to step in."
-                    </p>
-                    <h3>Responsibilities:</h3>                                            
-                        <ul>
-                            <li>
-                                Streamline WordPress
-                            </li>
-                            <li>
-                                Customized CSS code
-                            </li>
-                            <li>
-                                Make mobile scalable
-                            </li>
-                            <li>
-                                Improve UX/UI experience
-                            </li>
-                            <li>
-                                Resolve bugs
-                            </li>
-                            <li>
-                                Currently undergoing updates
-                            </li>
-                        </ul>
-                        <h3>
-                            Technologies: 
-                        </h3>
-                        <span>
-                            WordPress, CSS, HTML
-                        </span>
-                        <hr/>   
-                    </section>
-                    <DesktopImg src="./clients/it-afterhours.png"/>
-                </div>
-                
-                
+        })
+
+
+    return(
+            <Container>
+                <h1>Clients</h1>
+                    {mapClientList}                
             </Container>
         );
+    };
 };
 const DesktopImg = styled.img`
     display: inline-block;
@@ -241,5 +149,3 @@ const Container = styled.div`
         }
     }
 `;
-
-export default Clients;
