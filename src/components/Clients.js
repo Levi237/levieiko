@@ -28,9 +28,9 @@ export default class Clients extends Component {
             title: "IT After Hours",
             link: "it-afterhours.com",
             image: "./clients/it-afterhours.png",
-            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology. During my time as an IT Professional, I noticed a lack of on site computer support in the San Diego area after 5pm. Sure, you can schedule an appointment at 7pm, if you’re willing to pay the “After Hours Rate” of 200%-300% the regular price. This is where I decided to step in.",
+            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
             responsibilities: ["Streamlineexisting WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing updates"],
-            technologies: ["React", "CSS", "HTML", "Firebase", "Photoshop", "MailChimp"]
+            technologies: ["WordPress", "CSS", "HTML"]
         }]
     }
     render(){
