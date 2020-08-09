@@ -104,7 +104,7 @@ color: #fff;
     color: #000;
     text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
     padding: 20px 0;
-}
+  }
   @media screen and (max-width: 680px) {
     overflow: scroll;
     padding-bottom: 20px;

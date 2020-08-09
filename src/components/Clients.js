@@ -96,17 +96,14 @@ const MobileImg = styled.img`
 `;
 const Container = styled.div`
     position: relative;
-    text-align: center;
     background-color: #fff;
-    text-align: left;
-
     div {
         margin: 0 auto;
         max-width: 800px;
         text-align: center;
-    }
-    div:nth-of-type(odd) img:last-of-type {
-        float: left;
+        &:nth-of-type(odd) img:last-of-type {
+            float: left;
+        }
     }
     section {
         width: 40%;
