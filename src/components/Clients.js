@@ -29,7 +29,7 @@ export default class Clients extends Component {
             link: "it-afterhours.com",
             image: "./clients/it-afterhours.png",
             statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-            responsibilities: ["Streamlineexisting WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing updates"],
+            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
             technologies: ["WordPress", "CSS", "HTML"]
         }]
     }
@@ -90,8 +90,8 @@ const DesktopImg = styled.img`
 `;
 
 const MobileImg = styled.img`
-display: none;
-@media screen and (max-width: 900px) {
+    display: none;
+    @media screen and (max-width: 900px) {
         display: block;
 `;
 const Container = styled.div`
@@ -104,6 +104,9 @@ const Container = styled.div`
         margin: 0 auto;
         max-width: 800px;
         text-align: center;
+    }
+    div:nth-of-type(odd) img:last-of-type {
+        float: left;
     }
     section {
         width: 40%;
