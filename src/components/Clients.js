@@ -36,10 +36,10 @@ export default class Clients extends Component {
     render(){
         const { clientList } = this.state
         const mapClientList = clientList.map((client, key) => {
-            const rList = client.responsibilities.map((r, k) => {
+            const responsibilitiesList = client.responsibilities.map((r, k) => {
                 return <li key={k}>{r}</li>
             })
-            const tList = client.technologies.map((c, k) => {
+            const technologiesList = client.technologies.map((c, k) => {
                 return <span key={k}>{c} </span>
             })
             return(
@@ -47,7 +47,7 @@ export default class Clients extends Component {
                     <MobileImg src={client.image} alt={client.title}/>
                     <section>
                         <h2>
-                            {client.title}:
+                            {client.title}
                         </h2>
                         <a target="_blank" rel="noopener noreferrer" href={client.link}>
                             {client.link}
@@ -59,22 +59,19 @@ export default class Clients extends Component {
                             Responsibilities: 
                         </h3>
                         <ul>
-                            {rList}
+                            {responsibilitiesList}
                         </ul>
                         <h3>
                             Technologies: 
                         </h3>
-                            {tList}
+                            {technologiesList}
                         <hr/>   
                     </section>
                     <DesktopImg src={client.image} alt={client.title}/>
                 </div>
             )
-
         })
-
-
-    return(
+        return(
             <Container>
                 <h1>Clients</h1>
                     {mapClientList}                
@@ -118,6 +115,14 @@ const Container = styled.div`
         max-width: 400px;
         margin-top: 5%;
         box-shadow: 0 1px 12px rgba(0,0,0,.2);
+    }
+    a {
+        color: grey!important;
+        text-decoration: none;
+        &:hover {
+            color: dodgerblue!important;
+            text-decoration: underline;
+        }
     }
     h1 {
         margin-bottom: 10px!important;
