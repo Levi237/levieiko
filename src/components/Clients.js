@@ -120,7 +120,6 @@ const Container = styled.div`
         color: grey!important;
         text-decoration: none;
         &:hover {
-            color: dodgerblue!important;
             text-decoration: underline;
         }
     }
