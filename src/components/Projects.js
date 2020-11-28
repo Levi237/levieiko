@@ -1,3 +1,4 @@
+// FOR MOBILE DISPLAY OF PERSONAL PROJECTS
 import React  from 'react';
 import styled from 'styled-components';
 
@@ -6,8 +7,8 @@ const Projects =()=> {
         <Container>
 
             <div>
-                    <h3>PokeGen</h3>
-                    <a 
+                <h3>PokeGen</h3>
+                <a 
                     alt="PokeGen" 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -27,7 +28,7 @@ const Projects =()=> {
                 alt="Hi Sierra!" 
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://parkintel.herokuapp.com/home"
+                href="https://https://hi-sierra.firebaseapp.com/"
                 >
                 <img src="./projects/hi-sierra.png"/>
             </a>
@@ -40,11 +41,11 @@ const Projects =()=> {
             <div>
                 <h3>LA-HOP</h3>
                 <a 
-                alt="Los Angeles Homeless Outreach Program" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://lahsa-la-hopv2.herokuapp.com/request"
-                >
+                    alt="Los Angeles Homeless Outreach Program" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://lahsa-la-hopv2.herokuapp.com/request"
+                    >
                     <img src="./projects/la-hop.png"/>
                 </a>
                 <section>
@@ -56,11 +57,11 @@ const Projects =()=> {
             <div>
                 <h3>BlackJack</h3>
                 <a 
-                alt="BlackJack" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://levi237.github.io/blackjack-reup/"
-                >
+                    alt="BlackJack" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://levi237.github.io/blackjack-reup/"
+                    >
                     <img src="./projects/blackjack.png"/>
                 </a>
                 <section>
@@ -107,7 +108,8 @@ display: none;
             margin: 5vw;
         }
         section {
-            font-size: 2.25vw;
+            font-size: 3vw;
+            font-weight: 800;
         } 
     }
 

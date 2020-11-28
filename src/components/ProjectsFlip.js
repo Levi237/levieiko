@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import styled from 'styled-components';
 
-import FlipCards from './recycle/FlipCards';
+import FlipCards from './FlipCards';
 
 export default class ProjectsFlip extends Component {
     state = {

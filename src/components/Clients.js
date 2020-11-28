@@ -4,19 +4,26 @@ import styled from 'styled-components';
 export default class Clients extends Component {
     state = {
         clientList: [{
+        title: "Momo[Muscle]",
+            image: "./clients/momomuscle.png",
+            link: "momomuscle.co",
+            statement: "Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.",
+            responsibilities: ["Build & maintain custom Shopify website", "custom Quiz w/ email campaign", "MailChimp email marketing"],
+            technologies: ["Shopify", "CSS", "HTML", "Liquid", "Javascript", "VanillaJs", "Photoshop", "Figma", "MailChimp"]
+        },{
             title: "Prana Wellness",
             image: "./clients/prana-wellness.png",
             link: "pranawellnessworks.com",
             statement: "Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.",
             responsibilities: ["Build custom fullstack website for client w/ admin portal", "Automate email campaign with MailChimp", "Update as needed"],
-            technologies: ["React", "CSS", "HTML", "Firebase", "Photoshop", "MailChimp"]
+            technologies: ["React", "Javascript", "VanillaJs", "CSS", "HTML", "Firebase", "Photoshop", "Figma", "MailChimp"]
         },{
-            title: "FITPLAN",
-            link: "fitplanapp.com",
-            image: "./clients/fitplan-giftcard.png",
-            statement: "Workout with elite personal trainers.",
-            responsibilities: ["Create custom emails using MailChimp, HTML and CSS style", "Frontend web development- design and develop", "Trouble shoot & build out athlete websites on Shopify"],
-            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","Zeplin"]
+            title: "IT After Hours",
+            link: "it-afterhours.com",
+            image: "./clients/it-afterhours.png",
+            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
+            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+            technologies: ["WordPress", "CSS", "HTML"]
         },{
             title: "HeatSeeker Hot Sauce",
             link: "heatseekersauce.com",
@@ -25,12 +32,12 @@ export default class Clients extends Component {
             responsibilities: ["eCommerce Shopify w/ Wholesale", "Customized Liquid", "Streamline content & UX", "Update as needed"],
             technologies: ["Shopify", "Liquid", "CSS", "HTML", "Photoshop", "Figma"]
         },{
-            title: "IT After Hours",
-            link: "it-afterhours.com",
-            image: "./clients/it-afterhours.png",
-            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
-            technologies: ["WordPress", "CSS", "HTML"]
+            title: "FITPLAN",
+            link: "fitplanapp.com",
+            image: "./clients/fitplan-giftcard.png",
+            statement: "Workout with elite personal trainers.",
+            responsibilities: ["Custom email design & marketing on MailChimp", "Frontend web development- design & develop", "Trouble shoot & build out athlete websites on Shopify"],
+            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","MailChimp"]
         }]
     }
     render(){
@@ -73,6 +80,7 @@ export default class Clients extends Component {
         })
         return(
             <Container>
+                <br/><br/>
                 <h1>Clients</h1>
                     {mapClientList}                
             </Container>

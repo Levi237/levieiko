@@ -29,23 +29,32 @@ const FlipCards =({projects})=> {
 const CardContainer = styled.div`
     display: inline-block;
     p {
-        font-size: 10px;
+        font-size: 15px;
+        font-weight: 800;
     }
-
 `;
 
 const FlipCard = styled.div`
     background-color: transparent!important;
-    width: 20vw!important;
-    height: 30vw!important;
-    margin: 2.5vw;
+    width: 200px!important;
+    height: 300px!important;
+    margin: 25px;
     perspective: 1000px;
     &:hover > div:first-of-type {
         transform: rotateY(180deg);
     }
     img {
+        width: 200px!important;
+        height: 300px!important;
+    }
+    @media only screen and (max-width: 1000px) {
         width: 20vw!important;
         height: 30vw!important;
+        margin: 2.5vw;
+        img {
+            width: 20vw!important;
+            height: 30vw!important;
+        }
     }
   `;
   

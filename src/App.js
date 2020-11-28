@@ -9,6 +9,8 @@ import ProjectsFlip from './components/ProjectsFlip';
 import Projects from './components/Projects';
 import Footer   from './components/Footer';
 
+// import Vote   from './components/Vote';
+
 
 export default class App extends Component {
   render (){
@@ -20,6 +22,8 @@ export default class App extends Component {
           <HeaderContainer>
             <Header/>
           </HeaderContainer>
+
+{/* <Vote/> */}
 
           <AboutContainer>
             <About/>
@@ -93,13 +97,15 @@ const SkillsContainer = styled.div`
   margin-top: 0;
 `;
 const ProjectsContainer = styled.div`
-color: #fff;
-  height: 100vh;
+  color: #fff;
+  text-align: center;
   scroll-snap-align: start;
   background-attachment: local;
   background-image: url('./background/milkyway.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
   h1,h2 {
     color: #000;
     text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
@@ -108,6 +114,7 @@ color: #fff;
   @media screen and (max-width: 680px) {
     overflow: scroll;
     padding-bottom: 20px;
+    height: 100vh;
   }
 `;
 const FooterContainer = styled.div`
