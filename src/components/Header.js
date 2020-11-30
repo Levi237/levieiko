@@ -4,12 +4,13 @@ import styled from 'styled-components';
 const Header =(props)=> {
     return(
         <Container>
-            <h1>Levi Eiko Winans</h1>
-            <section>
+          <h1></h1>
+            {/* <h1>Levi Eiko Winans</h1> */}
+            {/* <section>
               <span>+ 646 206 8777</span>
               <br/>
               <span>LeviEiko@gmail.com</span>
-            </section>
+            </section> */}
             <img src="logo.png" alt="levieiko.com"/>
       </Container>
         );
