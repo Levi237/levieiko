@@ -25,26 +25,26 @@ export default class App extends Component {
 
 {/* <Vote/> */}
 
-          <AboutContainer>
+          {/* <AboutContainer>
             <About/>
             <br/><br/><br/><br/>
-          </AboutContainer>
+          </AboutContainer> */}
 
-          <SkillsContainer>
+          {/* <SkillsContainer>
             <Skills/>
-          </SkillsContainer>
-          <ClientsContainer>
+          </SkillsContainer> */}
+          {/* <ClientsContainer>
             <Clients/>
-          </ClientsContainer>
-          <SnappBottom/>
-          <ProjectsContainer>
+          </ClientsContainer> */}
+          {/* <SnappBottom/> */}
+          {/* <ProjectsContainer>
           <h1>Projects</h1>
             <ProjectsFlip/>
             <Projects/>
-          </ProjectsContainer>
-          <FooterContainer>
+          </ProjectsContainer> */}
+          {/* <FooterContainer>
             <Footer/>
-          </FooterContainer>
+          </FooterContainer> */}
         </BodyContainer>        
       </AppContainer>
     );
