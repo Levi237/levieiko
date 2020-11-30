@@ -2,17 +2,23 @@ import React, { Component } from 'react';
 import styled               from 'styled-components';
 
 import Header   from './components/Header';
-import About    from './components/About';
-import Skills   from './components/Skills';
-import Clients  from './components/Clients';
-import ProjectsFlip from './components/ProjectsFlip';
-import Projects from './components/Projects';
-import Footer   from './components/Footer';
+// import About    from './components/About';
+// import Skills   from './components/Skills';
+// import Clients  from './components/Clients';
+// import ProjectsFlip from './components/ProjectsFlip';
+// import Projects from './components/Projects';
+// import Footer   from './components/Footer';
+import Nav   from './components/Nav';
 
 // import Vote   from './components/Vote';
 
-
 export default class App extends Component {
+  toggleHamburger = () => {
+    const hamburgerMenu = document.getElementById('menu');
+    hamburgerMenu.classList.toggle('active');
+    hamburgerMenu.classList.toggle('inactive');
+  };
+  
   render (){
     return (
       <AppContainer>
@@ -20,6 +26,7 @@ export default class App extends Component {
         <BodyContainer>    
 
           <HeaderContainer>
+          <Nav toggleHamburger={this.toggleHamburger}/>
             <Header/>
           </HeaderContainer>
 
