@@ -1,14 +1,14 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-const NavHamburger = ({toggleHamburger }) => {
+const NavHamburger = ({ toggleHamburger, colorThis }) => {
   return(
     <NavContainer>
       <Hamburger 
         name="toggleHamburger" 
         onClick={(e) => toggleHamburger(e)}
       >
-        <><HomePatties></HomePatties><HomePatties></HomePatties><HomePatties></HomePatties></>
+        <><HomePatties style={{backgroundColor: colorThis}}/><HomePatties style={{backgroundColor: colorThis}}/><HomePatties style={{backgroundColor: colorThis}}/></>
       </Hamburger>
     </NavContainer>);
 };
@@ -31,7 +31,7 @@ const Hamburger = styled.div`
   }
 `;
 const HomePatties = styled.section`
-background-color: #fff;
+
 `;
 
 export default NavHamburger;

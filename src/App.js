@@ -32,25 +32,21 @@ export default class App extends Component {
           </Switch>
         {/* <HeroImage/> */}
         <BodyContainer>    
-          <NavHamburger 
-            toggleHamburger={this.toggleHamburger}
-            // toggleEmailSignup={this.toggleEmailSignup}
-          /> 
+          <Switch>         
+            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"black"}/>}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"black"}/>}/>
+          </Switch>
+
           <HeaderContainer>
           <Switch>         
             <Route path={routes.ROOT} exact render={() => <Header/>}/>
             <Route path={routes.HOME} exact render={() => <Header/>}/>
             <Route path={routes.INFO} exact render={() => <About/>}/>
-            {/* <Route path={routes.ROOT} exact render={() => <Header/>}/> */}
             <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/>
             </Switch>
           </HeaderContainer>
-
-
-          {/* <AboutContainer>
-            <About/>
-            <br/><br/><br/><br/>
-          </AboutContainer> */}
 
           {/* <SkillsContainer>
             <Skills/>

@@ -6,7 +6,6 @@ import * as routes from '../constants/routes';
 
 export default class NavModal extends Component {
 
-
     render(){
         const { toggleHamburger } = this.props;
         
