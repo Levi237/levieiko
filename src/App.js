@@ -68,29 +68,7 @@ const HeaderContainer = styled.div`
   scroll-snap-align: start;
   position: relative;
 `;
-// const AboutContainer = styled.div`
-//   width: 100%;
-//   height: 90vh;
-//   padding-top: 10vh;
 
-//   background-attachment: fixed;
-//   background-color: #fff;
-//   background-image: url(about.png);
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: 60%;
-
-//   position: relative;
-//   scroll-snap-align: start;
-
-// @media screen and (max-width: 900px) {
-//     background-size: cover!important;
-//     background-position: 70% center;
-
-//     padding-top: 5vh;
-//     height: 95vh;
-// }
-// `;
 // const SkillsContainer = styled.div`
 //   position: relative;
 //   text-align: center;
