@@ -12,10 +12,6 @@ export default class NavModal extends Component {
         return(
             <NavContainer id="menu" className="inactive">
                 <div>
-                    {/* <button className="close xClose" onClick={() => {toggleHamburger()}}>
-                         CLOSE X
-                    </button> */}
-                    {/* <br /><br /><br /><br /> */}
                     <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleHamburger()}}>HOME</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleHamburger()}}>ABOUT</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleHamburger()}}>SERVICES</NavLink>
