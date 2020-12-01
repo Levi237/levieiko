@@ -35,8 +35,8 @@ export default class App extends Component {
           <Switch>         
             <Route path={routes.ROOT} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
             <Route path={routes.HOME} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"black"}/>}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"black"}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#131111"}/>}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#131111"}/>}/>
           </Switch>
 
           <HeaderContainer>
