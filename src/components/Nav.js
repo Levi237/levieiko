@@ -37,9 +37,7 @@ const NavContainer = styled.div`
     overflow: hidden;
     background-color: #744A9E;
     color: #FFF;
-
     position: fixed;
-
     a {
         text-decoration: none;
         display: block;

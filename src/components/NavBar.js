@@ -1,7 +1,7 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-const NavBar = ({ toggleHamburger }) => {
+const NavBar = ({toggleHamburger }) => {
   return(
     <NavContainer>
       <Hamburger 
@@ -14,7 +14,9 @@ const NavBar = ({ toggleHamburger }) => {
 };
 
 const NavContainer = styled.div`
-  width: 90vw%;
+  width: 90vw;
+  position: absolute;
+  z-index: 99999999999999999999999999;
  `;
 
 const Hamburger = styled.div`

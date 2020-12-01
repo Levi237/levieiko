@@ -58,79 +58,79 @@ export default class App extends Component {
     );
   }
 }
-const SnappBottom = styled.div`
-  height: 20px;
-  background-color: #fff;
-  scroll-snap-align: end; 
-`;
-const ClientsContainer = styled.div`
-  scroll-snap-align: start; 
-  background-color: #fff;
+// const SnappBottom = styled.div`
+//   height: 20px;
+//   background-color: #fff;
+//   scroll-snap-align: end; 
+// `;
+// const ClientsContainer = styled.div`
+//   scroll-snap-align: start; 
+//   background-color: #fff;
 
-`;
+// `;
 const HeaderContainer = styled.div`
   color: #fff;
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
 `;
-const AboutContainer = styled.div`
-  width: 100%;
-  height: 90vh;
-  padding-top: 10vh;
+// const AboutContainer = styled.div`
+//   width: 100%;
+//   height: 90vh;
+//   padding-top: 10vh;
 
-  background-attachment: fixed;
-  background-color: #fff;
-  background-image: url(about.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+//   background-attachment: fixed;
+//   background-color: #fff;
+//   background-image: url(about.png);
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: 60%;
 
-  position: relative;
-  scroll-snap-align: start;
+//   position: relative;
+//   scroll-snap-align: start;
 
-@media screen and (max-width: 900px) {
-    background-size: cover!important;
-    background-position: 70% center;
+// @media screen and (max-width: 900px) {
+//     background-size: cover!important;
+//     background-position: 70% center;
 
-    padding-top: 5vh;
-    height: 95vh;
-}
-`;
-const SkillsContainer = styled.div`
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  scroll-snap-align: start;
-  margin-top: 0;
-`;
-const ProjectsContainer = styled.div`
-  color: #fff;
-  text-align: center;
-  scroll-snap-align: start;
-  background-attachment: local;
-  background-image: url('./background/milkyway.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
-  h1,h2 {
-    color: #000;
-    text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
-    padding: 20px 0;
-  }
-  @media screen and (max-width: 680px) {
-    overflow: scroll;
-    padding-bottom: 20px;
-    height: 100vh;
-  }
-`;
-const FooterContainer = styled.div`
-  scroll-snap-align: start;
-  height: 400px;
-  background-color: #fff;
-  position: relative;
-`;
+//     padding-top: 5vh;
+//     height: 95vh;
+// }
+// `;
+// const SkillsContainer = styled.div`
+//   position: relative;
+//   text-align: center;
+//   background-color: #fff;
+//   scroll-snap-align: start;
+//   margin-top: 0;
+// `;
+// const ProjectsContainer = styled.div`
+//   color: #fff;
+//   text-align: center;
+//   scroll-snap-align: start;
+//   background-attachment: local;
+//   background-image: url('./background/milkyway.png');
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   height: 500px;
+//   h1,h2 {
+//     color: #000;
+//     text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
+//     padding: 20px 0;
+//   }
+//   @media screen and (max-width: 680px) {
+//     overflow: scroll;
+//     padding-bottom: 20px;
+//     height: 100vh;
+//   }
+// `;
+// const FooterContainer = styled.div`
+//   scroll-snap-align: start;
+//   height: 400px;
+//   background-color: #fff;
+//   position: relative;
+// `;
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
