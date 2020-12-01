@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export default class About extends Component {
     render(){
         return(
+          <AboutContainer>
             <Container>
               <div>
                 <h2>
@@ -26,7 +27,7 @@ export default class About extends Component {
                 </section>
               </div>
             </Container>
-
+          </AboutContainer>
         )
     }
 }
@@ -40,10 +41,11 @@ const Container = styled.div`
   width: 50%;
   max-width: 50%;
   vertical-align: top;
+  color: black;
 
   div {
     background-color: rgba(250,250,250,.8);
-    padding: 5% 0;
+    padding: 30px 0;
   }
   h2 {
     margin: 0 10%;
@@ -63,4 +65,27 @@ const Container = styled.div`
     width: 80%;
     max-width: 80%;
   }
+`;
+const AboutContainer = styled.div`
+  width: 100%;
+  height: 90vh;
+  padding-top: 10vh;
+
+  background-attachment: fixed;
+  background-color: #fff;
+  background-image: url(about.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+
+  position: relative;
+  scroll-snap-align: start;
+
+@media screen and (max-width: 900px) {
+    background-size: cover!important;
+    background-position: 70% center;
+
+    // padding-top: 5vh;
+    height: 100vh;
+}
 `;
