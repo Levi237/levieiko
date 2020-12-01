@@ -16,7 +16,7 @@ const NavHamburger = ({ toggleHamburger, colorThis }) => {
 const NavContainer = styled.div`
   position: absolute;
   right: 0;
-  z-index: 99;
+  z-index: 999;
  `;
 
 const Hamburger = styled.div`
