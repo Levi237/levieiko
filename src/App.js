@@ -33,10 +33,10 @@ export default class App extends Component {
         {/* <HeroImage/> */}
         <BodyContainer>    
           <Switch>         
-            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"white"}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#131111"}/>}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#131111"}/>}/>
+            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#000"}/>}/>
           </Switch>
 
           <HeaderContainer>
@@ -47,22 +47,6 @@ export default class App extends Component {
             <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/>
             </Switch>
           </HeaderContainer>
-
-          {/* <SkillsContainer>
-            <Skills/>
-          </SkillsContainer> */}
-          {/* <ClientsContainer>
-            <Clients/>
-          </ClientsContainer> */}
-          {/* <SnappBottom/> */}
-          {/* <ProjectsContainer>
-          <h1>Projects</h1>
-            <ProjectsFlip/>
-            <Projects/>
-          </ProjectsContainer> */}
-          {/* <FooterContainer>
-            <Footer/>
-          </FooterContainer> */}
         </BodyContainer>        
       </AppContainer>
     );
