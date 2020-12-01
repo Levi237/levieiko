@@ -7,7 +7,7 @@ import Nav                  from './components/Nav';
 import NavBar               from './components/NavBar';
 
 import Header   from './components/Header';
-// import About    from './components/About';
+import About    from './components/About';
 // import Skills   from './components/Skills';
 // import Clients  from './components/Clients';
 import ProjectsFlip from './components/ProjectsFlip';
@@ -29,9 +29,8 @@ export default class App extends Component {
           <Switch>         
             <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
             <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
-            {/* <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/> */}
             </Switch>
-        <HeroImage/>
+        {/* <HeroImage/> */}
         <BodyContainer>    
           <NavBar 
             toggleHamburger={this.toggleHamburger}
@@ -40,6 +39,7 @@ export default class App extends Component {
           <HeaderContainer>
           <Switch>         
             <Route path={routes.HOME} exact render={() => <Header/>}/>
+            <Route path={routes.INFO} exact render={() => <About/>}/>
             {/* <Route path={routes.ROOT} exact render={() => <Header/>}/> */}
             <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/>
             </Switch>
