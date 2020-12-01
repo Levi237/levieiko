@@ -18,10 +18,10 @@ export default class Nav extends Component {
                     </button>
                     <br /><br /><br /><br />
                     <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleHamburger()}}>HOME</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleHamburger()}}>ABOUT US</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleHamburger()}}>WELLNESS SERVICES</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleHamburger()}}>ABOUT</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleHamburger()}}>SERVICES</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleHamburger()}}>CONTACT</NavLink>
                 </div>
-
             </NavContainer>
         );
     };
