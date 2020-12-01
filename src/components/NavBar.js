@@ -14,21 +14,20 @@ const NavBar = ({toggleHamburger }) => {
 };
 
 const NavContainer = styled.div`
-  width: 90vw;
   position: absolute;
-  z-index: 99999999999999999999999999;
+  right: 0;
+  z-index: 99;
  `;
 
 const Hamburger = styled.div`
-  float: right;
-  margin: 90px 10vw 0 0;
+  margin: 80px 100px 0 0;
   section {
     margin: 6px 0;
     width: 35px;
     height: 4px;
   }
   @media screen and (max-width: 945px) {
-    margin: 25px 5vw 0 0;
+    margin: 5vw 5vw 0 0;
   }
 `;
 const HomePatties = styled.section`

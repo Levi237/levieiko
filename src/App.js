@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
+
+import * as routes          from './constants/routes';
+import Nav                  from './components/Nav';
+import NavBar               from './components/NavBar';
 
 import Header   from './components/Header';
 // import About    from './components/About';
 // import Skills   from './components/Skills';
 // import Clients  from './components/Clients';
-// import ProjectsFlip from './components/ProjectsFlip';
+import ProjectsFlip from './components/ProjectsFlip';
 // import Projects from './components/Projects';
 // import Footer   from './components/Footer';
-import Nav      from './components/Nav';
-import NavBar   from './components/NavBar';
 
 // import Vote   from './components/Vote';
 
@@ -23,6 +26,11 @@ export default class App extends Component {
     return (
       <AppContainer>
           <Nav toggleHamburger={this.toggleHamburger}/>
+          <Switch>         
+            <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
+            <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
+            {/* <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/> */}
+            </Switch>
         <HeroImage/>
         <BodyContainer>    
           <NavBar 
@@ -30,8 +38,13 @@ export default class App extends Component {
             // toggleEmailSignup={this.toggleEmailSignup}
           /> 
           <HeaderContainer>
-            <Header/>
+          <Switch>         
+            <Route path={routes.HOME} exact render={() => <Header/>}/>
+            {/* <Route path={routes.ROOT} exact render={() => <Header/>}/> */}
+            <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/>
+            </Switch>
           </HeaderContainer>
+
 
           {/* <AboutContainer>
             <About/>
