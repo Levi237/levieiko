@@ -3,8 +3,8 @@ import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
-import Nav                  from './components/Nav';
-import NavBar               from './components/NavBar';
+import NavModal                  from './components/NavModal';
+import NavHamburger               from './components/NavHamburger';
 
 import Header   from './components/Header';
 import About    from './components/About';
@@ -25,14 +25,14 @@ export default class App extends Component {
   render (){
     return (
       <AppContainer>
-          <Nav toggleHamburger={this.toggleHamburger}/>
+          <NavModal toggleHamburger={this.toggleHamburger}/>
           <Switch>         
             <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
             <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
           </Switch>
         {/* <HeroImage/> */}
         <BodyContainer>    
-          <NavBar 
+          <NavHamburger 
             toggleHamburger={this.toggleHamburger}
             // toggleEmailSignup={this.toggleEmailSignup}
           /> 

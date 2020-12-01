@@ -1,7 +1,7 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-const NavBar = ({toggleHamburger }) => {
+const NavHamburger = ({toggleHamburger }) => {
   return(
     <NavContainer>
       <Hamburger 
@@ -34,4 +34,4 @@ const HomePatties = styled.section`
 background-color: #fff;
 `;
 
-export default NavBar;
+export default NavHamburger;

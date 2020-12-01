@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import * as routes from '../constants/routes';
 
-export default class Nav extends Component {
+export default class NavModal extends Component {
 
 
     render(){
