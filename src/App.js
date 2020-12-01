@@ -8,7 +8,8 @@ import Header   from './components/Header';
 // import ProjectsFlip from './components/ProjectsFlip';
 // import Projects from './components/Projects';
 // import Footer   from './components/Footer';
-import Nav   from './components/Nav';
+import Nav      from './components/Nav';
+import NavBar   from './components/NavBar';
 
 // import Vote   from './components/Vote';
 
@@ -18,19 +19,19 @@ export default class App extends Component {
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
-  
   render (){
     return (
       <AppContainer>
+          <Nav toggleHamburger={this.toggleHamburger}/>
         <HeroImage/>
         <BodyContainer>    
-
+          <NavBar 
+            toggleHamburger={this.toggleHamburger}
+            // toggleEmailSignup={this.toggleEmailSignup}
+          /> 
           <HeaderContainer>
-          <Nav toggleHamburger={this.toggleHamburger}/>
             <Header/>
           </HeaderContainer>
-
-{/* <Vote/> */}
 
           {/* <AboutContainer>
             <About/>

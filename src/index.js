@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import * as firebase from "firebase/app";
 import 'firebase/firestore';
@@ -22,10 +23,9 @@ const storage = firebase.storage();
 export { storage, firebase as default }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <Router>
+      <App />
+  </Router>, 
+  document.getElementById('root'));
 
 serviceWorker.unregister();
