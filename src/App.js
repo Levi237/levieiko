@@ -29,7 +29,7 @@ export default class App extends Component {
           <Switch>         
             <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
             <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
-            </Switch>
+          </Switch>
         {/* <HeroImage/> */}
         <BodyContainer>    
           <NavBar 
@@ -38,6 +38,7 @@ export default class App extends Component {
           /> 
           <HeaderContainer>
           <Switch>         
+            <Route path={routes.ROOT} exact render={() => <Header/>}/>
             <Route path={routes.HOME} exact render={() => <Header/>}/>
             <Route path={routes.INFO} exact render={() => <About/>}/>
             {/* <Route path={routes.ROOT} exact render={() => <Header/>}/> */}
