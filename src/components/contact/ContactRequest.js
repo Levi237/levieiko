@@ -13,7 +13,6 @@ export default class ContactRequest extends Component {
     };
 
     handleSelect = (e, service) => {
-        console.log(service)
         const { addServices } = this.state
         e.preventDefault();
 
