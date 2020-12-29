@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
 
-import FreebieEmailSignup   from './FreebieEmailSignup';
 import ContactRequest       from './ContactRequest';
-import ReferralRequest      from './ReferralRequest';
 
 export default class EmailSignup extends Component { 
     
     render(){
 
-        const { toggleEmailSignup, contactType } = this.props
+        const { toggleEmailSignup } = this.props
         return(
             <Container id="email" className="inactive contact-container">
                 <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
-                { (contactType === "freebie") && <FreebieEmailSignup/> }
-                { (contactType === "contactRequest") && <ContactRequest/> }
-                { (contactType === "referralRequest") && <ReferralRequest/> }
+                <ContactRequest/>
             </Container>
         );
     };

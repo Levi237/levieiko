@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 export default class About extends Component {
     render(){
+      const { toggleEmailSignup } = this.props
         return(
           <AboutContainer>
             <Container>
@@ -23,7 +24,7 @@ export default class About extends Component {
                   <a href="https://github.com/Levi237"><img src="icons/github.png" alt="github link"/></a>
                   <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/linkedin.png" alt="linkedin link"/></a>
                   <a href="https://www.instagram.com/levi_eiko/"><img src="icons/instagram.png" alt="instagram link"/></a>
-                  <a href="mailto:levieiko@gmail.com"><img src="icons/email.png" alt="email link"/></a>
+                  <span onClick={(e) => {toggleEmailSignup(e)}}><img src="icons/email.png" alt="email form"/></span>
                 </section>
               </div>
             </Container>
