@@ -13,7 +13,7 @@ code {
 }
 
 
-
+/* ON/OFF SWITCH */
 #email.active {
   max-width: 100vw;
 }
@@ -50,8 +50,12 @@ code {
   }
 }
 
+.nav-active {
+  color:#29bfff !important;
+}
+
 /* Email Form */
 button.selectedHighlighted {
-  background-color:rgba(24, 23, 23, .9)!important;
+  background-color:rgba(24, 23, 23, .95)!important;
   color: #fff;
 }
