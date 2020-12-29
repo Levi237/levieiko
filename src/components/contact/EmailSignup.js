@@ -18,6 +18,8 @@ export default class EmailSignup extends Component {
 };
 
 const Container = styled.div`
+height: 100vh;
+width: 100vw;
     position: fixed;
     overflow: scroll;
     z-index: 99999;
@@ -27,65 +29,6 @@ const Container = styled.div`
     @media screen and (max-width: 745px) {
         align-items: start;
         background-color: #fff;
-    }
-
-    p {
-        text-align: center;
-        background-color: white;
-    }
-    
-    form {
-        text-align: center;
-        max-width: 600px;
-        background-color: white;
-        padding: 20px 0;
-        @media screen and (max-width: 900px) {
-            padding: 40px 0 20px 0;
-        }
-    }
-    form input {
-        height: 36px;
-        margin: 5px auto;
-        font-size: 18px;
-        border-width: 1px;
-        border-radius: 0px;
-    }
-    form input[type=submit] {
-        background-color: #fff;
-        height: 36px;
-        width: 150px;
-        color: #181717;
-        border: #181717 solid 1px;
-        line-height: 100%;
-        position: relative;
-        z-index: 900;
-        border-radius: 0;
-        font-size: 18px;
-        text-transform: uppercase;
-    }
-    form button {
-        border-radius: 0px;
-        border: 1px solid black;;
-        background: transparent;
-    }
-    form label {
-        width: 44%;
-        &:nth-of-type(even){
-            margin-left: 1.75%
-        }
-        textarea {
-            width: 86%;
-            border: 1px solid black;
-            border-radius: 0px;
-            height: 150px;
-            margin: 5px 0;
-            font-family: Montserrat, Arial;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
-            color: #473E4E;
-            padding: 2%;
-        }
     }
 `;
 

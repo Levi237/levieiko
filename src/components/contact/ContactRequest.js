@@ -148,6 +148,58 @@ const AuthFilter = styled.div`
 `;
 
 const Form = styled.form`
+    position: relative;
+    z-index: 90000000000000000000000000000000000000;
+    text-align: center;
+    max-width: 700px;
+    background-color: white;
+    padding: 20px 0;
+
+
+    input {
+        height: 36px;
+        margin: 5px auto;
+        font-size: 18px;
+        border-width: 1px;
+        border-radius: 0px;
+    }
+    input[type=submit] {
+        background-color: #fff;
+        height: 36px;
+        width: 150px;
+        color: #181717;
+        border: #181717 solid 1px;
+        line-height: 100%;
+        position: relative;
+        z-index: 900;
+        border-radius: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    button {
+        border-radius: 0px;
+        border: 1px solid black;;
+        background: transparent;
+    }
+    label {
+        width: 44%;
+        &:nth-of-type(even){
+            margin-left: 1.75%
+        }
+        textarea {
+            width: 86%;
+            border: 1px solid black;
+            border-radius: 0px;
+            height: 150px;
+            margin: 5px 0;
+            font-family: Montserrat, Arial;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #473E4E;
+            padding: 2%;
+        }
+    }
     h3 {
         margin: 10px 0 0 0;
         text-transform: capitalize;
@@ -173,7 +225,7 @@ const Form = styled.form`
         }
     }
     > div {
-        max-width: 600px;
+        max-width: 650px;
         margin: 0 auto;
         width: 100%;
         > button {
@@ -184,5 +236,14 @@ const Form = styled.form`
             padding: 5px 15px;
             margin: 5px;
         }
-    }}
+    }
+    @media screen and (max-width: 900px) {
+        padding: 40px 0 20px 0;
+    }
+    @media screen and (max-width: 698px) {
+        > div {
+            max-width: 320px;
+        }
+    }
+
 `;
