@@ -6,6 +6,10 @@ import * as routes          from './constants/routes';
 import NavModal             from './components/NavModal';
 import NavHamburger         from './components/NavHamburger';
 
+import EmailConfirmation    from './components/contact/EmailConfirmation';
+import EmailSignup          from './components/contact/EmailSignup';
+// import EmailContact         from './components/contact/EmailContact';
+
 import Header               from './components/Header';
 import About                from './components/About';
 import Skills               from './components/Skills';
@@ -17,36 +21,51 @@ import Projects             from './components/Projects';
 // import Vote   from './components/Vote';
 
 export default class App extends Component {
+  state = {
+    emailContact: ""
+  }
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
+  toggleEmailSignup = (e) => {
+    const emailForm = document.getElementById('email');
+    emailForm.classList.toggle('active');
+    emailForm.classList.toggle('inactive');
+    this.setState({
+      emailContact: e.currentTarget.value
+    });
+  };
   render (){
+    const { emailContact } = this.state
     return (
       <AppContainer>
           <NavModal toggleMenu={this.toggleMenu}/>
-          <Switch>         
+          <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/>
+
+          <Switch>
+            <Route path={routes.MAIL} exact render={() => <EmailConfirmation/> }/>      
             <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
-            <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
             <Route path={routes.SERV} exact render={() => <HeroImage/>}/>
+            <Route path={routes.ROOT} render={() => <HeroImage/>}/>
           </Switch>
-        {/* <HeroImage/> */}
+
         <BodyContainer>    
           <Switch>         
-            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
             <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#181717"}/>}/>
             <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#000"}/>}/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#181717"}/>}/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
           </Switch>
 
           <ContentContainer>
           <Switch>         
-            <Route path={routes.ROOT} exact render={() => <Header/>}/>
             <Route path={routes.HOME} exact render={() => <Header/>}/>
-            <Route path={routes.INFO} exact render={() => <About/>}/>
+            <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
             <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><br/><br/><br/><br/><br/><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
+            <Route path={routes.ROOT} render={() => <Header/>}/>
             </Switch>
           </ContentContainer>
         </BodyContainer>        
