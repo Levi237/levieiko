@@ -49,7 +49,7 @@ const Container = styled.div`
             height: 298px;
             width: 298px;
             margin: 50px;
-            border: 1px solid #965BA5;
+            border: 1px solid #181717;
             background-color: rgba(255,255,255,1);
             text-align: center;
 
@@ -61,7 +61,7 @@ const Container = styled.div`
                 font-family: Merriweather;
                 text-transform: capitalize;
                 font-size: 40px;
-                color: #965BA5;
+                color: #181717;
                 width: 100%;
                 padding-top: 5%;
                 p {

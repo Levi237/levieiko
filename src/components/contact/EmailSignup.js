@@ -44,7 +44,7 @@ const Container = styled.div`
     }
     form input[type=submit] {
         background-color: #fff;
-        color: #965ba5;
+        color: #181717;
         border: purple solid 1px;
         position: relative;
         z-index: 900;

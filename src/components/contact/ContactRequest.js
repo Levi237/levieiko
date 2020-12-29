@@ -7,7 +7,6 @@ export default class ContactRequest extends Component {
         fNameValue: '',
         lNameValue: '',
         locationValue: '',
-        subjectValue: '',
         messageValue: '',
         addServices: ['Services Request:'],
         services: ["Corporate Wellness", "Personal Wellness", "Yoga Therapy", "Maternal Health", "Coaching", "Speaking"]
@@ -106,7 +105,7 @@ export default class ContactRequest extends Component {
                     />
                 </label>
 
-                <h3>Ask about additional services:</h3>
+                <h3>What Services are you Interested In?:</h3>
                 <div>
                     {buttonSelectors}
                     <input 
@@ -116,17 +115,7 @@ export default class ContactRequest extends Component {
                         value={addServices}
                     />
                 </div>
-                
-                <label htmlFor='SUBJECT'>
-                    <input 
-                        type="text" 
-                        name="SUBJECT" 
-                        id="SUBJECT" 
-                        value={subjectValue}
-                        placeholder="Subject" 
-                        onChange={(e)=>{this.setState({subjectValue: e.target.value});}}
-                    />
-                </label>
+
                 <label htmlFor='MESSAGE'>
                     <textarea 
                         type="text" 
@@ -162,7 +151,7 @@ const Form = styled.form`
     h3 {
         margin: 10px 0 0 0;
         text-transform: capitalize;
-        color: #965ba5;
+        color: #181717;
     }
     label {
         display: inline-block;
