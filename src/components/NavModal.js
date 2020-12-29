@@ -7,15 +7,15 @@ import * as routes from '../constants/routes';
 export default class NavModal extends Component {
 
     render(){
-        const { toggleHamburger } = this.props;
+        const { toggleMenu } = this.props;
         
         return(
             <NavContainer id="menu" className="inactive">
                 <div>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleHamburger()}}>HOME</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleHamburger()}}>ABOUT</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleHamburger()}}>SERVICES</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleHamburger()}}>CONTACT</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleMenu()}}>HOME</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleMenu()}}>SERVICES</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
                 </div>
             </NavContainer>
         );

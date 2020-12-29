@@ -3,21 +3,21 @@ import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
-import NavModal                  from './components/NavModal';
-import NavHamburger               from './components/NavHamburger';
+import NavModal             from './components/NavModal';
+import NavHamburger         from './components/NavHamburger';
 
-import Header   from './components/Header';
-import About    from './components/About';
-// import Skills   from './components/Skills';
-// import Clients  from './components/Clients';
-import ProjectsFlip from './components/ProjectsFlip';
-// import Projects from './components/Projects';
+import Header               from './components/Header';
+import About                from './components/About';
+import Skills               from './components/Skills';
+import Clients              from './components/Clients';
+import ProjectsFlip         from './components/ProjectsFlip';
+import Projects             from './components/Projects';
 // import Footer   from './components/Footer';
 
 // import Vote   from './components/Vote';
 
 export default class App extends Component {
-  toggleHamburger = () => {
+  toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
@@ -25,28 +25,30 @@ export default class App extends Component {
   render (){
     return (
       <AppContainer>
-          <NavModal toggleHamburger={this.toggleHamburger}/>
+          <NavModal toggleMenu={this.toggleMenu}/>
           <Switch>         
             <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
             <Route path={routes.ROOT} exact render={() => <HeroImage/>}/>
+            <Route path={routes.SERV} exact render={() => <HeroImage/>}/>
           </Switch>
         {/* <HeroImage/> */}
         <BodyContainer>    
           <Switch>         
-            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#fff"}/>}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleHamburger={this.toggleHamburger} colorThis={"#000"}/>}/>
+            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#000"}/>}/>
           </Switch>
 
-          <HeaderContainer>
+          <ContentContainer>
           <Switch>         
             <Route path={routes.ROOT} exact render={() => <Header/>}/>
             <Route path={routes.HOME} exact render={() => <Header/>}/>
             <Route path={routes.INFO} exact render={() => <About/>}/>
-            <Route path={routes.SERV} exact render={() => <ProjectsFlip/>}/>
+            <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><br/><br/><br/><br/><br/><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
             </Switch>
-          </HeaderContainer>
+          </ContentContainer>
         </BodyContainer>        
       </AppContainer>
     );
@@ -62,7 +64,7 @@ export default class App extends Component {
 //   background-color: #fff;
 
 // `;
-const HeaderContainer = styled.div`
+const ContentContainer = styled.div`
   color: #fff;
   height: 100vh;
   scroll-snap-align: start;

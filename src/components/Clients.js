@@ -101,7 +101,6 @@ const MobileImg = styled.img`
 `;
 const Container = styled.div`
     position: relative;
-    background-color: #fff;
     div {
         margin: 0 auto;
         max-width: 800px;

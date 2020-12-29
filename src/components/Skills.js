@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const Skills =()=> {
     return(
         <Container>
-            <br/><br/>
             <h1>Skills</h1>
+            <br/>
             <section>
-            HTML5 | CSS3 | JavaScript | Mongoose | MongoDB | Express | React | NodeJs | Flask | Python3 | Git | GitHub | Dreamweaver | Bootstrap | jQuery | VanillaJS | Firebase | Shopify | WordPress | MailChimp |  PhotoShop
+            HTML5 | CSS3 | JavaScript | React | NodeJs | Git | GitHub | VanillaJS | Firebase | Shopify | WordPress | MailChimp |  PhotoShop
             </section>
       </Container>
         );
@@ -18,6 +18,7 @@ const Container = styled.div`
     padding-top: 2%;
   }
   section {
+    text-align: center;
     padding: 2% 10% 40px;
   }
 `;

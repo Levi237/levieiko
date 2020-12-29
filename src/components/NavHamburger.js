@@ -1,12 +1,12 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-const NavHamburger = ({ toggleHamburger, colorThis }) => {
+const NavHamburger = ({ toggleMenu, colorThis }) => {
   return(
     <NavContainer>
       <Hamburger 
-        name="toggleHamburger" 
-        onClick={(e) => toggleHamburger(e)}
+        name="toggleMenu" 
+        onClick={(e) => toggleMenu(e)}
       >
         <><HomePatties style={{backgroundColor: colorThis}}/><HomePatties style={{backgroundColor: colorThis}}/><HomePatties style={{backgroundColor: colorThis}}/></>
       </Hamburger>
