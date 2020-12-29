@@ -9,7 +9,7 @@ export default class ContactRequest extends Component {
         locationValue: '',
         messageValue: '',
         addServices: ['Services Request:'],
-        services: ["Corporate Wellness", "Personal Wellness", "Yoga Therapy", "Maternal Health", "Coaching", "Speaking"]
+        services: ["Online Store", "Business Website", "Email Marketing", "Graphic Design"]
     };
 
     handleSelect = (e, service) => {
