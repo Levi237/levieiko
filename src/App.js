@@ -8,7 +8,6 @@ import NavHamburger         from './components/NavHamburger';
 
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
-// import EmailContact         from './components/contact/EmailContact';
 
 import Header               from './components/Header';
 import About                from './components/About';
@@ -16,9 +15,6 @@ import Skills               from './components/Skills';
 import Clients              from './components/Clients';
 import ProjectsFlip         from './components/ProjectsFlip';
 import Projects             from './components/Projects';
-// import Footer   from './components/Footer';
-
-// import Vote   from './components/Vote';
 
 export default class App extends Component {
 
