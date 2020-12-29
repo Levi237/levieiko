@@ -35,6 +35,8 @@ export default class ProjectsFlip extends Component {
         const { projects } = this.state;    
         return(
             <Container>
+                <br/><br/><br/><br/>
+                <h1>Projects</h1>
                 <FlipCards projects={projects} />
             </Container>
         );
