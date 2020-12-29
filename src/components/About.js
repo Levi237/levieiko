@@ -10,7 +10,7 @@ export default class About extends Component {
                   About Me:
                 </h2>
                 <p>
-                  I help small businesses be more professional in the digital world. 
+                  I help businesses enhance their online presence. 
                   Stores, blogs, email automations, photoshop, I can build/upgrade 
                   your online presence for that extra edge.
                 </p>

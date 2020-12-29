@@ -23,4 +23,4 @@ const Container = styled.div`
   }
 `;
 
-export default Skills;
+export default Skills; 
