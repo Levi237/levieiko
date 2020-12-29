@@ -21,14 +21,17 @@ import Projects             from './components/Projects';
 // import Vote   from './components/Vote';
 
 export default class App extends Component {
+
   state = {
     emailContact: ""
   }
+
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
+
   toggleEmailSignup = (e) => {
     const emailForm = document.getElementById('email');
     emailForm.classList.toggle('active');
@@ -37,8 +40,10 @@ export default class App extends Component {
       emailContact: e.currentTarget.value
     });
   };
+
   render (){
     const { emailContact } = this.state
+
     return (
       <AppContainer>
           <NavModal toggleMenu={this.toggleMenu}/>
@@ -73,16 +78,7 @@ export default class App extends Component {
     );
   }
 }
-// const SnappBottom = styled.div`
-//   height: 20px;
-//   background-color: #fff;
-//   scroll-snap-align: end; 
-// `;
-// const ClientsContainer = styled.div`
-//   scroll-snap-align: start; 
-//   background-color: #fff;
 
-// `;
 const ContentContainer = styled.div`
   color: #fff;
   height: 100vh;
@@ -90,40 +86,6 @@ const ContentContainer = styled.div`
   position: relative;
 `;
 
-// const SkillsContainer = styled.div`
-//   position: relative;
-//   text-align: center;
-//   background-color: #fff;
-//   scroll-snap-align: start;
-//   margin-top: 0;
-// `;
-// const ProjectsContainer = styled.div`
-//   color: #fff;
-//   text-align: center;
-//   scroll-snap-align: start;
-//   background-attachment: local;
-//   background-image: url('./background/milkyway.png');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   height: 500px;
-//   h1,h2 {
-//     color: #000;
-//     text-shadow: 0px 0px 3px rgba(255,255,255,0.9);
-//     padding: 20px 0;
-//   }
-//   @media screen and (max-width: 680px) {
-//     overflow: scroll;
-//     padding-bottom: 20px;
-//     height: 100vh;
-//   }
-// `;
-// const FooterContainer = styled.div`
-//   scroll-snap-align: start;
-//   height: 400px;
-//   background-color: #fff;
-//   position: relative;
-// `;
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
