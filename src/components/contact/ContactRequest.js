@@ -155,6 +155,11 @@ const Form = styled.form`
     background-color: white;
     padding: 20px 0;
 
+    h3 {
+        margin: 10px 0 0 0;
+        text-transform: capitalize;
+        color: #181717;
+    }
 
     input {
         height: 36px;
@@ -183,30 +188,10 @@ const Form = styled.form`
     }
     label {
         width: 44%;
+        display: inline-block;
         &:nth-of-type(even){
             margin-left: 1.75%
         }
-        textarea {
-            width: 86%;
-            border: 1px solid black;
-            border-radius: 0px;
-            height: 150px;
-            margin: 5px 0;
-            font-family: Montserrat, Arial;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
-            color: #473E4E;
-            padding: 2%;
-        }
-    }
-    h3 {
-        margin: 10px 0 0 0;
-        text-transform: capitalize;
-        color: #181717;
-    }
-    label {
-        display: inline-block;
 
         &:nth-of-type(5){
             width: 100%;
@@ -222,6 +207,19 @@ const Form = styled.form`
         input {
             width: 90%;
             padding: 5px 5%;
+        }
+        textarea {
+            width: 86%;
+            border: 1px solid black;
+            border-radius: 0px;
+            height: 150px;
+            margin: 5px 0;
+            font-family: Montserrat, Arial;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #473E4E;
+            padding: 2%;
         }
     }
     > div {
