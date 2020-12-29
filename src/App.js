@@ -8,6 +8,7 @@ import NavHamburger         from './components/NavHamburger';
 
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
+import Contact              from './components/contact/Contact';
 
 import Header               from './components/Header';
 import About                from './components/About';
@@ -46,8 +47,12 @@ export default class App extends Component {
         <NavModal toggleMenu={this.toggleMenu}/>
         <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/>
 
+        <Switch>         
+        </Switch>
+
         <Switch>
-          <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>      
+          <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>     
+          <Route contactType={emailContact} path={routes.MAIL} exact render={() => <Contact></Contact>}/>
           <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
           <Route path={routes.SERV} exact render={() => <HeroImage/>}/>
           <Route path={routes.ROOT} render={() => <HeroImage/>}/>
@@ -64,7 +69,7 @@ export default class App extends Component {
           <ContentContainer>
             <Switch>         
               <Route path={routes.HOME} exact render={() => <Header/>}/>
-              <Route path={routes.MAIL} exact render={() => <></>}/>
+              <Route path={routes.MAIL} exact render={() => <></>}/> 
               <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
               <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><br/><br/><br/><br/><br/><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
               <Route path={routes.ROOT} render={() => <Header/>}/>
