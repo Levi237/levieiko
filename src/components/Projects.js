@@ -76,7 +76,7 @@ const Projects =()=> {
 };
 
 const Container = styled.div`
-display: none;
+    display: none;
 
     h3 {
         text-align: center;
