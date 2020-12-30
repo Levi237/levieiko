@@ -46,6 +46,7 @@ const FlipCard = styled.div`
     img {
         width: 200px!important;
         height: 300px!important;
+        border-radius: 6px;
     }
     @media only screen and (max-width: 1000px) {
         width: 20vw!important;
