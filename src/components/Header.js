@@ -15,8 +15,6 @@ const Container = styled.div`
   img {
     margin: calc(50vh - 60px) calc(50vw - 60px);
   }
-  // @media screen and (max-width: 900px){
-  // }
 `;
 
 export default Header;
