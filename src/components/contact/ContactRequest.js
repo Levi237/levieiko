@@ -33,7 +33,6 @@ export default class ContactRequest extends Component {
     render(){
 
         const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
-        console.log(process.env.REACT_APP_MAILCHIMP_ID, "id")
         const buttonSelectors = services.map((service, key) => {
             return(
                 <ServiceBtn 
