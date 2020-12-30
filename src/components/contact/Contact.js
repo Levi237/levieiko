@@ -9,7 +9,6 @@ export default class Contact extends Component {
         return(
             <Container id="contact" className="contact-container">
                 <ContactRequest>
-                <br/><br/><br/>
                 <h1>CONTACT</h1>
                 <p>
                     Thank you for taking an interest in my work!  
@@ -33,11 +32,23 @@ const Container = styled.div`
     h1, p {
         color: #181717;
     }
+    h1 {
+        margin-top: 40px;
+    }
     p {
-        margin-top: 10vh;
+        margin-top: 40px;
+        padding: 0 5%;
     }
     @media screen and (max-width: 745px) {
         align-items: start;
         background-color: #fff;
+        h1 {
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 20px;
+        br {
+            display: none!important;
+        }
     }
 `;
