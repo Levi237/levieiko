@@ -9,6 +9,7 @@ export default class Contact extends Component {
         return(
             <Container id="contact" className="contact-container">
                 <ContactRequest>
+                <br/><br/><br/>
                 <h1>CONTACT</h1>
                 <p>
                     Thank you for taking an interest in my work!  
@@ -16,8 +17,7 @@ export default class Contact extends Component {
                     and a brief message and I will send you a 
                     confirmation via email right away :)
                 </p>
-                    
-                    </ContactRequest>
+                </ContactRequest>
             </Container>
         );
     };
@@ -32,7 +32,9 @@ const Container = styled.div`
     overflow: scroll;
     h1, p {
         color: #181717;
-        margin-top: 10vh
+    }
+    p {
+        margin-top: 10vh;
     }
     @media screen and (max-width: 745px) {
         align-items: start;
