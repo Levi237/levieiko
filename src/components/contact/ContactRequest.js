@@ -31,8 +31,8 @@ export default class ContactRequest extends Component {
     };
 
     render(){
-
         const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
+
         const buttonSelectors = services.map((service, key) => {
             return(
                 <ServiceBtn 
