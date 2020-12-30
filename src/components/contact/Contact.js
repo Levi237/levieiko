@@ -47,8 +47,5 @@ const Container = styled.div`
         }
         p {
             margin-top: 20px;
-        br {
-            display: none!important;
-        }
     }
 `;
