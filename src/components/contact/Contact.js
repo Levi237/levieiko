@@ -29,15 +29,14 @@ const Container = styled.div`
     padding-top: 0;
     position: fixed;
     overflow: scroll;
-    h1, p {
-        color: #181717;
-    }
     h1 {
+        color: #181717;
         margin-top: 40px;
     }
     p {
         margin-top: 40px;
         padding: 0 5%;
+        color: rgba(24, 23, 23, .75);
     }
     @media screen and (max-width: 745px) {
         align-items: start;

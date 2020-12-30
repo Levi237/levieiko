@@ -49,7 +49,7 @@ const Container = styled.div`
             height: 298px;
             width: 298px;
             margin: 50px;
-            border: 1px solid #181717;
+            border: 1px solid #29bfff;;
             background-color: rgba(255,255,255,1);
             text-align: center;
 

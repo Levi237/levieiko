@@ -8,7 +8,7 @@ export default class ContactRequest extends Component {
         websiteValue: '',
         messageValue: '',
         addServices: ['Services Request:'],
-        services: ["Online Store", "Business Website", "Email Marketing", "Graphic Design"]
+        services: ["Online Store", "Professional Website", "Email Marketing", "Graphic Design"]
     };
 
     handleSelect = (e, service) => {
@@ -35,7 +35,7 @@ export default class ContactRequest extends Component {
 
         const buttonSelectors = services.map((service, key) => {
             return(
-                <ServiceBtn 
+                <button 
                     key={key} 
                     id={key}
                     name={service}
@@ -44,7 +44,7 @@ export default class ContactRequest extends Component {
                     onClick={(e) => {this.handleSelect(e, service)}
                 }>
                    {service}
-                </ServiceBtn>
+                </button>
             );
         });
         return(<>
@@ -133,13 +133,6 @@ export default class ContactRequest extends Component {
         </>);
     };
 };
-
-const ServiceBtn = styled.button`
-    width: 150px;
-    font-size: 20px;
-    padding: 5px 15px;
-    margin: 5px;
-`;
 
 const AuthFilter = styled.div`
     position: absolute; left: -5000px;
@@ -236,7 +229,7 @@ const Form = styled.form`
             width: 150px;
             height: 54px;
             font-size: 16px;
-            padding: 5px 15px;
+            padding: 5px 30px;
             margin: 5px;
         }
     }

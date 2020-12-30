@@ -56,6 +56,6 @@ code {
 
 /* Email Form */
 button.selectedHighlighted {
-  background-color:rgba(24, 23, 23, .95)!important;
-  color: #fff;
+  background-color: rgba(41, 191, 255, .3)!important;
+  /* color: #fff; */
 }
