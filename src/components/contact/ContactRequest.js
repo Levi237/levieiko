@@ -103,7 +103,7 @@ export default class ContactRequest extends Component {
                     />
                 </label>
 
-                <h3>What Services are you Interested In?:</h3>
+                <h3>What are You In?</h3>
                 <div>
                     {buttonSelectors}
                     <input 
@@ -239,6 +239,11 @@ const Form = styled.form`
     @media screen and (max-width: 698px) {
         > div {
             max-width: 320px;
+        }
+        label {
+            display: block;
+            width: 90%;
+            margin: 0 auto!important;
         }
     }
 
