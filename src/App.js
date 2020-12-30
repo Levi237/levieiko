@@ -65,8 +65,7 @@ export default class App extends Component {
           <ContentContainer>
             <Switch>         
               <Route path={routes.HOME} exact render={() => <Header/>}/>
-              {/* <Route path={routes.MAIL} exact render={() => <></>}/>  */}
-              <Route contactType={emailContact} path={routes.MAIL} exact render={() => <Contact></Contact>}/>
+              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>}/>
               <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
               <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><br/><br/><br/><br/><br/><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
               <Route path={routes.ROOT} render={() => <Header/>}/>
