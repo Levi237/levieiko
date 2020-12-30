@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/firebase-storage';
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 firebase.initializeApp({
   apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
