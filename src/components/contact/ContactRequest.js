@@ -103,7 +103,7 @@ export default class ContactRequest extends Component {
                     />
                 </label>
 
-                <h3>What are You In?</h3>
+                <h3>What are You Intrested In?</h3>
                 <div>
                     {buttonSelectors}
                     <input 
