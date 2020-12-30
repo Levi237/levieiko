@@ -51,7 +51,7 @@ export default class ContactRequest extends Component {
         });
         return(<>
                 <Form 
-                    action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&ampid=${process.env.REACT_APP_MAILCHIMP_ID}`}
+                    action={`https://LeviEiko.us5.list-manage.com/subscribe/post?u=fd3d8729543e3dd38afa3ff51&amp;id=f08d59ca6f`}
                     method="POST" 
                     id="mc-embedded-subscribe-form" 
                     name="mc-embedded-subscribe-form" 
@@ -252,3 +252,6 @@ const Form = styled.form`
     }
 
 `;
+
+
+
