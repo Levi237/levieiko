@@ -49,9 +49,9 @@ export default class App extends Component {
 
         <Switch>
           <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>     
-          <Route path={routes.HOME} exact render={() => <HeroImage/>}/>
+          <Route path={routes.HOME} exact render={() => <HeroImageAnimation/>}/>
           <Route path={routes.SERV} exact render={() => <HeroImage/>}/>
-          <Route path={routes.ROOT} render={() => <HeroImage/>}/>
+          <Route path={routes.ROOT} render={() => <HeroImageAnimation/>}/>
         </Switch>
 
         <BodyContainer>
@@ -108,12 +108,22 @@ const HeroImage = styled.div`
 
   background-image: url(background/header-hero.png);
   background-size: cover;
-  background-position: left;
-
+  
   position: fixed;
   z-index: -100;
 
+
   @media screen and (max-width: 900px){
     background-position: 23%;
+  }
+`;
+const HeroImageAnimation = styled(HeroImage)`
+  background-repeat: repeat-x;
+  animation: slideleft 900s infinite linear;
+
+  @keyframes slideleft {
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
   }
 `;
