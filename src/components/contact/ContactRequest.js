@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
 export default class ContactRequest extends Component { 
     state = {
         emailValue: '',
@@ -34,7 +33,7 @@ export default class ContactRequest extends Component {
     render(){
 
         const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
-
+        console.log(process.env.REACT_APP_MAILCHIMP_ID, "id")
         const buttonSelectors = services.map((service, key) => {
             return(
                 <ServiceBtn 
@@ -51,7 +50,7 @@ export default class ContactRequest extends Component {
         });
         return(<>
                 <Form 
-                    action={`https://LeviEiko.us5.list-manage.com/subscribe/post?u=fd3d8729543e3dd38afa3ff51&amp;id=f08d59ca6f`}
+                    action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
                     method="POST" 
                     id="mc-embedded-subscribe-form" 
                     name="mc-embedded-subscribe-form" 
