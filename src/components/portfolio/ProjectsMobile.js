@@ -31,11 +31,17 @@ export default class ProjectsMobile extends Component {
         }]
     }
     render(){
-
-    const mapped = this.state.projects.map((x, k) => {
+        
+    const { projects } = this.state
+    const mapped = projects.map((x, k) => {
         return (
             <div key={k}>
                 <h3>{x.title}</h3>
+                <section>
+                    {x.lineOne}
+                    <br/>
+                    {x.lineTwo}
+                </section>
                 <a 
                     alt={x.title}
                     target="_blank"
@@ -44,11 +50,6 @@ export default class ProjectsMobile extends Component {
                     >
                     <img src={x.image}/>
                 </a>
-                <section>
-                    {x.lineOne}
-                    <br/>
-                    {x.lineTwo}
-                </section>
             </div>
         )
     })
@@ -84,20 +85,16 @@ const Container = styled.div`
         color: #fff;
         text-align: center;
         font-size: 12px;
+        padding-bottom: 5px;
     }
     @media screen and (max-width: 760px) {
         display: block;
-        section {
-            font-size: 9px;
-        }
-    }
-    @media screen and (max-width: 680px) {
         div {
             width: 40vw;
             margin: 5vw;
         }
         section {
-            font-size: 3vw;
+            font-size: 2.125vw;
             font-weight: 800;
         } 
     }

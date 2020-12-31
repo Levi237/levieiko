@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled               from 'styled-components';
 
 import Skills               from './Skills';
 import Clients              from './Clients';
@@ -35,14 +36,21 @@ export default class Portfolio extends Component {
     }
     render(){
         return (
-            <div style={{backgroundColor: "rgba(19,17,17,.8)",paddingTop: "80px"}}>
+            <Container>
                 <h1>PORTFOLIO</h1>
                 <br/><br/><br/>
                 <Skills/>
                 <Clients/>
                 <ProjectsFlip/><ProjectsMobile/>
-            </div>
+            </Container>
         );
     };
 };
 
+const Container = styled.div`
+    background-color: rgba(19,17,17,.8);
+    padding-top: 80px;
+    @media screen and (max-width: 745px){
+        padding-top: 60px;
+    }
+`;
