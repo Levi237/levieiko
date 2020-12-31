@@ -13,10 +13,8 @@ import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
 import Contact              from './components/contact/Contact';
 
-import Skills               from './components/portfolio/Skills';
-import Clients              from './components/portfolio/Clients';
-import ProjectsFlip         from './components/portfolio/ProjectsFlip';
-import Projects             from './components/portfolio/Projects';
+import Portfolio            from './components/portfolio/Portfolio';
+
 
 export default class App extends Component {
   state = {
@@ -89,18 +87,18 @@ export default class App extends Component {
         <BodyContainer>
           <Switch>         
             <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} />}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} />}/>
             <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} />}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} />}/>
             <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} />}/>
             <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} />}/>
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <Home/>}/>
-              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>}/>
-              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
-              <Route path={routes.PORT} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
-              <Route path={routes.ROOT} render={() => <Home/>}/>
+              <Route path={routes.HOME} exact render={() => <Home/>} />
+              <Route path={routes.PORT} exact render={() => <Portfolio/>} />
+              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>} />
+              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>} />
+              <Route path={routes.ROOT} render={() => <Home/>} />
             </Switch>
           </ContentContainer>
         </BodyContainer>   

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const Skills =()=> {
     return(
         <Container>
-            <h1>PORTFOLIO</h1>
-            <br/><br/><br/>
             <h1>Skills</h1>
             <br/>
             <section>
@@ -43,7 +41,7 @@ const Skills =()=> {
 
 const Container = styled.div`
   h1 {
-    padding-top: 60px;
+    padding-top: 20px;
   }
   section {
     text-align: center;

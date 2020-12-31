@@ -9,7 +9,6 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
       <section style={{backgroundColor: pageStyle.color}}/>
       <section style={{backgroundColor: pageStyle.color}}/>
     </Hamburger>
-    {/* <Title style={{color: pageStyle.color}}>{pageStyle.title}</Title> */}
   </>);
 };
 
