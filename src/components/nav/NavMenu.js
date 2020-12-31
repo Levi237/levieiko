@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink }          from 'react-router-dom';
+import styled               from 'styled-components';
 
-import * as routes from '../constants/routes';
+import * as routes          from '../../constants/routes';
 
-export default class NavModal extends Component {
+export default class NavMenu extends Component {
 
     render(){
         const { toggleMenu } = this.props;

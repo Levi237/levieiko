@@ -1,0 +1,40 @@
+import React       from 'react';
+import styled      from 'styled-components';
+
+const NavHamburger = ({ toggleMenu, hamburgerColor, logoColor, displayLogo }) => {
+  return(<>
+    <Logo src="../logo.png" style={{display: displayLogo, filter: logoColor}}/>
+    <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
+      <section style={{backgroundColor: hamburgerColor}}/>
+      <section style={{backgroundColor: hamburgerColor}}/>
+      <section style={{backgroundColor: hamburgerColor}}/>
+    </Hamburger>
+  </>);
+};
+
+const Logo = styled.img`
+  position: absolute;
+  z-index:999;
+  left:0;
+
+  width: 36px;
+  margin: 5vw 0 0 5vw;
+`;
+
+const Hamburger = styled.div`
+  position: absolute;
+  z-index: 999;
+  right: 0;
+
+  margin: 5vw 5vw 0 0;
+
+  section {
+    margin: 6px 0;
+    width: 35px;
+    height: 4px;
+  }
+  @media screen and (max-width: 945px) {
+  }
+`;
+
+export default NavHamburger;

@@ -3,14 +3,14 @@ import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
-import NavModal             from './components/NavModal';
-import NavHamburger         from './components/NavHamburger';
+import NavMenu              from './components/nav/NavMenu';
+import NavHamburger         from './components/nav/NavHamburger';
 
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
 import Contact              from './components/contact/Contact';
 
-import Header               from './components/Header';
+import Home               from './components/Home';
 import About                from './components/About';
 import Skills               from './components/Skills';
 import Clients              from './components/Clients';
@@ -18,9 +18,36 @@ import ProjectsFlip         from './components/ProjectsFlip';
 import Projects             from './components/Projects';
 
 export default class App extends Component {
-
   state = {
-    emailContact: ""
+    emailContact: "",
+    pageStyle: {
+      home: {
+        hamburgerColor: "#fff",
+        logoColor: "invert(0)",
+        displayLogo: "none",
+      },
+      about: {
+        hamburgerColor: "#fff",
+        logoColor: "invert(0)",
+        displayLogo: "none",
+      },
+      services: {
+        hamburgerColor: "#fff",
+        logoColor: "invert(0)",
+        displayLogo: "inline-block",
+      },
+      mail: {
+        hamburgerColor: "#181717",
+        logoColor: "invert(1)",
+        displayLogo: "inline-block",
+      },
+      root: {
+        hamburgerColor: "#fff",
+        logoColor: "invert(0)",
+        displayLogo: "none",
+      },
+
+    },
   }
 
   toggleMenu = () => {
@@ -39,12 +66,13 @@ export default class App extends Component {
   };
 
   render (){
-    const { emailContact } = this.state
 
+    const { emailContact, pageStyle } = this.state
+    console.log(pageStyle.home.hamburgerColor, "<===== pageStyle.test")
     return (
       <AppContainer>
 
-        <NavModal toggleMenu={this.toggleMenu}/>
+        <NavMenu toggleMenu={this.toggleMenu}/>
         <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/>
 
         <Switch>
@@ -56,19 +84,19 @@ export default class App extends Component {
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#181717"}/>}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#181717"}/>}/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} colorThis={"#fff"}/>}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.home.logoColor} displayLogo={pageStyle.home.displayLogo} hamburgerColor={pageStyle.home.hamburgerColor}/>}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.about.logoColor} displayLogo={pageStyle.about.displayLogo} hamburgerColor={pageStyle.about.hamburgerColor}/>}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.services.logoColor} displayLogo={pageStyle.services.displayLogo} hamburgerColor={pageStyle.services.hamburgerColor}/>}/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.mail.logoColor} displayLogo={pageStyle.mail.displayLogo} hamburgerColor={pageStyle.mail.hamburgerColor}/>}/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.root.logoColor} displayLogo={pageStyle.root.displayLogo} hamburgerColor={pageStyle.root.hamburgerColor}/>}/>
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <Header/>}/>
+              <Route path={routes.HOME} exact render={() => <Home/>}/>
               <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>}/>
               <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
-              <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><br/><br/><br/><br/><br/><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
-              <Route path={routes.ROOT} render={() => <Header/>}/>
+              <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
+              <Route path={routes.ROOT} render={() => <Home/>}/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   

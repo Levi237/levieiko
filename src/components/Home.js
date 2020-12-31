@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // import 
 
-const Header =()=> {
+const Home =()=> {
     return(
         <Container>
             <img src="logo.png" alt="levieiko.com"/>
@@ -17,4 +17,4 @@ const Container = styled.div`
   }
 `;
 
-export default Header;
+export default Home;

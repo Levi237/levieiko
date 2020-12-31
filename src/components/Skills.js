@@ -7,16 +7,6 @@ const Skills =()=> {
             <h1>Skills</h1>
             <br/>
             <section>
-              Liquid
-               | 
-              Shopify
-               | 
-              WordPress
-               | 
-              MailChimp
-               | 
-              PhotoShop
-              <span> | </span><br/>
               React
                | 
               Firebase
@@ -27,6 +17,16 @@ const Skills =()=> {
                | 
               Git 
               <span> | </span><br/>
+              Shopify
+               | 
+              WordPress
+               | 
+              MailChimp
+               | 
+              PhotoShop
+              <span> | </span><br/>
+              Liquid
+               | 
               CSS
                |
               HTML
@@ -40,8 +40,8 @@ const Skills =()=> {
 };
 
 const Container = styled.div`
-  h2 {
-    padding-top: 2%;
+  h1 {
+    padding-top: 60px;
   }
   section {
     text-align: center;
@@ -60,6 +60,8 @@ const Container = styled.div`
         display: block;
       }
     }
+  }
+  @media screen and (max-width: 400px){
   }
 `;
 
