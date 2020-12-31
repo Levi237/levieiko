@@ -3,61 +3,33 @@ import React, { Component }     from 'react';
 import styled                   from 'styled-components';
 
 export default class ProjectsMobile extends Component {
-    state = {
-        projects: [{
-            title: "PokeGen",
-            image: "./projects/pokegen.png",
-            link: "https://pokegen.herokuapp.com/",
-            lineOne: "Build your own Pokemon Card MEME.",
-            lineTwo:"Login, create, and share."
-        },{
-            title: "Hi Sierra!",
-            image: "./projects/hi-sierra.png",
-            link: "https://parkintel.herokuapp.com/home",
-            lineOne: "Learn more about the National Parks.",
-            lineTwo:"Track unexpected closures."
-        },{
-            title: "LA-HOP",
-            image: "./projects/la-hop.png",
-            link: "https://lahsa-la-hopv2.herokuapp.com/request",
-            lineOne: "Tools for the public to help",
-            lineTwo: "report homeless needs."
-        },{
-            title: "BlackJack",
-            image: "./projects/blackjack.png",
-            link: "https://levi237.github.io/blackjack-reup/",
-            lineOne: "Bid, Hit, Double Down, Call.",
-            lineTwo: "Black Jack circa 1990."
-        }]
-    }
     render(){
-        
-    const { projects } = this.state
-    const mapped = projects.map((x, k) => {
-        return (
-            <div key={k}>
-                <h3>{x.title}</h3>
-                <section>
-                    {x.lineOne}
-                    <br/>
-                    {x.lineTwo}
-                </section>
-                <a 
-                    alt={x.title}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={x.link}
-                    >
-                    <img src={x.image}/>
-                </a>
-            </div>
-        )
-    })
+        const { projects } = this.props
+        const mapped = projects.map((x, k) => {
+            return (
+                <div key={k}>
+                    <h3>{x.title}</h3>
+                    <section>
+                        {x.lineOne}
+                        <br/>
+                        {x.lineTwo}
+                    </section>
+                    <a 
+                        alt={x.title}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={x.link}
+                        >
+                        <img src={x.image}/>
+                    </a>
+                </div>
+            )
+        })
         return(
             <Container>
-                    <br/><br/><br/><br/>
-                    <h1>Projects</h1>
-                    {mapped}
+                <br/><br/><br/><br/>
+                <h1>Projects</h1>
+                {mapped}
             </Container>
         );
     };

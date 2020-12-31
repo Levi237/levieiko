@@ -35,13 +35,14 @@ export default class Portfolio extends Component {
         }]
     }
     render(){
+        const { projects } = this.state
         return (
             <Container>
                 <h1>PORTFOLIO</h1>
                 <br/><br/><br/>
                 <Skills/>
                 <Clients/>
-                <ProjectsFlip/><ProjectsMobile/>
+                <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
             </Container>
         );
     };

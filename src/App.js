@@ -86,18 +86,18 @@ export default class App extends Component {
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} />}/>
-            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} />}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} />}/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} />}/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} />}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} /> }/>
+            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} /> }/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} /> }/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} /> }/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} /> }/>
           </Switch>
           <ContentContainer>
             <Switch>         
               <Route path={routes.HOME} exact render={() => <Home/>} />
               <Route path={routes.PORT} exact render={() => <Portfolio/>} />
-              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>} />
-              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>} />
+              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>  }/>
+              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact} /> }/>
               <Route path={routes.ROOT} render={() => <Home/>} />
             </Switch>
           </ContentContainer>
