@@ -31,7 +31,7 @@ export default class App extends Component {
         logoColor: "invert(0)",
         displayLogo: "none",
       },
-      services: {
+      portfolio: {
         hamburgerColor: "#fff",
         logoColor: "invert(0)",
         displayLogo: "inline-block",
@@ -78,7 +78,7 @@ export default class App extends Component {
         <Switch>
           <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>     
           <Route path={routes.HOME} exact render={() => <HeroImageAnimation/>}/>
-          <Route path={routes.SERV} exact render={() => <HeroImage/>}/>
+          <Route path={routes.PORT} exact render={() => <HeroImage/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageAnimation/>}/>
         </Switch>
 
@@ -86,7 +86,7 @@ export default class App extends Component {
           <Switch>         
             <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} />}/>
             <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} />}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.services} />}/>
+            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} />}/>
             <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} />}/>
             <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} />}/>
           </Switch>
@@ -95,7 +95,7 @@ export default class App extends Component {
               <Route path={routes.HOME} exact render={() => <Home/>}/>
               <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact}></Contact>}/>
               <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>}/>
-              <Route path={routes.SERV} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
+              <Route path={routes.PORT} exact render={() => <div style={{backgroundColor: "rgba(19,17,17,.8)"}}><Skills/><Clients/><ProjectsFlip/><Projects/></div>}/>
               <Route path={routes.ROOT} render={() => <Home/>}/>
             </Switch>
           </ContentContainer>
