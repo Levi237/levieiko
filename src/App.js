@@ -6,16 +6,17 @@ import * as routes          from './constants/routes';
 import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
+import Home                 from './components/Home';
+import About                from './components/About';
+
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
 import Contact              from './components/contact/Contact';
 
-import Home               from './components/Home';
-import About                from './components/About';
-import Skills               from './components/Skills';
-import Clients              from './components/Clients';
-import ProjectsFlip         from './components/ProjectsFlip';
-import Projects             from './components/Projects';
+import Skills               from './components/portfolio/Skills';
+import Clients              from './components/portfolio/Clients';
+import ProjectsFlip         from './components/portfolio/ProjectsFlip';
+import Projects             from './components/portfolio/Projects';
 
 export default class App extends Component {
   state = {
@@ -23,31 +24,31 @@ export default class App extends Component {
     pageStyle: {
       home: {
         title: "",
-        hamburgerColor: "#fff",
+        color: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
       about: {
         title: "",
-        hamburgerColor: "#181717",
+        color: "#181717",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
       portfolio: {
         title: "portfolio",
-        hamburgerColor: "#fff",
+        color: "#fff",
         logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       mail: {
         title: "contact",
-        hamburgerColor: "#181717",
+        color: "#181717",
         logoColor: "invert(1)",
         displayLogo: "inline-block",
       },
       root: {
         title: "",
-        hamburgerColor: "#fff",
+        color: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
@@ -60,7 +61,6 @@ export default class App extends Component {
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
-
   toggleEmailSignup = (e) => {
     const emailForm = document.getElementById('email');
     emailForm.classList.toggle('active');
@@ -71,9 +71,8 @@ export default class App extends Component {
   };
 
   render (){
-
     const { emailContact, pageStyle } = this.state
-    console.log(pageStyle.home.hamburgerColor, "<===== pageStyle.test")
+
     return (
       <AppContainer>
 

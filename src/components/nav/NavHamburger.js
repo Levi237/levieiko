@@ -5,11 +5,11 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo src="../logo.png" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/>
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
-      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
-      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
-      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
+      <section style={{backgroundColor: pageStyle.color}}/>
+      <section style={{backgroundColor: pageStyle.color}}/>
+      <section style={{backgroundColor: pageStyle.color}}/>
     </Hamburger>
-    <Title>{pageStyle.title}</Title>
+    {/* <Title style={{color: pageStyle.color}}>{pageStyle.title}</Title> */}
   </>);
 };
 

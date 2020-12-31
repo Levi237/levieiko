@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const Skills =()=> {
     return(
         <Container>
+            <h1>PORTFOLIO</h1>
+            <br/><br/><br/>
             <h1>Skills</h1>
             <br/>
             <section>

@@ -31,7 +31,6 @@ const Container = styled.div`
     overflow: scroll;
     h1 {
         color: #181717;
-        margin-top: 40px;
     }
     p {
         margin-top: 40px;
@@ -40,10 +39,6 @@ const Container = styled.div`
     }
     @media screen and (max-width: 745px) {
         align-items: start;
-        background-color: #fff;
-        h1 {
-            margin-top: 20px;
-        }
         p {
             margin-top: 20px;
     }
