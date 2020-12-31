@@ -27,7 +27,7 @@ export default class App extends Component {
         displayLogo: "none",
       },
       about: {
-        hamburgerColor: "#fff",
+        hamburgerColor: "#181717",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
@@ -84,11 +84,11 @@ export default class App extends Component {
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.home.logoColor} displayLogo={pageStyle.home.displayLogo} hamburgerColor={pageStyle.home.hamburgerColor}/>}/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.about.logoColor} displayLogo={pageStyle.about.displayLogo} hamburgerColor={pageStyle.about.hamburgerColor}/>}/>
-            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.services.logoColor} displayLogo={pageStyle.services.displayLogo} hamburgerColor={pageStyle.services.hamburgerColor}/>}/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.mail.logoColor} displayLogo={pageStyle.mail.displayLogo} hamburgerColor={pageStyle.mail.hamburgerColor}/>}/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} logoColor={pageStyle.root.logoColor} displayLogo={pageStyle.root.displayLogo} hamburgerColor={pageStyle.root.hamburgerColor}/>}/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} />}/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} />}/>
+            <Route path={routes.SERV} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.services} />}/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} />}/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} />}/>
           </Switch>
           <ContentContainer>
             <Switch>         

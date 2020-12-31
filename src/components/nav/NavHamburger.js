@@ -1,13 +1,13 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-const NavHamburger = ({ toggleMenu, hamburgerColor, logoColor, displayLogo }) => {
+const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
-    <Logo src="../logo.png" style={{display: displayLogo, filter: logoColor}}/>
+    <Logo src="../logo.png" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/>
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
-      <section style={{backgroundColor: hamburgerColor}}/>
-      <section style={{backgroundColor: hamburgerColor}}/>
-      <section style={{backgroundColor: hamburgerColor}}/>
+      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
+      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
+      <section style={{backgroundColor: pageStyle.hamburgerColor}}/>
     </Hamburger>
   </>);
 };
