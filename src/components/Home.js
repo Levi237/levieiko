@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import 
-
 const Home =()=> {
     return(
         <Container>
@@ -12,9 +10,10 @@ const Home =()=> {
 };
 
 const Container = styled.div`
-  img {
-    margin: calc(50vh - 60px) calc(50vw - 60px);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 `;
 
 export default Home;
