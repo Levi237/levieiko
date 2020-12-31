@@ -22,26 +22,31 @@ export default class App extends Component {
     emailContact: "",
     pageStyle: {
       home: {
+        title: "",
         hamburgerColor: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
       about: {
+        title: "",
         hamburgerColor: "#181717",
         logoColor: "invert(0)",
         displayLogo: "none",
       },
       portfolio: {
+        title: "portfolio",
         hamburgerColor: "#fff",
         logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       mail: {
+        title: "contact",
         hamburgerColor: "#181717",
         logoColor: "invert(1)",
         displayLogo: "inline-block",
       },
       root: {
+        title: "",
         hamburgerColor: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
