@@ -6,12 +6,12 @@ import * as routes          from './constants/routes';
 import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
-import Home                 from './components/Home';
-import About                from './components/About';
+import HomePage                 from './components/HomePage';
+import AboutPage                from './components/AboutPage';
 
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
-import Contact              from './components/contact/Contact';
+import ContactPage              from './components/contact/ContactPage';
 
 import Portfolio            from './components/portfolio/Portfolio';
 
@@ -48,9 +48,9 @@ export default class App extends Component {
         color: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
-      },
-    },
-  }
+      }
+    }
+  };
 
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
@@ -92,11 +92,11 @@ export default class App extends Component {
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <Home/>} />
+              <Route path={routes.HOME} exact render={() => <HomePage/>} />
               <Route path={routes.PORT} exact render={() => <Portfolio/>} />
-              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>  }/>
-              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact} /> }/>
-              <Route path={routes.ROOT} render={() => <Home/>} />
+              <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
+              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact} /> }/>
+              <Route path={routes.ROOT} render={() => <HomePage/>} />
             </Switch>
           </ContentContainer>
         </BodyContainer>   

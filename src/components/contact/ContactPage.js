@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
 
-import ContactRequest       from './ContactRequest';
+import EmailForm       from './EmailForm';
 
-export default class Contact extends Component { 
+export default class ContactPage extends Component { 
     
     render(){
         return(
             <Container id="contact" className="contact-container">
-                <ContactRequest>
+                <EmailForm>
                 <h1>CONTACT</h1>
                 <p>
                     Thank you for taking an interest in my work!  
@@ -16,7 +16,7 @@ export default class Contact extends Component {
                     and a brief message and I will send you a 
                     confirmation via email right away :)
                 </p>
-                </ContactRequest>
+                </EmailForm>
             </Container>
         );
     };

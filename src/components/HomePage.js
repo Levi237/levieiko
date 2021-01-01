@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Home =()=> {
+const HomePage =()=> {
     return(
         <Container>
             <img src="logo.png" alt="levieiko.com"/>
@@ -16,4 +16,4 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-export default Home;
+export default HomePage;

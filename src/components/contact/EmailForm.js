@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-export default class ContactRequest extends Component { 
+export default class EmailForm extends Component { 
     state = {
         emailValue: '',
         fNameValue: '',

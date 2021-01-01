@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-export default class About extends Component {
+export default class AboutPage extends Component {
     render(){
       const { toggleEmailSignup } = this.props
         return(
