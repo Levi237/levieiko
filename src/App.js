@@ -6,14 +6,11 @@ import * as routes          from './constants/routes';
 import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
-import HomePage             from './components/HomePage';
+import PortfolioPage        from './components/portfolio/PortfolioPage';
 import AboutPage            from './components/AboutPage';
-
-import EmailConfirmation    from './components/contact/EmailConfirmation';
-import EmailSignup          from './components/contact/EmailSignup';
 import ContactPage          from './components/contact/ContactPage';
-
-import Portfolio            from './components/portfolio/Portfolio';
+import EmailSignup          from './components/contact/EmailSignup';
+import EmailConfirmation    from './components/contact/EmailConfirmation';
 
 export default class App extends Component {
   state = {
@@ -84,19 +81,19 @@ export default class App extends Component {
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} /> }/>
-            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} /> }/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} /> }/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} /> }/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} /> }/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <HomePage/>} />
-              <Route path={routes.PORT} exact render={() => <Portfolio/>} />
+              <Route path={routes.HOME} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
-              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact} /> }/>
-              <Route path={routes.ROOT} render={() => <HomePage/>} />
+              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
+              <Route path={routes.ROOT} render={() => <HomeLogo/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
@@ -140,7 +137,6 @@ const HeroImageDiv = styled.div`
   position: fixed;
   z-index: -100;
 
-
   @media screen and (max-width: 900px){
     background-position: 23%;
   }
@@ -148,4 +144,14 @@ const HeroImageDiv = styled.div`
 const HeroImageDivAnimation = styled(HeroImageDiv)`
   background-repeat: repeat-x;
   animation: slideleft 900s infinite linear;
+`;
+
+const HomeLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 `;

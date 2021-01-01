@@ -5,8 +5,9 @@ import Skills               from './Skills';
 import Clients              from './Clients';
 import ProjectsFlip         from './ProjectsFlip';
 import ProjectsMobile       from './ProjectsMobile';
+import Photography          from './Photography';
 
-export default class Portfolio extends Component {
+export default class PortfolioPage extends Component {
     state = {
         projects: [{
             title: "PokeGen",
@@ -43,6 +44,7 @@ export default class Portfolio extends Component {
                 <Skills/>
                 <Clients/>
                 <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
+                <Photography/>
             </Container>
         );
     };
