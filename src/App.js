@@ -15,7 +15,6 @@ import Contact              from './components/contact/Contact';
 
 import Portfolio            from './components/portfolio/Portfolio';
 
-
 export default class App extends Component {
   state = {
     emailContact: "",
@@ -50,7 +49,6 @@ export default class App extends Component {
         logoColor: "invert(0)",
         displayLogo: "none",
       },
-
     },
   }
 
