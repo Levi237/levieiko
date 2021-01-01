@@ -59,3 +59,9 @@ button.selectedHighlighted {
   background-color: rgba(41, 191, 255, .3)!important;
   /* color: #fff; */
 }
+/* Background Phase */
+@keyframes slideleft {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}

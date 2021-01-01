@@ -6,12 +6,12 @@ import * as routes          from './constants/routes';
 import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
-import HomePage                 from './components/HomePage';
-import AboutPage                from './components/AboutPage';
+import HomePage             from './components/HomePage';
+import AboutPage            from './components/AboutPage';
 
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 import EmailSignup          from './components/contact/EmailSignup';
-import ContactPage              from './components/contact/ContactPage';
+import ContactPage          from './components/contact/ContactPage';
 
 import Portfolio            from './components/portfolio/Portfolio';
 
@@ -148,10 +148,4 @@ const HeroImageDiv = styled.div`
 const HeroImageDivAnimation = styled(HeroImageDiv)`
   background-repeat: repeat-x;
   animation: slideleft 900s infinite linear;
-
-  @keyframes slideleft {
-    0% { background-position: 0%; }
-    50% { background-position: 100%; }
-    100% { background-position: 0%; }
-  }
 `;
