@@ -18,7 +18,7 @@ export default class ProjectsFlip extends Component {
 };
 
 const Container = styled.div`
-text-align: center;
+    text-align: center;
     h3 {
         text-align: center;
         padding-bottom: 10px;
