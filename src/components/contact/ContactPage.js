@@ -9,7 +9,7 @@ export default class ContactPage extends Component {
         return(
             <Container id="contact" className="contact-container">
                 <EmailForm>
-                <h1>CONTACT</h1>
+                <h1 className="titleDecoration">CONTACT</h1>
                 <p>
                     Thank you for taking an interest in my work!  
                     Please include your first name, email contact, 

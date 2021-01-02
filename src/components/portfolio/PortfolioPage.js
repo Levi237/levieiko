@@ -39,7 +39,7 @@ export default class PortfolioPage extends Component {
         const { projects } = this.state
         return (
             <Container>
-                <h1>PORTFOLIO</h1>
+                <h1 className="titleDecoration">PORTFOLIO</h1>
                 <br/><br/><br/>
                 <Skills/>
                 <Clients/>
@@ -53,6 +53,7 @@ export default class PortfolioPage extends Component {
 const Container = styled.div`
     background-color: rgba(19,17,17,.8);
     padding-top: 80px;
+
     @media screen and (max-width: 745px){
         padding-top: 60px;
     }
