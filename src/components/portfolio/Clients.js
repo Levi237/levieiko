@@ -56,7 +56,7 @@ export default class Clients extends Component {
                         <h2>
                             {client.title}
                         </h2>
-                        <a target="_blank" rel="noopener noreferrer" href={client.link}>
+                        <a target="_blank" rel="noopener noreferrer" href={`https://${client.link}`}>
                             {client.link}
                         </a>
                         <p>
