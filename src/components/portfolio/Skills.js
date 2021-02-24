@@ -16,10 +16,6 @@ const Skills =({skills})=> {
   );
 };
 
-const SkillsList = styled.section`
-  display: inline-block;
-`;
-
 const Container = styled.div`
   h1 {
     padding-top: 20px;
