@@ -54,7 +54,7 @@ export default class Clients extends Component {
                 return <li key={k}>{r}</li>
             })
             const technologiesList = client.technologies.map((c, k) => {
-                return <span key={k}>{c} </span>
+                return <><span key={k}>{c}</span><span> | </span></>
             })
             return(
                 <>
@@ -102,11 +102,6 @@ const ClientContainer = styled.div`
     max-width: 800px;
     text-align: center;
 
-    &:nth-of-type(odd) img:last-of-type {
-        float: left;
-    }
-
-
     section {
         width: 40%;
         padding: 5%;
@@ -114,13 +109,21 @@ const ClientContainer = styled.div`
         display: inline-block;
         vertical-align: top;
         text-align: left;
+        span:last-of-type {
+            display: none;
+        }
     }
+    
     img {
         width: 50%;
         max-width: 400px;
         margin-top: 5%;
         box-shadow: 0 1px 12px rgba(0,0,0,.2);
     }
+    &:nth-of-type(odd) img:last-of-type {
+        float: left;
+    }
+
     a {
         color: grey!important;
         text-decoration: none;
