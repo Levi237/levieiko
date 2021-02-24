@@ -4,40 +4,47 @@ import styled from 'styled-components';
 export default class Clients extends Component {
     state = {
         clientList: [{
-        title: "Momo[Muscle]",
+        title: "Andrea Sells Maui",
+            image: "./clients/andreasellsmaui.png",
+            link: "andreasellsmaui.com",
+            statement: "Maui resident and real estate agent serving her local community",
+            responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic Design"],
+            technologies: ["WordPress", "CSS", "HTML", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker"]
+        },{
+            title: "Momo[Muscle]",
             image: "./clients/momomuscle.png",
             link: "momomuscle.co",
             statement: "Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.",
-            responsibilities: ["Build & maintain custom Shopify website", "custom Quiz w/ email campaign", "MailChimp email marketing"],
+            responsibilities: ["Build custom eCommerce website", "custom Quiz w/ email campaign", "MailChimp email marketing", "Graphic Design"],
             technologies: ["Shopify", "CSS", "HTML", "Liquid", "Javascript", "VanillaJs", "Photoshop", "Figma", "MailChimp"]
         },{
             title: "Prana Wellness",
             image: "./clients/prana-wellness.png",
             link: "pranawellnessworks.com",
             statement: "Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.",
-            responsibilities: ["Build custom fullstack website for client w/ admin portal", "Automate email campaign with MailChimp", "Update as needed"],
+            responsibilities: ["Build custom business website", "Automate email campaign with MailChimp", "Graphic Design"],
             technologies: ["React", "Javascript", "VanillaJs", "CSS", "HTML", "Firebase", "Photoshop", "Figma", "MailChimp"]
         },{
-            title: "IT After Hours",
-            link: "it-afterhours.com",
-            image: "./clients/it-afterhours.png",
-            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
-            technologies: ["WordPress", "CSS", "HTML"]
+            title: "FITPLAN",
+            link: "fitplanapp.com",
+            image: "./clients/fitplan-giftcard.png",
+            statement: "Workout with elite personal trainers.",
+            responsibilities: ["Custom email design & marketing on MailChimp", "Frontend web development- design & develop", "Trouble shoot & build out athlete websites on Shopify & WordPress", "Graphic Design"],
+            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","MailChimp"]
         },{
+        //     title: "IT After Hours",
+        //     link: "it-afterhours.com",
+        //     image: "./clients/it-afterhours.png",
+        //     statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
+        //     responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+        //     technologies: ["WordPress", "CSS", "HTML"]
+        // },{
             title: "HeatSeeker Hot Sauce",
             link: "heatseekersauce.com",
             image: "./clients/heatseeker.png",
             statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
             responsibilities: ["eCommerce Shopify w/ Wholesale", "Customized Liquid", "Streamline content & UX", "Update as needed"],
             technologies: ["Shopify", "Liquid", "CSS", "HTML", "Photoshop", "Figma"]
-        },{
-            title: "FITPLAN",
-            link: "fitplanapp.com",
-            image: "./clients/fitplan-giftcard.png",
-            statement: "Workout with elite personal trainers.",
-            responsibilities: ["Custom email design & marketing on MailChimp", "Frontend web development- design & develop", "Trouble shoot & build out athlete websites on Shopify"],
-            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","MailChimp"]
         }]
     }
     render(){
