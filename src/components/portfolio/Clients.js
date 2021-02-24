@@ -177,7 +177,11 @@ const Container = styled.div`
         border: none;
     }
     >hr {
-        width: 60%;
+        width: 80%;
+        margin: 40px auto 20px;
+    }
+    >hr:last-of-type {
+        margin: 40px auto 0;
     }
     @media screen and (max-width: 900px) {
         section, img {

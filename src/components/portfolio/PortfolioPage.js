@@ -5,7 +5,7 @@ import Skills               from './Skills';
 import Clients              from './Clients';
 import ProjectsFlip         from './ProjectsFlip';
 import ProjectsMobile       from './ProjectsMobile';
-import Photography          from './Photography';
+// import Photography          from './Photography';
 
 export default class PortfolioPage extends Component {
     state = {
@@ -43,7 +43,7 @@ export default class PortfolioPage extends Component {
                 <Skills/>
                 <Clients/>
                 <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
-                <Photography/>
+                {/* <Photography/> */}
             </Container>
         );
     };
@@ -51,7 +51,7 @@ export default class PortfolioPage extends Component {
 
 const Container = styled.div`
     background-color: rgba(19,17,17,.8);
-    padding-top: 80px;
+    padding: 80px 0;
     margin: 0 auto!important;
     @media screen and (max-width: 745px){
         padding-top: 60px;

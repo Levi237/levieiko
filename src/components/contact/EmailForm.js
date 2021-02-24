@@ -151,7 +151,7 @@ const Form = styled.form`
     h3 {
         padding: 20px 0 10px;
         text-transform: capitalize;
-        color: #181717;
+        color: rgba(75, 125, 190, 1);
     }
     p {
         max-width: 500px;
@@ -237,6 +237,7 @@ const Form = styled.form`
         padding: 40px 0 20px 0;
     }
     @media screen and (max-width: 698px) {
+        margin: 75px auto;
         > div {
             max-width: 320px;
         }
@@ -246,7 +247,6 @@ const Form = styled.form`
             margin: 0 auto!important;
         }
     }
-
 `;
 
 

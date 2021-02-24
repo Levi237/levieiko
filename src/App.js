@@ -36,8 +36,8 @@ export default class App extends Component {
       },
       mail: {
         title: "contact",
-        color: "#181717",
-        logoColor: "invert(1)",
+        color: "#fff",
+        logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       root: {
@@ -69,6 +69,7 @@ export default class App extends Component {
           <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>     
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
+          <Route path={routes.MAIL} render={() => <GoblinValleyImageAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
@@ -137,6 +138,24 @@ const HeroImageDiv = styled.div`
 const HeroImageDivAnimation = styled(HeroImageDiv)`
   background-repeat: repeat-x;
   animation: slideleft 900s infinite linear;
+`;
+const GoblinValleyImage = styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url(background/goblin-valley.jpg);
+  background-size: cover;
+  
+  position: fixed;
+  z-index: -100;
+
+  @media screen and (max-width: 900px){
+    background-position: 23%;
+  }
+`;
+const GoblinValleyImageAnimation = styled(GoblinValleyImage)`
+  background-repeat: repeat-x;
+  animation: slideleft 1200s infinite linear;
 `;
 
 const HomeLogo = styled.div`
