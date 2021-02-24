@@ -90,8 +90,6 @@ export default class Clients extends Component {
         })
         return(
             <Container>
-                <br/>
-                <br/>
                 <h1>Clients</h1>
                     {mapClientList}                
             </Container>
@@ -173,13 +171,15 @@ const MobileImg = styled.img`
 `;
 const Container = styled.div`
     position: relative;
-   
+    >h1 {
+        margin-bottom: 30px;
+    }
     hr {
         height: 1px;
         background-color: #fff;
         border: none;
     }
-    > hr {
+    >hr {
         width: 60%;
     }
     @media screen and (max-width: 900px) {
@@ -187,7 +187,7 @@ const Container = styled.div`
             width: 90%;
             margin: auto;
         }
-        > hr {
+        >hr {
             display: none;
         }
     }

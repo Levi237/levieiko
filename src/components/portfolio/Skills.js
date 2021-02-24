@@ -42,6 +42,7 @@ const Skills =()=> {
 const Container = styled.div`
   h1 {
     padding-top: 20px;
+    margin-bottom: 30px;
   }
   section {
     text-align: center;
