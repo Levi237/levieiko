@@ -32,22 +32,38 @@ const Container = styled.div`
     >span::before {
       content: ' | ';
     }
-    >span:nth-of-type(5)::before,
-    >span:nth-of-type(9)::before,
     >span:last-of-type::before   {
       content: '';
-      display: block;
     }
   }
-  @media screen and (max-width: 980px){
+  @media screen and (max-width: 400px){
+  }
+  @media screen and (max-width: 900px){
     section {
       margin: 0 auto;
-      br {
+
+      >span::before {
+        content: ' | ';
+      }
+      >span:nth-of-type(5)::before,
+      >span:nth-of-type(9)::before {
+        content: '';
         display: block;
       }
     }
   }
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 1200px){
+    section {
+      margin: 0 auto;
+
+      >span::before {
+        content: ' | ';
+      }
+      >span:nth-of-type(9)::before {
+        content: '';
+        display: block;
+      }
+    }
   }
 `;
 

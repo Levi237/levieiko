@@ -18,6 +18,7 @@ export default class PortfolioPage extends Component {
             'Shopify',
             'WordPress',
             'MailChimp',
+            'IDX Broker',
             'PhotoShop',
             'Liquid',
             'CSS',
