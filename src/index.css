@@ -18,7 +18,9 @@ h1 {
   font-family: 'Big Shoulders Stencil Text', courier;
   font-weight: 500;
   letter-spacing: 4px;
+  margin: 40px auto!important;
 }
+
 /* ON/OFF SWITCH */
 #email.active {
   max-width: 100vw;
@@ -76,4 +78,5 @@ button.selectedHighlighted {
     font-family: 'Big Shoulders Stencil Text';
     font-size: 48px;
     letter-spacing: 4px;
+    margin: 0 auto!important;
 }

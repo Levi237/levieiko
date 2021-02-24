@@ -32,6 +32,7 @@ const Container = styled.div`
     h1 {
         color: #181717;
         padding-top: 40px;
+        margin: 0 auto!important;
     }
     p {
         margin-top: 40px;

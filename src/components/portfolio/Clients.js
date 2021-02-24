@@ -171,9 +171,6 @@ const MobileImg = styled.img`
 `;
 const Container = styled.div`
     position: relative;
-    >h1 {
-        margin-bottom: 30px;
-    }
     hr {
         height: 1px;
         background-color: #fff;
