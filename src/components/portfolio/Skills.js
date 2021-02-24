@@ -1,43 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Skills =()=> {
-    return(
-        <Container>
-            <h1>Skills</h1>
-            <br/>
-            <section>
-              React
-               | 
-              Firebase
-               | 
-              NodeJs
-               | 
-              GitHub
-               | 
-              Git 
-              <span> | </span><br/>
-              Shopify
-               | 
-              WordPress
-               | 
-              MailChimp
-               | 
-              PhotoShop
-              <span> | </span><br/>
-              Liquid
-               | 
-              CSS
-               |
-              HTML
-               | 
-              JavaScript
-               | 
-              VanillaJS
-            </section>
-      </Container>
-        );
+const Skills =({skills})=> {
+  const skillsList = skills.map(skill => {
+    return <>{skill}<span></span></>
+  })
+  return(
+      <Container>
+          <h1>Skills</h1>
+          <br/>
+          <section>
+            {skillsList}
+          </section>
+    </Container>
+  );
 };
+
+const SkillsList = styled.section`
+  display: inline-block;
+`;
 
 const Container = styled.div`
   h1 {
@@ -51,12 +32,20 @@ const Container = styled.div`
   br {
     display: none;
   }
+  section {
+    >span::before {
+      content: ' | ';
+    }
+    >span:nth-of-type(5)::before,
+    >span:nth-of-type(9)::before,
+    >span:last-of-type::before   {
+      content: '';
+      display: block;
+    }
+  }
   @media screen and (max-width: 980px){
     section {
       margin: 0 auto;
-      span {
-        display: none;
-      }
       br {
         display: block;
       }
