@@ -8,43 +8,43 @@ export default class Clients extends Component {
             image: "./clients/andreasellsmaui.png",
             link: "andreasellsmaui.com",
             statement: "Maui resident and real estate agent serving her local community",
-            responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic Design"],
-            technologies: ["WordPress", "CSS", "HTML", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker"]
+            responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic design"],
+            technologies: ["WordPress", "CSS3", "HTML5", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker", "IMPress"]
         },{
             title: "Momo[Muscle]",
             image: "./clients/momomuscle.png",
             link: "momomuscle.co",
             statement: "Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.",
-            responsibilities: ["Build custom eCommerce website", "custom Quiz w/ email campaign", "MailChimp email marketing", "Graphic Design"],
-            technologies: ["Shopify", "CSS", "HTML", "Liquid", "Javascript", "VanillaJs", "Photoshop", "Figma", "MailChimp"]
+            responsibilities: ["Build custom eCommerce website", "custom Quiz w/ email campaign", "MailChimp email marketing", "Graphic design"],
+            technologies: ["Shopify", "CSS3", "HTML5", "Liquid", "Javascript", "VanillaJs", "Photoshop", "Figma", "MailChimp"]
         },{
             title: "Prana Wellness",
             image: "./clients/prana-wellness.png",
             link: "pranawellnessworks.com",
             statement: "Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.",
-            responsibilities: ["Build custom business website", "Automate email campaign with MailChimp", "Graphic Design"],
-            technologies: ["React", "Javascript", "VanillaJs", "CSS", "HTML", "Firebase", "Photoshop", "Figma", "MailChimp"]
+            responsibilities: ["Build custom business website", "Automate email campaign with MailChimp", "Graphic design"],
+            technologies: ["React", "Javascript", "VanillaJs", "CSS3", "HTML5", "Firebase", "Photoshop", "Figma", "MailChimp"]
         },{
             title: "FITPLAN",
             link: "fitplanapp.com",
             image: "./clients/fitplan-giftcard.png",
             statement: "Workout with elite personal trainers.",
-            responsibilities: ["Custom email design & marketing on MailChimp", "Frontend web development- design & develop", "Trouble shoot & build out athlete websites on Shopify & WordPress", "Graphic Design"],
-            technologies: ["React","Liquid","CSS","HTML","Photoshop","Figma","MailChimp"]
+            responsibilities: ["Custom email: design & marketing", "Web development, design & troubleshooting", "Graphic design"],
+            technologies: ["React","Liquid","CSS3","HTML5","WordPress", "Shopify", "Photoshop","Figma","MailChimp"]
         },{
         //     title: "IT After Hours",
         //     link: "it-afterhours.com",
         //     image: "./clients/it-afterhours.png",
         //     statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-        //     responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
-        //     technologies: ["WordPress", "CSS", "HTML"]
+        //     responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+        //     technologies: ["WordPress", "CSS3", "HTML5"]
         // },{
             title: "HeatSeeker Hot Sauce",
             link: "heatseekersauce.com",
             image: "./clients/heatseeker.png",
             statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
-            responsibilities: ["eCommerce Shopify w/ Wholesale", "Customized Liquid", "Streamline content & UX", "Update as needed"],
-            technologies: ["Shopify", "Liquid", "CSS", "HTML", "Photoshop", "Figma"]
+            responsibilities: ["Re-design eCommerce website", "Streamline content & UX"],
+            technologies: ["Shopify", "Liquid", "CSS3", "HTML5", "Photoshop", "Figma"]
         }]
     }
     render(){
@@ -57,7 +57,8 @@ export default class Clients extends Component {
                 return <span key={k}>{c} </span>
             })
             return(
-                <div key={key}>
+                <>
+                <ClientContainer key={key}>
                     <MobileImg src={client.image} alt={client.title}/>
                     <section>
                         <h2>
@@ -82,40 +83,32 @@ export default class Clients extends Component {
                         <hr/>   
                     </section>
                     <DesktopImg src={client.image} alt={client.title}/>
-                </div>
+                </ClientContainer>
+                <hr/>
+                </>
             )
         })
         return(
             <Container>
-                <br/><br/>
+                <br/>
+                <br/>
                 <h1>Clients</h1>
                     {mapClientList}                
             </Container>
         );
     };
 };
-const DesktopImg = styled.img`
-    display: inline-block;
-    @media screen and (max-width: 900px) {
-        display: none;
-    }
-`;
 
-const MobileImg = styled.img`
-    display: none;
-    @media screen and (max-width: 900px) {
-        display: block;
-`;
-const Container = styled.div`
-    position: relative;
-    div {
-        margin: 0 auto;
-        max-width: 800px;
-        text-align: center;
-        &:nth-of-type(odd) img:last-of-type {
-            float: left;
-        }
+const ClientContainer = styled.div`
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+
+    &:nth-of-type(odd) img:last-of-type {
+        float: left;
     }
+
+
     section {
         width: 40%;
         padding: 5%;
@@ -145,7 +138,7 @@ const Container = styled.div`
     }
     p {
         font-style: italic;
-        font-size: 12px;
+        font-size: 14px;
         margin: 10px auto;
     }
     ul, span {
@@ -158,12 +151,44 @@ const Container = styled.div`
         display: none;
     }
     @media screen and (max-width: 900px) {
+        hr {
+            display: block;
+            width: 80%;
+            margin: 5% auto;
+        }
+    }
+`;
+
+const DesktopImg = styled.img`
+    display: inline-block;
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+`;
+
+const MobileImg = styled.img`
+    display: none;
+    @media screen and (max-width: 900px) {
+        display: block;
+`;
+const Container = styled.div`
+    position: relative;
+   
+    hr {
+        height: 1px;
+        background-color: #fff;
+        border: none;
+    }
+    > hr {
+        width: 60%;
+    }
+    @media screen and (max-width: 900px) {
         section, img {
             width: 90%;
             margin: auto;
         }
-        hr {
-            display: block;
+        > hr {
+            display: none;
         }
     }
 `;
