@@ -70,12 +70,14 @@ export default class App extends Component {
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
           <Route path={routes.MAIL} render={() => <GoblinValleyImageAnimation/>}/>
+          <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
         <BodyContainer>
           <Switch>         
             <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
             <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
             <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
@@ -84,6 +86,7 @@ export default class App extends Component {
           <ContentContainer>
             <Switch>         
               <Route path={routes.HOME} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.CNFM} exact render={() => <HomeLogo/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>

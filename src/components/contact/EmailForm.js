@@ -140,10 +140,11 @@ const AuthFilter = styled.div`
 
 const Form = styled.form`
     position: relative;
-    z-index: 90000000000000000000000000000000000000;
+    z-index: 90000000000000000;
     text-align: center;
+    width: 66%;
     max-width: 700px;
-    background-color: white;
+    background-color: #fff;
     padding: 20px 0;
     overflow: scroll;
     margin: 20px auto;
