@@ -48,16 +48,16 @@ export default class EmailForm extends Component {
             );
         });
         return(<>
-                <Form 
-                    action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
-                    method="POST" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    className="validate" 
-                    target="_blank" 
-                    novalidate 
-                >
-                 {this.props.children}
+            <Form 
+                action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
+                method="POST" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                className="validate" 
+                target="_blank" 
+                novalidate 
+            >
+                {this.props.children}
                 <label htmlFor='MERGE1'>
                     <input 
                         type="text" 
@@ -104,7 +104,7 @@ export default class EmailForm extends Component {
                 </label>
 
                 <h3>What are You Intrested In?</h3>
-                <div>
+                <div class="services-section">
                     {buttonSelectors}
                     <input 
                         type="hidden" 
@@ -227,11 +227,16 @@ const Form = styled.form`
         width: 100%;
         > button {
             vertical-align: top;
-            width: 150px;
+            width: 144px;
             height: 54px;
             font-size: 16px;
             padding: 5px 30px;
             margin: 5px;
+        }
+    }
+    @media screen and (max-width: 1010px) {
+        >div.services-section {
+            max-width: 400px;
         }
     }
     @media screen and (max-width: 900px) {
