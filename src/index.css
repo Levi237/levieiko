@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,6 +14,12 @@ code {
     monospace;
 }
 
+h1 {
+  font-family: 'Big Shoulders Stencil Text', courier;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin: 40px auto!important;
+}
 
 /* ON/OFF SWITCH */
 #email.active {
@@ -58,4 +66,17 @@ code {
 button.selectedHighlighted {
   background-color: rgba(41, 191, 255, .3)!important;
   /* color: #fff; */
+}
+/* Background Phase */
+@keyframes slideleft {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+.titleDecoration {
+    font-family: 'Big Shoulders Stencil Text';
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin: 0 auto!important;
 }

@@ -1,47 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Skills =()=> {
-    return(
-        <Container>
-            <h1>Skills</h1>
-            <br/>
-            <section>
-              React
-               | 
-              Firebase
-               | 
-              NodeJs
-               | 
-              GitHub
-               | 
-              Git 
-              <span> | </span><br/>
-              Shopify
-               | 
-              WordPress
-               | 
-              MailChimp
-               | 
-              PhotoShop
-              <span> | </span><br/>
-              Liquid
-               | 
-              CSS
-               |
-              HTML
-               | 
-              JavaScript
-               | 
-              VanillaJS
-            </section>
-      </Container>
-        );
+const Skills =({skills})=> {
+  const skillsList = skills.map(skill => {
+    return <>{skill}<span></span></>
+  })
+  return(
+      <Container>
+          <h1>Skills</h1>
+          <br/>
+          <section>
+            {skillsList}
+          </section>
+    </Container>
+  );
 };
 
 const Container = styled.div`
   h1 {
     padding-top: 20px;
+    margin-bottom: 30px;
   }
   section {
     text-align: center;
@@ -50,18 +28,42 @@ const Container = styled.div`
   br {
     display: none;
   }
-  @media screen and (max-width: 980px){
+  section {
+    >span::before {
+      content: ' | ';
+    }
+    >span:last-of-type::before   {
+      content: '';
+    }
+  }
+  @media screen and (max-width: 400px){
+  }
+  @media screen and (max-width: 900px){
     section {
       margin: 0 auto;
-      span {
-        display: none;
+
+      >span::before {
+        content: ' | ';
       }
-      br {
+      >span:nth-of-type(5)::before,
+      >span:nth-of-type(9)::before {
+        content: '';
         display: block;
       }
     }
   }
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 1200px){
+    section {
+      margin: 0 auto;
+
+      >span::before {
+        content: ' | ';
+      }
+      >span:nth-of-type(9)::before {
+        content: '';
+        display: block;
+      }
+    }
   }
 `;
 

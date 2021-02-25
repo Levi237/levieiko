@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
 
-import ContactRequest       from './ContactRequest';
+import EmailForm       from './EmailForm';
 
 export default class EmailSignup extends Component { 
     
@@ -11,7 +11,7 @@ export default class EmailSignup extends Component {
         return(
             <Container id="email" className="inactive contact-container">
                 <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
-                <ContactRequest/>
+                <EmailForm/>
             </Container>
         );
     };

@@ -6,15 +6,11 @@ import * as routes          from './constants/routes';
 import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
-import Home                 from './components/Home';
-import About                from './components/About';
-
-import EmailConfirmation    from './components/contact/EmailConfirmation';
+import PortfolioPage        from './components/portfolio/PortfolioPage';
+import AboutPage            from './components/AboutPage';
+import ContactPage          from './components/contact/ContactPage';
 import EmailSignup          from './components/contact/EmailSignup';
-import Contact              from './components/contact/Contact';
-
-import Portfolio            from './components/portfolio/Portfolio';
-
+import EmailConfirmation    from './components/contact/EmailConfirmation';
 
 export default class App extends Component {
   state = {
@@ -40,8 +36,8 @@ export default class App extends Component {
       },
       mail: {
         title: "contact",
-        color: "#181717",
-        logoColor: "invert(1)",
+        color: "#fff",
+        logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       root: {
@@ -49,24 +45,16 @@ export default class App extends Component {
         color: "#fff",
         logoColor: "invert(0)",
         displayLogo: "none",
-      },
-
-    },
-  }
+      }
+    }
+  };
 
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
-  toggleEmailSignup = (e) => {
-    const emailForm = document.getElementById('email');
-    emailForm.classList.toggle('active');
-    emailForm.classList.toggle('inactive');
-    this.setState({
-      emailContact: e.currentTarget.value
-    });
-  };
+ 
 
   render (){
     const { emailContact, pageStyle } = this.state
@@ -79,26 +67,30 @@ export default class App extends Component {
 
         <Switch>
           <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>     
-          <Route path={routes.HOME} exact render={() => <HeroImageAnimation/>}/>
-          <Route path={routes.PORT} exact render={() => <HeroImage/>}/>
-          <Route path={routes.ROOT} render={() => <HeroImageAnimation/>}/>
+          <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
+          <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
+          <Route path={routes.MAIL} render={() => <GoblinValleyImageAnimation/>}/>
+          <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
+          <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home} /> }/>
-            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio} /> }/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about} /> }/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail} /> }/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root} /> }/>
+            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
+            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
+            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <Home/>} />
-              <Route path={routes.PORT} exact render={() => <Portfolio/>} />
-              <Route path={routes.INFO} exact render={() => <About toggleEmailSignup={this.toggleEmailSignup}/>  }/>
-              <Route path={routes.MAIL} exact render={() => <Contact contactType={emailContact} /> }/>
-              <Route path={routes.ROOT} render={() => <Home/>} />
+              <Route path={routes.HOME} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.CNFM} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
+              <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
+              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
+              <Route path={routes.ROOT} render={() => <HomeLogo/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
@@ -132,7 +124,7 @@ const AppContainer = styled.div`
     text-transform: uppercase;
   }
 `;
-const HeroImage = styled.div`
+const HeroImageDiv = styled.div`
   height: 100vh;
   width: 100vw;
 
@@ -142,18 +134,39 @@ const HeroImage = styled.div`
   position: fixed;
   z-index: -100;
 
+  @media screen and (max-width: 900px){
+    background-position: 23%;
+  }
+`;
+const HeroImageDivAnimation = styled(HeroImageDiv)`
+  background-repeat: repeat-x;
+  animation: slideleft 900s infinite linear;
+`;
+const GoblinValleyImage = styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url(background/goblin-valley.jpg);
+  background-size: cover;
+  
+  position: fixed;
+  z-index: -100;
 
   @media screen and (max-width: 900px){
     background-position: 23%;
   }
 `;
-const HeroImageAnimation = styled(HeroImage)`
+const GoblinValleyImageAnimation = styled(GoblinValleyImage)`
   background-repeat: repeat-x;
-  animation: slideleft 900s infinite linear;
+  animation: slideleft 1200s infinite linear;
+`;
 
-  @keyframes slideleft {
-    0% { background-position: 0%; }
-    50% { background-position: 100%; }
-    100% { background-position: 0%; }
-  }
+const HomeLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 `;

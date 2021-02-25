@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-export default class ContactRequest extends Component { 
+export default class EmailForm extends Component { 
     state = {
         emailValue: '',
         fNameValue: '',
@@ -48,16 +48,16 @@ export default class ContactRequest extends Component {
             );
         });
         return(<>
-                <Form 
-                    action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
-                    method="POST" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    className="validate" 
-                    target="_blank" 
-                    novalidate 
-                >
-                 {this.props.children}
+            <Form 
+                action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
+                method="POST" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                className="validate" 
+                target="_blank" 
+                novalidate 
+            >
+                {this.props.children}
                 <label htmlFor='MERGE1'>
                     <input 
                         type="text" 
@@ -104,7 +104,7 @@ export default class ContactRequest extends Component {
                 </label>
 
                 <h3>What are You Intrested In?</h3>
-                <div>
+                <div class="services-section">
                     {buttonSelectors}
                     <input 
                         type="hidden" 
@@ -140,10 +140,11 @@ const AuthFilter = styled.div`
 
 const Form = styled.form`
     position: relative;
-    z-index: 90000000000000000000000000000000000000;
+    z-index: 90000000000000000;
     text-align: center;
+    width: 66%;
     max-width: 700px;
-    background-color: white;
+    background-color: #fff;
     padding: 20px 0;
     overflow: scroll;
     margin: 20px auto;
@@ -151,7 +152,7 @@ const Form = styled.form`
     h3 {
         padding: 20px 0 10px;
         text-transform: capitalize;
-        color: #181717;
+        color: rgba(75, 125, 190, 1);
     }
     p {
         max-width: 500px;
@@ -226,17 +227,23 @@ const Form = styled.form`
         width: 100%;
         > button {
             vertical-align: top;
-            width: 150px;
+            width: 144px;
             height: 54px;
             font-size: 16px;
             padding: 5px 30px;
             margin: 5px;
         }
     }
+    @media screen and (max-width: 1010px) {
+        >div.services-section {
+            max-width: 400px;
+        }
+    }
     @media screen and (max-width: 900px) {
         padding: 40px 0 20px 0;
     }
     @media screen and (max-width: 698px) {
+        margin: 75px auto;
         > div {
             max-width: 320px;
         }
@@ -246,7 +253,6 @@ const Form = styled.form`
             margin: 0 auto!important;
         }
     }
-
 `;
 
 

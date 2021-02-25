@@ -7,7 +7,8 @@ export default class EmailConfirmation extends Component {
         const hamburgerMenu = document.getElementById('confirmation');
         hamburgerMenu.classList.toggle('active');
         hamburgerMenu.classList.toggle('inactive');
-        window.history.back();
+        // window.history.back();
+        // this.props.history.replace('/home');
       };
     render(){
         return (<>
