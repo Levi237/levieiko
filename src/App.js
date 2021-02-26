@@ -49,6 +49,15 @@ export default class App extends Component {
     }
   };
 
+  toggleEmailSignup = (e) => {
+    const emailForm = document.getElementById('email');
+    emailForm.classList.toggle('active');
+    emailForm.classList.toggle('inactive');
+    this.setState({
+      emailContact: e.currentTarget.value
+    });
+  };
+
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');

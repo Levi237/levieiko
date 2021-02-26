@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 export default class AboutPage extends Component {
     render(){
+      
       const { toggleEmailSignup } = this.props
         return(
           <AboutContainer>
@@ -10,14 +11,17 @@ export default class AboutPage extends Component {
                 <h2>
                   About Me:
                 </h2>
+                <p><b>Who am I?</b>  Web developer, LEGO enthusaist, 
+                  camping guru & photographer of random things. 
+                  I have the eye of an artist and the mind of an engineer.</p>
                 <p>
-                  I help businesses enhance their online presence. 
+                  <b>What I do:</b> I help businesses enhance their online presence. 
                   Stores, blogs, email automations, photoshop, I can build/upgrade 
-                  your online presence for that extra edge.
+                  your website for that extra digital edge.
                 </p>
                 <p>
                   If you have a project you want to come to life, or an existing page 
-                  that needs an upgrade and email marketing assitance, contact me 
+                  that needs an upgrade or email marketing assitance, contact me 
                   directly by phone or email.
                 </p>
                 <section>

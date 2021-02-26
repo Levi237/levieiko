@@ -185,6 +185,14 @@ const Form = styled.form`
         border: 1px solid black;;
         background: transparent;
     }
+    .button,
+    button {
+        &:hover {
+            // background: rgba(161, 93, 42,.2);
+            background: rgba(41, 191, 255,.2);
+        }
+    }
+
     label {
         width: 44%;
         display: inline-block;
