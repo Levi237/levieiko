@@ -9,20 +9,21 @@ export default class AboutPage extends Component {
             <Container>
               <div>
                 <h2>
-                  About Me:
+                  Meet Levi
                 </h2>
-                <p><b>Who am I?</b>  Web developer, LEGO enthusaist, 
-                  camping guru & photographer of random things. 
-                  I have the eye of an artist and the mind of an engineer.</p>
+                <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
+                  camping guru & photographer of random things... with a green thumb. 
+                  I'd like to think I have the eye of an artist & the mind of an engineer, 
+                  and my clients think so too, so that's nice! 🤗</p>
                 <p>
                   <b>What I do:</b> I help businesses enhance their online presence. 
-                  Stores, blogs, email automations, photoshop, I can build/upgrade 
-                  your website for that extra digital edge.
+                  Stores, blogs, email automations, photoshop, yes. 
+                  I can build/upgrade your website for that extra digital edge.
                 </p>
                 <p>
-                  If you have a project you want to come to life, or an existing page 
+                  If you have a project you want to come to life, an existing page 
                   that needs an upgrade or email marketing assitance, contact me 
-                  directly by phone or email.
+                  by clicking the envelope below!
                 </p>
                 <section>
                   <a href="https://github.com/Levi237"><img src="icons/github.png" alt="github link"/></a>
@@ -54,9 +55,17 @@ const Container = styled.div`
   }
   h2 {
     margin: 0 10%;
+    font-size: 36px;
+    font-family: "Big Shoulders Stencil Text";
+    text-align: center;
   }
   p {
     margin: 5% 15%;
+    font-size: 15px;
+    font-weight: 100;
+    b {
+      font-weight: 500;
+    }
   }
   section {
     text-align: center;
@@ -64,6 +73,14 @@ const Container = styled.div`
       width: 15%;
       max-width: 40px;
       margin: 2.5%;
+    }
+    >a, 
+    >span {
+      transition: .3s ease;
+      &:hover {
+        cursor: pointer;
+        opacity: .8;
+      }
     }
   }
   @media screen and (max-width: 900px) {
