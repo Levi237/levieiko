@@ -121,7 +121,6 @@ const BodyContainer = styled.div`
   scroll-snap-type: y proximity;
 `;
 const AppContainer = styled.div`
-  font-family: Helvetica;
   h1,h2,h3,ul {
     margin-block-start: 0;
     margin-block-end: 0;
