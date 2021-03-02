@@ -36,7 +36,9 @@ const Hamburger = styled.div`
   right: 0;
 
   margin: 5vw 5vw 0 0;
-
+  &:hover{
+    cursor: pointer;
+  }
   section {
     margin: 6px 0;
     width: 35px;
