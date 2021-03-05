@@ -27,11 +27,12 @@ export default class AboutPage extends Component {
                   that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
                   by clicking the envelope below!
                 </p>
+                {/* <img src="icons/iconfinder_mail.svg"/> */}
                 <section>
-                  <a href="https://github.com/Levi237"><img src="icons/github.png" alt="github link"/></a>
-                  <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/linkedin.png" alt="linkedin link"/></a>
-                  <a href="https://www.instagram.com/levi_eiko/"><img src="icons/instagram.png" alt="instagram link"/></a>
-                  <span onClick={(e) => {toggleEmailSignup(e)}}><img src="icons/email.png" alt="email form"/></span>
+                  <a href="https://github.com/Levi237"><img src="icons/iconfinder_github.svg" alt="github link"/></a>
+                  <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/iconfinder_linkedin.svg" alt="linkedin link"/></a>
+                  <a href="https://www.instagram.com/levi_eiko/"><img src="icons/iconfinder_instagram.svg" alt="instagram link"/></a>
+                  <span onClick={(e) => {toggleEmailSignup(e)}}><img src="icons/iconfinder_mail.svg" alt="email form"/></span>
                 </section>
               </div>
             </Container>
@@ -41,6 +42,7 @@ export default class AboutPage extends Component {
 };
 
 const Container = styled.div`
+color: var(--black);
   font-size: 14px;
   position: relative;
   z-index: 10;
@@ -49,8 +51,13 @@ const Container = styled.div`
   width: 50%;
   max-width: 50%;
   vertical-align: top;
-  color: black;
-
+  a {
+    color: var(--darkblue);
+    transition: .3s ease;
+    &:hover {
+      color: var(--blue);
+    }
+  }
   div {
     background-color: rgba(250,250,250,.8);
     padding: 30px 0;
@@ -62,9 +69,10 @@ const Container = styled.div`
     text-align: center;
   }
   p {
-    margin: 5% 15%;
+    margin: 15px 15%;
     font-size: 15px;
     font-weight: 100;
+    line-height: 160%;
     b {
       font-weight: 500;
     }
@@ -76,7 +84,6 @@ const Container = styled.div`
       max-width: 40px;
       margin: 2.5%;
     }
-    >a, 
     >span {
       transition: .3s ease;
       &:hover {
