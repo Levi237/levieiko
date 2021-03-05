@@ -25,7 +25,6 @@ export default class ContactPage extends Component {
 const Container = styled.div`
     width: 100vw;
     height: calc(100vh);
-    // background: #fff;
     padding-top: 0;
     position: fixed;
     overflow: scroll;
