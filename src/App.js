@@ -111,14 +111,14 @@ export default class App extends Component {
 const ContentContainer = styled.div`
   color: #fff;
   height: 100vh;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
   position: relative;
 `;
 
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  // scroll-snap-type: y proximity;
 `;
 const AppContainer = styled.div`
   h1,h2,h3,ul {
