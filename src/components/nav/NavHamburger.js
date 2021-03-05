@@ -19,16 +19,9 @@ const Logo = styled.img`
 
   width: 36px;
   margin: 5vw 0 0 5vw;
-`;
-const Title = styled.h1`
-  position: absolute;
-  z-index:991;
-width: 100vw!important;
-text-align:center;
-  color: white;
-text-transform: uppercase;
-  width: 36px;
-  margin: 60px auto!important;
+  &::after {
+    content: "LeviEiko";
+  }
 `;
 const Hamburger = styled.div`
   position: absolute;
