@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import * as routes from './../constants/routes'
 export default class AboutPage extends Component {
     render(){
       
@@ -14,7 +16,7 @@ export default class AboutPage extends Component {
                 <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
                   camping guru & photographer of random things... with a green thumb. 
                   I'd like to think I have the eye of an artist & the mind of an engineer, 
-                  and my clients think so too, so that's nice! 🤗</p>
+                  and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
                 <p>
                   <b>What I do:</b> I help businesses enhance their online presence. 
                   Stores, blogs, email automations, photoshop, yes. 
@@ -22,7 +24,7 @@ export default class AboutPage extends Component {
                 </p>
                 <p>
                   If you have a project you want to come to life, an existing page 
-                  that needs an upgrade or email marketing assitance, contact me 
+                  that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
                   by clicking the envelope below!
                 </p>
                 <section>
@@ -34,9 +36,9 @@ export default class AboutPage extends Component {
               </div>
             </Container>
           </AboutContainer>
-        )
-    }
-}
+        );
+    };
+};
 
 const Container = styled.div`
   font-size: 14px;
@@ -96,18 +98,16 @@ const AboutContainer = styled.div`
   background-attachment: fixed;
   background-color: #fff;
   background-image: url(about.png);
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: cover;
 
   position: relative;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 
-@media screen and (max-width: 900px) {
-    background-size: cover!important;
-    background-position: 70% center;
-
-    // padding-top: 5vh;
-    height: 100vh;
-}
+  @media screen and (max-width: 900px) {
+      height: 100vh;
+      background-size: cover!important;
+      background-position: 70% center;
+  }
 `;
