@@ -19,9 +19,9 @@ const Logo = styled.img`
 
   width: 36px;
   margin: 5vw 0 0 5vw;
-  &::after {
-    content: "LeviEiko";
-  }
+  // &::after {
+  //   content: "LeviEiko";
+  // }
 `;
 const Hamburger = styled.div`
   position: absolute;
