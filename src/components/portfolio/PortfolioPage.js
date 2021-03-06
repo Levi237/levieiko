@@ -57,8 +57,8 @@ export default class PortfolioPage extends Component {
         return (
             <Container>
                 <h1 className='titleDecoration'>PORTFOLIO</h1>
-                <Skills skills={skills}/>
                 <Clients/>
+                <Skills skills={skills}/>
                 <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
                 {/* <Photography/> */}
             </Container>
