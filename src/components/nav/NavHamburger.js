@@ -1,9 +1,12 @@
 import React       from 'react';
 import styled      from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import * as routes from '../../constants/routes';
+
 
 const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
-    <Logo src="../logo.png" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/>
+    <NavLink to={routes.HOME}><Logo src="../logo.png" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/></NavLink>
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
       <section style={{backgroundColor: pageStyle.color}}/>
       <section style={{backgroundColor: pageStyle.color}}/>
