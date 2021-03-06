@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route }    from 'react-router-dom';
+import { Switch, Route, NavLink }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
@@ -93,12 +93,12 @@ export default class App extends Component {
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.HOME} exact render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
-              <Route path={routes.ROOT} render={() => <HomeLogo/> }/>
+              <Route path={routes.ROOT} render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
