@@ -16,13 +16,13 @@ const AboutPage = () => {
           <h2>
             Meet Levi
           </h2>
-          <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
+          <p><b>Who am I?</b>&emsp;A web developer, LEGO enthusaist, 
             camping guru & photographer of random things... with a green thumb. 
             I'd like to think I have the eye of an artist & the mind of an engineer, 
             and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
           <p>
-            <b>What I do:</b> I help businesses enhance their online presence. 
-            Stores, blogs, email automations, photoshop, yes. 
+            <b>What I do:</b>&emsp;I help businesses enhance their online presence. 
+            Stores, blogs, email automations, photoshop, <u>yes</u>. 
             I can build/upgrade your website for that extra digital edge.
           </p>
           <p>
@@ -118,6 +118,7 @@ const AboutContainer = styled.div`
   width: 100%;
   height: 90vh;
   padding-top: 10vh;
+  overflow: scroll;
 
   background-attachment: fixed;
   background-color: #fff;
