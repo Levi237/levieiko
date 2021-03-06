@@ -33,15 +33,15 @@ export default class AboutPage extends Component {
                   by clicking the envelope below!
                 </p>
                 <section>
-                  <a href="https://github.com/Levi237">
+                  <a target="_blank" href="https://github.com/Levi237">
                   <Github/>
                     {/* <img src="icons/iconfinder_github.svg" alt="github link"/> */}
                   </a>
-                  <a href="https://www.linkedin.com/in/leviwinans">
+                  <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
                   {/* <Linkedin/> */}
                     <img src="icons/iconfinder_linkedin.svg" alt="linkedin link"/>
                   </a>
-                  <a href="https://www.instagram.com/levi_eiko/">
+                  <a target="_blank" href="https://www.instagram.com/levi_eiko/">
                   {/* <Instagram/> */}
                     <img src="icons/iconfinder_instagram.svg" alt="instagram link"/>
                   </a>
