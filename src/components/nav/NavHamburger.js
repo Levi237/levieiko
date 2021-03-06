@@ -3,10 +3,17 @@ import styled      from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
+import { ReactComponent as LogoSVG } from '../svg/logo.svg';
+
 
 const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
-    <NavLink to={routes.HOME}><Logo src="../logo.png" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/></NavLink>
+    <Logo>
+      <NavLink to={routes.HOME}>
+        <LogoSVG/>
+      </NavLink>
+    </Logo>
+      {/* <Logo src="./icons/logo.svg" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/> */}
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
       <section style={{backgroundColor: pageStyle.color}}/>
       <section style={{backgroundColor: pageStyle.color}}/>
@@ -15,7 +22,7 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
   </>);
 };
 
-const Logo = styled.img`
+const Logo = styled.div`
   position: absolute;
   z-index:999;
   left:0;
