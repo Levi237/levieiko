@@ -5,13 +5,15 @@
   height="100%" 
   viewBox="0 0 500 500"
   >
-<defs>
-<style>
- svg:hover path {
-  fill: rgba(45,45,45,.9);
- }
-</style>
-</defs>
+
+  <defs>
+    <style>
+      svg:hover path {
+      fill: rgba(45,45,45,.9);
+      }
+    </style>
+  </defs>
+
   <rect 
     fill="transparent" 
     stroke-width="0" 
@@ -32,5 +34,5 @@
     stroke-width="0" 
     d="M325 175 H500 V375 H325 V300 H425 V250 H325 Z"
     />
-
+    
 </svg>
