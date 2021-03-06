@@ -19,31 +19,26 @@ export default class App extends Component {
       home: {
         title: "",
         color: "#fff",
-        logoColor: "invert(0)",
         displayLogo: "none",
       },
       about: {
         title: "",
         color: "#181717",
-        logoColor: "invert(0)",
         displayLogo: "none",
       },
       portfolio: {
         title: "portfolio",
         color: "#fff",
-        logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       mail: {
         title: "contact",
         color: "#fff",
-        logoColor: "invert(0)",
         displayLogo: "inline-block",
       },
       root: {
         title: "",
         color: "#fff",
-        logoColor: "invert(0)",
         displayLogo: "none",
       }
     }

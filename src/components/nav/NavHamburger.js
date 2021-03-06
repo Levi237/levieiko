@@ -10,7 +10,7 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
       <NavLink to={routes.HOME}>
-        <LogoSVG/>
+        <LogoSVG style={{fill: pageStyle.color, display: pageStyle.displayLogo}}/>
       </NavLink>
     </Logo>
       {/* <Logo src="./icons/logo.svg" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/> */}

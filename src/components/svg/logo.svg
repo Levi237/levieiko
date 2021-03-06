@@ -15,17 +15,14 @@
     y="000" 
     />
   <path 
-    fill="#fff" 
     stroke-width="0" 
     d="M0 0 H75 V300 H265 V425 H500 V500 H0 Z"
     />
   <path 
-    fill="#fff" 
     stroke-width="0" 
     d="M140 0 H500 V125 H265 V250 H140 Z"
     />
   <path 
-    fill="#fff" 
     stroke-width="0" 
     d="M325 175 H500 V375 H325 V300 H425 V250 H325 Z"
     />
