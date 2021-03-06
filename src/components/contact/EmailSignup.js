@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
-import styled               from 'styled-components';
+import React        from 'react';
+import styled       from 'styled-components';
 
-import EmailForm       from './EmailForm';
+import EmailForm    from './EmailForm';
 
-export default class EmailSignup extends Component { 
-    
-    render(){
-
-        const { toggleEmailSignup } = this.props
-        return(
-            <Container id="email" className="inactive contact-container">
-                <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
-                <EmailForm/>
-            </Container>
-        );
-    };
+const EmailSignup = ({ toggleEmailSignup }) => { 
+    return(
+        <Container id="email" className="inactive contact-container">
+            <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
+            <EmailForm/>
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -53,3 +48,5 @@ const CloseBtn = styled.button`
     top: 10px;
     z-index: 99999;
 `;
+
+export default EmailSignup;

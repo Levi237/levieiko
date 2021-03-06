@@ -1,4 +1,4 @@
-import React, { Component }             from 'react';
+import React                            from 'react';
 import styled                           from 'styled-components';
 import { NavLink }                      from 'react-router-dom';
 import * as routes                      from './../constants/routes';
@@ -8,53 +8,50 @@ import { ReactComponent as Instagram }  from './svg/iconfinder_instagram.svg';
 import { ReactComponent as Linkedin }   from './svg/iconfinder_linkedin.svg';
 import { ReactComponent as Github }     from './svg/iconfinder_github.svg';
 
-export default class AboutPage extends Component {
-    render(){    
-      const { toggleEmailSignup } = this.props
-        return(
-          <AboutContainer>
-            <Container>
-              <div>
-                <h2>
-                  Meet Levi
-                </h2>
-                <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
-                  camping guru & photographer of random things... with a green thumb. 
-                  I'd like to think I have the eye of an artist & the mind of an engineer, 
-                  and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
-                <p>
-                  <b>What I do:</b> I help businesses enhance their online presence. 
-                  Stores, blogs, email automations, photoshop, yes. 
-                  I can build/upgrade your website for that extra digital edge.
-                </p>
-                <p>
-                  If you have a project you want to come to life, an existing page 
-                  that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
-                  by clicking the envelope below!
-                </p>
-                <section>
-                  <a target="_blank" href="https://github.com/Levi237">
-                    <Github class="svg-link"/>
-                  </a>
-                  <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
-                    <Linkedin class="svg-link"/>
-                  </a>
-                  <a target="_blank" href="https://www.instagram.com/levi_eiko/">
-                    <Instagram class="svg-link"/>
-                  </a>
-                  <NavLink to={routes.MAIL}>
-                    <Mail class="svg-link"/>
-                  </NavLink>
-                </section>
-              </div>
-            </Container>
-          </AboutContainer>
-        );
-    };
+const AboutPage = () => { 
+  return(
+    <AboutContainer>
+      <Container>
+        <div>
+          <h2>
+            Meet Levi
+          </h2>
+          <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
+            camping guru & photographer of random things... with a green thumb. 
+            I'd like to think I have the eye of an artist & the mind of an engineer, 
+            and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
+          <p>
+            <b>What I do:</b> I help businesses enhance their online presence. 
+            Stores, blogs, email automations, photoshop, yes. 
+            I can build/upgrade your website for that extra digital edge.
+          </p>
+          <p>
+            If you have a project you want to come to life, an existing page 
+            that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
+            by clicking the envelope below!
+          </p>
+          <section>
+            <a target="_blank" href="https://github.com/Levi237">
+              <Github class="svg-link"/>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
+              <Linkedin class="svg-link"/>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/levi_eiko/">
+              <Instagram class="svg-link"/>
+            </a>
+            <NavLink to={routes.MAIL}>
+              <Mail class="svg-link"/>
+            </NavLink>
+          </section>
+        </div>
+      </Container>
+    </AboutContainer>
+  );
 };
 
 const Container = styled.div`
-color: var(--black);
+  color: var(--black);
   font-size: 14px;
   position: relative;
   z-index: 10;
@@ -138,3 +135,5 @@ const AboutContainer = styled.div`
       background-position: 70% center;
   }
 `;
+
+export default AboutPage;

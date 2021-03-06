@@ -14,7 +14,7 @@ import EmailConfirmation    from './components/contact/EmailConfirmation';
 
 export default class App extends Component {
   state = {
-    emailContact: "",
+    // emailContact: "",
     pageStyle: {
       home: {
         title: "",
@@ -49,14 +49,14 @@ export default class App extends Component {
     }
   };
 
-  toggleEmailSignup = (e) => {
-    const emailForm = document.getElementById('email');
-    emailForm.classList.toggle('active');
-    emailForm.classList.toggle('inactive');
-    this.setState({
-      emailContact: e.currentTarget.value
-    });
-  };
+  // toggleEmailSignup = (e) => {
+  //   const emailForm = document.getElementById('email');
+  //   emailForm.classList.toggle('active');
+  //   emailForm.classList.toggle('inactive');
+  //   this.setState({
+  //     emailContact: e.currentTarget.value
+  //   });
+  // };
 
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
@@ -72,7 +72,7 @@ export default class App extends Component {
       <AppContainer>
 
         <NavMenu toggleMenu={this.toggleMenu}/>
-        <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/>
+        {/* <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/> */}
 
         <Switch>
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
@@ -97,7 +97,7 @@ export default class App extends Component {
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
-              <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
+              <Route path={routes.INFO} exact render={() => <AboutPage /> }/>
               <Route path={routes.ROOT} render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
             </Switch>
           </ContentContainer>

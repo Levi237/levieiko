@@ -1,25 +1,20 @@
-import React, { Component } from 'react'
+import React                from 'react'
 import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from '../../constants/routes';
 
-export default class NavMenu extends Component {
-
-    render(){
-        const { toggleMenu } = this.props;
-        
-        return(
-            <NavContainer id="menu" className="inactive">
-                <div>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleMenu()}}>HOME</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>PORTFOLIO</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
-                </div>
-            </NavContainer>
-        );
-    };
+const NavMenu = ({ toggleMenu }) => {
+    return(
+        <NavContainer id="menu" className="inactive">
+            <div>
+                <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleMenu()}}>HOME</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>PORTFOLIO</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
+            </div>
+        </NavContainer>
+    );
 };
 
 const NavContainer = styled.div`
@@ -56,3 +51,5 @@ const NavContainer = styled.div`
         font-size: 14px;
     }
 `;
+
+export default NavMenu;

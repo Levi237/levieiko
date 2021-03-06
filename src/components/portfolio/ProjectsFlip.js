@@ -1,20 +1,16 @@
-import React, { Component }  from 'react';
-import styled from 'styled-components';
+import React    from 'react';
+import styled   from 'styled-components';
 
 import FlipCards from './FlipCards';
 
-export default class ProjectsFlip extends Component {
-
-    render(){
-        const { projects } = this.props;    
-        return(
-            <Container>
-                <br/><br/><br/><br/>
-                <h1>Projects</h1>
-                <FlipCards projects={projects} />
-            </Container>
-        );
-    };
+const ProjectsFlip = ({ projects }) => {   
+    return(
+        <Container>
+            <br/><br/><br/><br/>
+            <h1>Projects</h1>
+            <FlipCards projects={projects} />
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -28,3 +24,5 @@ const Container = styled.div`
         display: none;
     }
 `;
+
+export default ProjectsFlip;
