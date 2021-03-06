@@ -16,18 +16,23 @@ const AboutPage = () => {
           <h2>
             Meet Levi
           </h2>
-          <p><b>Who am I?</b>&emsp;A web developer, LEGO enthusaist, 
+          <p>
+            <b>Who am I?</b>
+            &emsp;A web developer, LEGO enthusaist, 
             camping guru & photographer of random things... with a green thumb. 
             I'd like to think I have the eye of an artist & the mind of an engineer, 
-            and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
+            and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗
+            </p>
           <p>
-            <b>What I do:</b>&emsp;I help businesses enhance their online presence. 
+            <b>What I do:</b>
+            &emsp;I help businesses enhance their online presence. 
             Stores, blogs, email automations, photoshop, <u>yes</u>. 
             I can build/upgrade your website for that extra digital edge.
           </p>
           <p>
             If you have a project you want to come to life, an existing page 
-            that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
+            that needs an upgrade or email marketing assitance, 
+            <NavLink to={routes.MAIL}>contact</NavLink> me 
             by clicking the envelope below!
           </p>
           <section>
