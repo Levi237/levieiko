@@ -5,7 +5,6 @@ import * as routes from '../../constants/routes';
 
 import { ReactComponent as LogoSVG } from '../svg/logo.svg';
 
-
 const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
@@ -13,7 +12,6 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
         <LogoSVG style={{fill: pageStyle.color, display: pageStyle.displayLogo}}/>
       </NavLink>
     </Logo>
-      {/* <Logo src="./icons/logo.svg" style={{display: pageStyle.displayLogo, filter: pageStyle.logoColor}}/> */}
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>
       <section style={{backgroundColor: pageStyle.color}}/>
       <section style={{backgroundColor: pageStyle.color}}/>
@@ -29,9 +27,6 @@ const Logo = styled.div`
 
   width: 36px;
   margin: 5vw 0 0 5vw;
-  // &::after {
-  //   content: "LeviEiko";
-  // }
 `;
 const Hamburger = styled.div`
   position: absolute;
