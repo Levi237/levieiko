@@ -26,9 +26,13 @@ width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(255,255,255,1);
     @media screen and (max-width: 745px) {
         align-items: start;
         background-color: #fff;
+    }
+    form {
+        box-shadow: 5px 5px 15px rgba(0,0,0,.2);
     }
 `;
 
