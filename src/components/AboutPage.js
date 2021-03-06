@@ -1,44 +1,57 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-export default class AboutPage extends Component {
-    render(){
-      
-      const { toggleEmailSignup } = this.props
-        return(
-          <AboutContainer>
-            <Container>
-              <div>
-                <h2>
-                  Meet Levi
-                </h2>
-                <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
-                  camping guru & photographer of random things... with a green thumb. 
-                  I'd like to think I have the eye of an artist & the mind of an engineer, 
-                  and my clients think so too, so that's nice! 🤗</p>
-                <p>
-                  <b>What I do:</b> I help businesses enhance their online presence. 
-                  Stores, blogs, email automations, photoshop, yes. 
-                  I can build/upgrade your website for that extra digital edge.
-                </p>
-                <p>
-                  If you have a project you want to come to life, an existing page 
-                  that needs an upgrade or email marketing assitance, contact me 
-                  by clicking the envelope below!
-                </p>
-                <section>
-                  <a href="https://github.com/Levi237"><img src="icons/github.png" alt="github link"/></a>
-                  <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/linkedin.png" alt="linkedin link"/></a>
-                  <a href="https://www.instagram.com/levi_eiko/"><img src="icons/instagram.png" alt="instagram link"/></a>
-                  <span onClick={(e) => {toggleEmailSignup(e)}}><img src="icons/email.png" alt="email form"/></span>
-                </section>
-              </div>
-            </Container>
-          </AboutContainer>
-        )
-    }
-}
+import React                            from 'react';
+import styled                           from 'styled-components';
+import { NavLink }                      from 'react-router-dom';
+import * as routes                      from './../constants/routes';
+
+import { ReactComponent as Mail }       from './svg/iconfinder_mail.svg';
+import { ReactComponent as Instagram }  from './svg/iconfinder_instagram.svg';
+import { ReactComponent as Linkedin }   from './svg/iconfinder_linkedin.svg';
+import { ReactComponent as Github }     from './svg/iconfinder_github.svg';
+
+const AboutPage = () => { 
+  return(
+    <AboutContainer>
+      <Container>
+        <div>
+          <h2>
+            Meet Levi
+          </h2>
+          <p><b>Who am I?</b>  A web developer, LEGO enthusaist, 
+            camping guru & photographer of random things... with a green thumb. 
+            I'd like to think I have the eye of an artist & the mind of an engineer, 
+            and my <NavLink to={routes.PORT}>clients</NavLink> seem to agree, so that's nice! 🤗</p>
+          <p>
+            <b>What I do:</b> I help businesses enhance their online presence. 
+            Stores, blogs, email automations, photoshop, yes. 
+            I can build/upgrade your website for that extra digital edge.
+          </p>
+          <p>
+            If you have a project you want to come to life, an existing page 
+            that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
+            by clicking the envelope below!
+          </p>
+          <section>
+            <a target="_blank" href="https://github.com/Levi237">
+              <Github class="svg-link"/>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
+              <Linkedin class="svg-link"/>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/levi_eiko/">
+              <Instagram class="svg-link"/>
+            </a>
+            <NavLink to={routes.MAIL}>
+              <Mail class="svg-link"/>
+            </NavLink>
+          </section>
+        </div>
+      </Container>
+    </AboutContainer>
+  );
+};
 
 const Container = styled.div`
+  color: var(--black);
   font-size: 14px;
   position: relative;
   z-index: 10;
@@ -47,8 +60,18 @@ const Container = styled.div`
   width: 50%;
   max-width: 50%;
   vertical-align: top;
-  color: black;
-
+  svg {
+    width: 40px;
+    height: 40px;
+    margin: 2.5%;
+  }
+  a {
+    color: var(--darkblue);
+    transition: .3s ease;
+    &:hover {
+      color: var(--blue);
+    }
+  }
   div {
     background-color: rgba(250,250,250,.8);
     padding: 30px 0;
@@ -60,9 +83,10 @@ const Container = styled.div`
     text-align: center;
   }
   p {
-    margin: 5% 15%;
+    margin: 15px 15%;
     font-size: 15px;
     font-weight: 100;
+    line-height: 160%;
     b {
       font-weight: 500;
     }
@@ -74,12 +98,14 @@ const Container = styled.div`
       max-width: 40px;
       margin: 2.5%;
     }
-    >a, 
-    >span {
+    > span {
+      width: 15%;
+      max-height: 40px;
+      max-width: 40px;
+      margin: 2.5%;
       transition: .3s ease;
       &:hover {
         cursor: pointer;
-        opacity: .8;
       }
     }
   }
@@ -96,18 +122,18 @@ const AboutContainer = styled.div`
   background-attachment: fixed;
   background-color: #fff;
   background-image: url(about.png);
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: cover;
 
   position: relative;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 
-@media screen and (max-width: 900px) {
-    background-size: cover!important;
-    background-position: 70% center;
-
-    // padding-top: 5vh;
-    height: 100vh;
-}
+  @media screen and (max-width: 900px) {
+      height: 100vh;
+      background-size: cover!important;
+      background-position: 70% center;
+  }
 `;
+
+export default AboutPage;

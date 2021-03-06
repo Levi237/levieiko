@@ -1,20 +1,12 @@
-import React, { Component } from 'react';
-import styled               from 'styled-components';
+import React        from 'react';
+import styled       from 'styled-components';
 
-import EmailForm       from './EmailForm';
-
-export default class EmailSignup extends Component { 
-    
-    render(){
-
-        const { toggleEmailSignup } = this.props
-        return(
-            <Container id="email" className="inactive contact-container">
-                <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
-                <EmailForm/>
-            </Container>
-        );
-    };
+const ModalWindow = ({ toggleModal }) => { 
+    return(
+        <Container id="modal" className="inactive contact-container">
+            <CloseBtn name="modalWindow" className="close xClose white" onClick={(e) => {toggleModal(e)}}>X</CloseBtn>
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -26,9 +18,13 @@ width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(255,255,255,1);
     @media screen and (max-width: 745px) {
         align-items: start;
         background-color: #fff;
+    }
+    form {
+        box-shadow: 5px 5px 15px rgba(0,0,0,.2);
     }
 `;
 
@@ -49,3 +45,5 @@ const CloseBtn = styled.button`
     top: 10px;
     z-index: 99999;
 `;
+
+export default ModalWindow;

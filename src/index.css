@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Big+Shoulders+Stencil+Text:wght@100;300;400;500;600;700;800;900&display=swap');
 
+:root {
+  --black: rgb(24, 23, 23);
+  --blue: rgb(75, 125, 190);
+  --darkblue: rgb(0, 54, 110);
+}
+
 body {
+  color: var(--black);
   margin: 0;
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,6 +19,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+svg * {
+  transition: .3s ease;
+}
+svg.svg-link *:hover {
+  fill: var(--blue);
 }
 
 h1 {
@@ -26,7 +45,7 @@ h2 {
 }
 
 /* ON/OFF SWITCH */
-#email.active {
+#modal.active {
   max-width: 100vw;
 }
 #menu.active {
@@ -39,7 +58,7 @@ h2 {
   transition: .8s ease-in-out;
 }
 
-#email.inactive{
+#modal.inactive{
   max-height: 0px;
 }
 #menu.inactive {
@@ -54,7 +73,7 @@ h2 {
 }
 
 @media screen and (max-width: 945px){
-  #menu.active, #email.active {
+  #menu.active, #modal.active {
     max-width: 100vw;
   }
   .active {

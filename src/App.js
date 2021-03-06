@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route }    from 'react-router-dom';
+import { Switch, Route, NavLink }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
@@ -9,12 +9,12 @@ import NavHamburger         from './components/nav/NavHamburger';
 import PortfolioPage        from './components/portfolio/PortfolioPage';
 import AboutPage            from './components/AboutPage';
 import ContactPage          from './components/contact/ContactPage';
-import EmailSignup          from './components/contact/EmailSignup';
+import ModalWindow          from './components/Modal';
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 
 export default class App extends Component {
   state = {
-    emailContact: "",
+    modalType: "",
     pageStyle: {
       home: {
         title: "",
@@ -49,12 +49,12 @@ export default class App extends Component {
     }
   };
 
-  toggleEmailSignup = (e) => {
-    const emailForm = document.getElementById('email');
-    emailForm.classList.toggle('active');
-    emailForm.classList.toggle('inactive');
+  toggleModal = (e) => {
+    const toggle = document.getElementById('modal');
+    toggle.classList.toggle('active');
+    toggle.classList.toggle('inactive');
     this.setState({
-      emailContact: e.currentTarget.value
+      modalType: e.currentTarget.value
     });
   };
 
@@ -63,16 +63,16 @@ export default class App extends Component {
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
- 
 
   render (){
-    const { emailContact, pageStyle } = this.state
+
+    const { modalType, pageStyle } = this.state
 
     return (
       <AppContainer>
 
         <NavMenu toggleMenu={this.toggleMenu}/>
-        <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/>
+        <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
@@ -93,12 +93,12 @@ export default class App extends Component {
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <HomeLogo/> }/>
+              <Route path={routes.HOME} exact render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
-              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
+              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
-              <Route path={routes.INFO} exact render={() => <AboutPage toggleEmailSignup={this.toggleEmailSignup}/>  }/>
-              <Route path={routes.ROOT} render={() => <HomeLogo/> }/>
+              <Route path={routes.INFO} exact render={() => <AboutPage /> }/>
+              <Route path={routes.ROOT} render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
@@ -111,14 +111,14 @@ export default class App extends Component {
 const ContentContainer = styled.div`
   color: #fff;
   height: 100vh;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
   position: relative;
 `;
 
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  // scroll-snap-type: y proximity;
 `;
 const AppContainer = styled.div`
   h1,h2,h3,ul {
