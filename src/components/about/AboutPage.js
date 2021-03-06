@@ -1,12 +1,12 @@
 import React                            from 'react';
 import styled                           from 'styled-components';
 import { NavLink }                      from 'react-router-dom';
-import * as routes                      from './../constants/routes';
+import * as routes                      from '../../constants/routes';
 
-import { ReactComponent as Mail }       from './svg/iconfinder_mail.svg';
-import { ReactComponent as Instagram }  from './svg/iconfinder_instagram.svg';
-import { ReactComponent as Linkedin }   from './svg/iconfinder_linkedin.svg';
-import { ReactComponent as Github }     from './svg/iconfinder_github.svg';
+import { ReactComponent as Mail }       from '../svg/iconfinder_mail.svg';
+import { ReactComponent as Instagram }  from '../svg/iconfinder_instagram.svg';
+import { ReactComponent as Linkedin }   from '../svg/iconfinder_linkedin.svg';
+import { ReactComponent as Github }     from '../svg/iconfinder_github.svg';
 
 const AboutPage = () => { 
   return(

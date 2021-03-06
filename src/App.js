@@ -7,7 +7,7 @@ import NavMenu              from './components/nav/NavMenu';
 import NavHamburger         from './components/nav/NavHamburger';
 
 import PortfolioPage        from './components/portfolio/PortfolioPage';
-import AboutPage            from './components/AboutPage';
+import AboutPage            from './components/about/AboutPage';
 import ContactPage          from './components/contact/ContactPage';
 import ModalWindow          from './components/Modal';
 import EmailConfirmation    from './components/contact/EmailConfirmation';
