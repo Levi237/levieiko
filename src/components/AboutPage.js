@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import * as routes from './../constants/routes'
+import * as routes from './../constants/routes';
+
+// import {ReactComponent as Mail} from "./svg/iconfinder_mail.svg";
+// import {ReactComponent as Instagram} from "./svg/iconfinder_instagram.svg";
+// import {ReactComponent as Linkedin} from "./svg/iconfinder_linkedin.svg";
+// import {ReactComponent as Github} from "./svg/iconfinder_github.svg";
 export default class AboutPage extends Component {
     render(){
       
@@ -27,12 +32,23 @@ export default class AboutPage extends Component {
                   that needs an upgrade or email marketing assitance, <NavLink to={routes.MAIL}>contact</NavLink> me 
                   by clicking the envelope below!
                 </p>
-                {/* <img src="icons/iconfinder_mail.svg"/> */}
                 <section>
-                  <a href="https://github.com/Levi237"><img src="icons/iconfinder_github.svg" alt="github link"/></a>
-                  <a href="https://www.linkedin.com/in/leviwinans"><img src="icons/iconfinder_linkedin.svg" alt="linkedin link"/></a>
-                  <a href="https://www.instagram.com/levi_eiko/"><img src="icons/iconfinder_instagram.svg" alt="instagram link"/></a>
-                  <span onClick={(e) => {toggleEmailSignup(e)}}><img src="icons/iconfinder_mail.svg" alt="email form"/></span>
+                  <a href="https://github.com/Levi237">
+                  {/* <Github/> */}
+                    <img src="icons/iconfinder_github.svg" alt="github link"/>
+                  </a>
+                  <a href="https://www.linkedin.com/in/leviwinans">
+                  {/* <Linkedin/> */}
+                    <img src="icons/iconfinder_linkedin.svg" alt="linkedin link"/>
+                  </a>
+                  <a href="https://www.instagram.com/levi_eiko/">
+                  {/* <Instagram/> */}
+                    <img src="icons/iconfinder_instagram.svg" alt="instagram link"/>
+                  </a>
+                  <span onClick={(e) => {toggleEmailSignup(e)}}>
+                    {/* <Mail/> */}
+                    <img src="icons/iconfinder_mail.svg" alt="email form"/>
+                  </span>
                 </section>
               </div>
             </Container>

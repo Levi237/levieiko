@@ -28,6 +28,9 @@ const Container = styled.div`
     padding-top: 0;
     position: fixed;
     overflow: scroll;
+    .svg> path:hover {
+        fill: #ccc!important;
+    }
     h1 {
         color: rgba(75, 125, 190, 1);
         padding-top: 40px;
