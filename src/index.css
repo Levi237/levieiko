@@ -26,10 +26,12 @@ a {
   text-decoration: none;
 }
 
-svg > path {
+svg > path,
+svg > g > path {
   transition: .3s ease;
 }
-svg > path:hover {
+svg > path:hover,
+svg g:hover > path {
   fill: var(--blue);
 }
 

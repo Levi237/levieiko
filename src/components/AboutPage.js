@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import * as routes from './../constants/routes';
+import React, { Component }             from 'react';
+import styled                           from 'styled-components';
+import { NavLink }                      from 'react-router-dom';
+import * as routes                      from './../constants/routes';
 
-import {ReactComponent as Mail} from "./svg/iconfinder_mail.svg";
-// import {ReactComponent as Instagram} from "./svg/iconfinder_instagram.svg";
-// import {ReactComponent as Linkedin} from "./svg/iconfinder_linkedin.svg";
-import {ReactComponent as Github} from "./svg/iconfinder_github.svg";
+import { ReactComponent as Mail }       from './svg/iconfinder_mail.svg';
+import { ReactComponent as Instagram }  from './svg/iconfinder_instagram.svg';
+import { ReactComponent as Linkedin }   from './svg/iconfinder_linkedin.svg';
+import { ReactComponent as Github }     from './svg/iconfinder_github.svg';
+
 export default class AboutPage extends Component {
-    render(){
-      
+    render(){    
       const { toggleEmailSignup } = this.props
         return(
           <AboutContainer>
@@ -34,20 +34,16 @@ export default class AboutPage extends Component {
                 </p>
                 <section>
                   <a target="_blank" href="https://github.com/Levi237">
-                  <Github/>
-                    {/* <img src="icons/iconfinder_github.svg" alt="github link"/> */}
+                    <Github/>
                   </a>
                   <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
-                  {/* <Linkedin/> */}
-                    <img src="icons/iconfinder_linkedin.svg" alt="linkedin link"/>
+                    <Linkedin/>
                   </a>
                   <a target="_blank" href="https://www.instagram.com/levi_eiko/">
-                  {/* <Instagram/> */}
-                    <img src="icons/iconfinder_instagram.svg" alt="instagram link"/>
+                    <Instagram/>
                   </a>
                   <span onClick={(e) => {toggleEmailSignup(e)}}>
                     <Mail/>
-                    {/* <img src="icons/iconfinder_mail.svg" alt="email form"/> */}
                   </span>
                 </section>
               </div>
