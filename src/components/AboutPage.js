@@ -34,16 +34,16 @@ export default class AboutPage extends Component {
                 </p>
                 <section>
                   <a target="_blank" href="https://github.com/Levi237">
-                    <Github/>
+                    <Github class="svg-link"/>
                   </a>
                   <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
-                    <Linkedin/>
+                    <Linkedin class="svg-link"/>
                   </a>
                   <a target="_blank" href="https://www.instagram.com/levi_eiko/">
-                    <Instagram/>
+                    <Instagram class="svg-link"/>
                   </a>
                   <span onClick={(e) => {toggleEmailSignup(e)}}>
-                    <Mail/>
+                    <Mail class="svg-link"/>
                   </span>
                 </section>
               </div>
