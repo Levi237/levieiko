@@ -42,9 +42,9 @@ export default class AboutPage extends Component {
                   <a target="_blank" href="https://www.instagram.com/levi_eiko/">
                     <Instagram class="svg-link"/>
                   </a>
-                  <span onClick={(e) => {toggleEmailSignup(e)}}>
+                  <NavLink to={routes.MAIL}>
                     <Mail class="svg-link"/>
-                  </span>
+                  </NavLink>
                 </section>
               </div>
             </Container>
