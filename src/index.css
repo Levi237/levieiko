@@ -45,7 +45,7 @@ h2 {
 }
 
 /* ON/OFF SWITCH */
-#email.active {
+#modal.active {
   max-width: 100vw;
 }
 #menu.active {
@@ -58,7 +58,7 @@ h2 {
   transition: .8s ease-in-out;
 }
 
-#email.inactive{
+#modal.inactive{
   max-height: 0px;
 }
 #menu.inactive {
@@ -73,7 +73,7 @@ h2 {
 }
 
 @media screen and (max-width: 945px){
-  #menu.active, #email.active {
+  #menu.active, #modal.active {
     max-width: 100vw;
   }
   .active {

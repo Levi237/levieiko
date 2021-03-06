@@ -9,12 +9,12 @@ import NavHamburger         from './components/nav/NavHamburger';
 import PortfolioPage        from './components/portfolio/PortfolioPage';
 import AboutPage            from './components/AboutPage';
 import ContactPage          from './components/contact/ContactPage';
-import EmailSignup          from './components/contact/EmailSignup';
+import ModalWindow          from './components/Modal';
 import EmailConfirmation    from './components/contact/EmailConfirmation';
 
 export default class App extends Component {
   state = {
-    // emailContact: "",
+    modalType: "",
     pageStyle: {
       home: {
         title: "",
@@ -49,30 +49,30 @@ export default class App extends Component {
     }
   };
 
-  // toggleEmailSignup = (e) => {
-  //   const emailForm = document.getElementById('email');
-  //   emailForm.classList.toggle('active');
-  //   emailForm.classList.toggle('inactive');
-  //   this.setState({
-  //     emailContact: e.currentTarget.value
-  //   });
-  // };
+  toggleModal = (e) => {
+    const toggle = document.getElementById('modal');
+    toggle.classList.toggle('active');
+    toggle.classList.toggle('inactive');
+    this.setState({
+      modalType: e.currentTarget.value
+    });
+  };
 
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
- 
 
   render (){
-    const { emailContact, pageStyle } = this.state
+
+    const { modalType, pageStyle } = this.state
 
     return (
       <AppContainer>
 
         <NavMenu toggleMenu={this.toggleMenu}/>
-        {/* <EmailSignup contactType={emailContact} toggleEmailSignup={this.toggleEmailSignup}/> */}
+        <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
@@ -95,7 +95,7 @@ export default class App extends Component {
             <Switch>         
               <Route path={routes.HOME} exact render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
-              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={emailContact}/> }/>
+              <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage /> }/>
               <Route path={routes.ROOT} render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>

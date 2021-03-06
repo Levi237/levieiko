@@ -1,13 +1,10 @@
 import React        from 'react';
 import styled       from 'styled-components';
 
-import EmailForm    from './EmailForm';
-
-const EmailSignup = ({ toggleEmailSignup }) => { 
+const ModalWindow = ({ toggleModal }) => { 
     return(
-        <Container id="email" className="inactive contact-container">
-            <CloseBtn name="emailForm" className="close xClose white" onClick={(e) => {toggleEmailSignup(e)}}>X</CloseBtn>
-            <EmailForm/>
+        <Container id="modal" className="inactive contact-container">
+            <CloseBtn name="modalWindow" className="close xClose white" onClick={(e) => {toggleModal(e)}}>X</CloseBtn>
         </Container>
     );
 };
@@ -49,4 +46,4 @@ const CloseBtn = styled.button`
     z-index: 99999;
 `;
 
-export default EmailSignup;
+export default ModalWindow;
