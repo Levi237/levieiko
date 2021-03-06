@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from './../constants/routes';
 
-// import {ReactComponent as Mail} from "./svg/iconfinder_mail.svg";
+import {ReactComponent as Mail} from "./svg/iconfinder_mail.svg";
 // import {ReactComponent as Instagram} from "./svg/iconfinder_instagram.svg";
 // import {ReactComponent as Linkedin} from "./svg/iconfinder_linkedin.svg";
-// import {ReactComponent as Github} from "./svg/iconfinder_github.svg";
+import {ReactComponent as Github} from "./svg/iconfinder_github.svg";
 export default class AboutPage extends Component {
     render(){
       
@@ -34,8 +34,8 @@ export default class AboutPage extends Component {
                 </p>
                 <section>
                   <a href="https://github.com/Levi237">
-                  {/* <Github/> */}
-                    <img src="icons/iconfinder_github.svg" alt="github link"/>
+                  <Github/>
+                    {/* <img src="icons/iconfinder_github.svg" alt="github link"/> */}
                   </a>
                   <a href="https://www.linkedin.com/in/leviwinans">
                   {/* <Linkedin/> */}
@@ -46,8 +46,8 @@ export default class AboutPage extends Component {
                     <img src="icons/iconfinder_instagram.svg" alt="instagram link"/>
                   </a>
                   <span onClick={(e) => {toggleEmailSignup(e)}}>
-                    {/* <Mail/> */}
-                    <img src="icons/iconfinder_mail.svg" alt="email form"/>
+                    <Mail/>
+                    {/* <img src="icons/iconfinder_mail.svg" alt="email form"/> */}
                   </span>
                 </section>
               </div>
@@ -67,6 +67,11 @@ color: var(--black);
   width: 50%;
   max-width: 50%;
   vertical-align: top;
+  svg {
+    width: 40px;
+    height: 40px;
+    margin: 2.5%;
+  }
   a {
     color: var(--darkblue);
     transition: .3s ease;
@@ -100,11 +105,14 @@ color: var(--black);
       max-width: 40px;
       margin: 2.5%;
     }
-    >span {
+    > span {
+      width: 15%;
+      max-height: 40px;
+      max-width: 40px;
+      margin: 2.5%;
       transition: .3s ease;
       &:hover {
         cursor: pointer;
-        opacity: .8;
       }
     }
   }

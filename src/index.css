@@ -26,6 +26,13 @@ a {
   text-decoration: none;
 }
 
+svg > path {
+  transition: .3s ease;
+}
+svg > path:hover {
+  fill: var(--blue);
+}
+
 h1 {
   font-family: 'Big Shoulders Stencil Text', courier;
   font-weight: 500;
