@@ -1,45 +1,50 @@
-import React, { Component } from 'react';
-import { Switch, Route, NavLink }    from 'react-router-dom';
-import styled               from 'styled-components';
+import React, { Component }           from 'react';
+import { Switch, Route, NavLink }     from 'react-router-dom';
+import styled                         from 'styled-components';
 
-import * as routes          from './constants/routes';
-import NavMenu              from './components/nav/NavMenu';
-import NavHamburger         from './components/nav/NavHamburger';
+import { ReactComponent as LogoSVG }  from './components/svg/logo.svg';
 
-import PortfolioPage        from './components/portfolio/PortfolioPage';
-import AboutPage            from './components/about/AboutPage';
-import ContactPage          from './components/contact/ContactPage';
-import ModalWindow          from './components/Modal';
-import EmailConfirmation    from './components/contact/EmailConfirmation';
+import * as routes                    from './constants/routes';
+import ModalWindow                    from './components/Modal';
+import NavMenu                        from './components/nav/NavMenu';
+import NavHamburger                   from './components/nav/NavHamburger';
+
+import HomePage                       from './components/home/HomePage';
+import AboutPage                      from './components/about/AboutPage';
+import ContactPage                    from './components/contact/ContactPage';
+import EmailConfirmation              from './components/contact/EmailConfirmation';
+import PortfolioPage                  from './components/portfolio/PortfolioPage';
 
 export default class App extends Component {
   state = {
-    modalType: "",
+    modalType: '',
     pageStyle: {
       home: {
-        title: "",
-        color: "#fff",
-        displayLogo: "none",
+        title: '',
+        color: '#fff',
+        fill: 'url(#skyGradient)',
+        displayLogo: 'none',
       },
       about: {
-        title: "",
-        color: "#181717",
-        displayLogo: "none",
+        title: '',
+        color: '#181717',
+        displayLogo: 'none',
       },
       portfolio: {
-        title: "portfolio",
-        color: "#fff",
-        displayLogo: "inline-block",
+        title: 'portfolio',
+        color: '#fff',
+        displayLogo: 'inline-block',
+        fill: 'url(#skyGradient)',
       },
       mail: {
-        title: "contact",
-        color: "#fff",
-        displayLogo: "inline-block",
+        title: 'contact',
+        color: '#fff',
+        displayLogo: 'inline-block',
       },
       root: {
-        title: "",
-        color: "#fff",
-        displayLogo: "none",
+        title: '',
+        color: '#fff',
+        displayLogo: 'none',
       }
     }
   };
@@ -88,12 +93,12 @@ export default class App extends Component {
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
+              <Route path={routes.HOME} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage /> }/>
-              <Route path={routes.ROOT} render={() => <NavLink to={routes.PORT}><HomeLogo/></NavLink> }/>
+              <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
@@ -168,7 +173,13 @@ const HomeLogo = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url(logo.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  a {
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+  }
+  svg {
+    height: 150px;
+    width: 150px;
+  }
 `;
