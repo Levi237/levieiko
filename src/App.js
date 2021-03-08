@@ -39,7 +39,7 @@ export default class App extends Component {
       mail: {
         title: 'contact',
         color: '#fff',
-        fill: 'fff',
+        fill: '#fff',
         displayLogo: 'inline-block',
       },
       root: {
