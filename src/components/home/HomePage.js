@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
 // import LogoSVGJS from './../svg/LogoSVGJS';
-import { ReactComponent as LogoSVG } from '../svg/logo.svg';
+import { ReactComponent as LogoSVG } from '../../svg/logo.svg';
 
 const HomePage = ({pageStyle}) => {
   return(
