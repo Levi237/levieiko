@@ -72,7 +72,7 @@ export default class App extends Component {
     return (
       <AppContainer>
 
-        {/* <LogoSVGapp className="" style={{width: '0', height: '0', position: 'absolute'}}/> */}
+        <LogoSVGapp className="" style={{width: '0', height: '0', position: 'absolute'}}/>
 
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
