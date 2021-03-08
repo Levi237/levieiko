@@ -7,8 +7,9 @@ export default class EmailForm extends Component {
         lNameValue: '',
         websiteValue: '',
         messageValue: '',
+        authFilter: '',
         addServices: ['Services Request:'],
-        services: ["Online Store", "Professional Website", "Email Marketing", "Graphic Design"]
+        services: ["Online Store", "Professional Website", "Email Marketing", "Graphic Design"],
     };
 
     handleSelect = (e, service) => {
@@ -31,7 +32,7 @@ export default class EmailForm extends Component {
     };
 
     render(){
-        const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
+        const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services, authFilter} = this.state
 
         const buttonSelectors = services.map((service, key) => {
             return(
@@ -104,7 +105,7 @@ export default class EmailForm extends Component {
                 </label>
 
                 <h3>What are You Intrested In?</h3>
-                <div class="services-section">
+                <div className="services-section">
                     {buttonSelectors}
                     <input 
                         type="hidden" 
@@ -117,7 +118,7 @@ export default class EmailForm extends Component {
                 <label htmlFor='MESSAGE'>
                     <textarea 
                         type="text" 
-                        maxlength="255"
+                        maxLength="255"
                         name="MESSAGE" 
                         id="MESSAGE" 
                         value={messageValue}
@@ -125,7 +126,15 @@ export default class EmailForm extends Component {
                         onChange={(e)=>{this.setState({messageValue: e.target.value});}}
                     />
                 </label>
-                <AuthFilter aria-hidden="true"><input type="text" name="b_0e3bf36f8cbe7c4f0019bd050_fe06177933" tabindex="-1" value=""/></AuthFilter>
+                <AuthFilter aria-hidden="true">
+                    <input 
+                        type="text" 
+                        name="b_0e3bf36f8cbe7c4f0019bd050_fe06177933" 
+                        tabIndex="-1" 
+                        value={authFilter}
+                        onChange={(e)=>{this.setState({authFilter: e.target.value});}}
+                        />
+                </AuthFilter>
                 <div className="clear">
                     <input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" className="button"/>
                 </div>
