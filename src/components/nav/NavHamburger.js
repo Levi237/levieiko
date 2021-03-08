@@ -36,7 +36,6 @@ const Logo = styled(GlobalDiv)`
 `;
 const Hamburger = styled(GlobalDiv)`
   right: 5vw;
-
 `;
 
 export default NavHamburger;
