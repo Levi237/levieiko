@@ -54,10 +54,9 @@ export default class Clients extends Component {
                 return <li key={k}>{r}</li>
             })
             const technologiesList = client.technologies.map((c, k) => {
-                return <><span key={k}>{c}</span><span> | </span></>
+                return <span key={k}>{c}</span>
             })
             return(
-                <>
                 <ClientContainer key={key}>
                     <MobileImg src={client.image} alt={client.title}/>
                     <section>
@@ -83,9 +82,8 @@ export default class Clients extends Component {
                         <hr/>   
                     </section>
                     <DesktopImg src={client.image} alt={client.title}/>
+                    <hr/>
                 </ClientContainer>
-                <hr/>
-                </>
             )
         })
         return(
@@ -109,8 +107,11 @@ const ClientContainer = styled.div`
         display: inline-block;
         vertical-align: top;
         text-align: left;
-        span:last-of-type {
-            display: none;
+        span::after {
+            content ' | ';
+        }
+        span:last-of-type::after {
+            content: '';
         }
     }
     
@@ -148,11 +149,21 @@ const ClientContainer = styled.div`
     ul {
         margin-bottom: 10px!important;
     }
-    hr {
+    >hr {
+        width: 100%;
+        margin: 40px auto 20px;
+    }
+    >hr:last-of-type {
+        margin: 40px auto 0;
+    }
+    section > hr {
         display: none;
     }
     @media screen and (max-width: 900px) {
-        hr {
+        >hr {
+            display: none;
+        }
+        section > hr {
             display: block;
             width: 80%;
             margin: 5% auto;
@@ -179,13 +190,7 @@ const Container = styled.div`
         background-color: #fff;
         border: none;
     }
-    >hr {
-        width: 80%;
-        margin: 40px auto 20px;
-    }
-    >hr:last-of-type {
-        margin: 40px auto 0;
-    }
+
     @media screen and (max-width: 900px) {
         section, img {
             width: 90%;

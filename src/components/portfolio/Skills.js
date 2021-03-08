@@ -29,42 +29,38 @@ const Container = styled.div`
     display: none;
   }
   section {
-      >span::after {
-        content: ' | ';
-      }
-      >span:last-of-type::after   {
-        content: '';
-      }
+    >span::after {
+      content: ' | ';
+    }
+    >span:last-of-type::after   {
+      content: '';
+    }
   }
   @media screen and (max-width: 400px){
   }
   @media screen and (max-width: 900px){
     section {
       margin: 0 auto;
-
-        >span::after {
-          content: ' | ';
-        }
-        >span:nth-of-type(5)::after,
-        >span:nth-of-type(9)::after {
-          content: '';
-          display: block;
-        }
-
+      >span::after {
+        content: ' | ';
+      }
+      >span:nth-of-type(5)::after,
+      >span:nth-of-type(9)::after {
+        content: '';
+        display: block;
+      }
     }
   }
   @media screen and (max-width: 1200px){
     section {
       margin: 0 auto;
-
-        >span::after {
-          content: ' | ';
-        }
-        >span:nth-of-type(9)::after {
-          content: '';
-          display: block;
-        }
-
+      >span::after {
+        content: ' | ';
+      }
+      >span:nth-of-type(9)::after {
+        content: '';
+        display: block;
+      }
     }
   }
 `;
