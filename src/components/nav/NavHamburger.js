@@ -9,7 +9,7 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
       <NavLink to={routes.HOME}>
-        <LogoSVG style={{fill: pageStyle.color, display: pageStyle.displayLogo}}/>
+        <LogoSVG class="" style={{fill: pageStyle.color, display: pageStyle.displayLogo}}/>
       </NavLink>
     </Logo>
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>

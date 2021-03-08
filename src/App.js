@@ -71,13 +71,15 @@ export default class App extends Component {
     return (
       <AppContainer>
 
+        <LogoSVG class="" style={{width: '0', height: '0', position: 'absolute'}}/>
+
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
           <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
-          <Route path={routes.MAIL} render={() => <GoblinValleyImageAnimation/>}/>
+          <Route path={routes.MAIL} exact render={() => <GoblinValleyImageAnimation/>}/>
           <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
@@ -93,12 +95,12 @@ export default class App extends Component {
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.HOME} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
-              <Route path={routes.INFO} exact render={() => <AboutPage /> }/>
-              <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
+              <Route path={routes.HOME} exact render={() => <HomePage/> }/>
+              <Route path={routes.ROOT} render={() => <HomePage/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   

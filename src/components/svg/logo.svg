@@ -7,8 +7,14 @@
   >
 
   <style type="text/css">
-    svg:hover path {
-      fill: rgba(45,45,45,.9);
+    svg.animate-svg path {
+      fill: url(#skyGradient);
+    }
+    svg:not(.animate-svg):hover path {
+      fill: url(#skyGradient);
+    }
+    svg:is(.animate-svg):hover path {
+      fill: #fff;
     }
   </style>
 
@@ -24,17 +30,9 @@
     </linearGradient>
   </defs>
 
-  <rect 
-    fill= "transparent"
-    stroke-width="0" 
-    width="500" 
-    height="500" 
-    x="000" 
-    y="000" 
-    />
+  <rect fill= "transparent" stroke-width="0" width="500" height="500" x="0" y="0" />
   <path 
     stroke-width="0" 
     d="M0 0 H75 V300 H265 V425 H500 V500 H0, M140 0 H500 V125 H265 V250 H140, M325 175 H500 V375 H325 V300 H425 V250 H325 Z"
     />
-    
 </svg>

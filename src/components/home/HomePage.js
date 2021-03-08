@@ -5,17 +5,17 @@ import * as routes from '../../constants/routes';
 
 import { ReactComponent as LogoSVG } from '../svg/logo.svg';
 
-const HomePage = ({ pageStyle }) => {
-  return(<>
-    <Logo>
+const HomePage = () => {
+  return(
+    <LocalWrapper>
       <NavLink to={routes.PORT}>
-        <LogoSVG style={{fill: pageStyle.color}}/>
+        <LogoSVG class="animate-svg"/>
       </NavLink>
-    </Logo>
-  </>);
+    </LocalWrapper>
+  );
 };
 
-const Logo = styled.div`
+const LocalWrapper = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
