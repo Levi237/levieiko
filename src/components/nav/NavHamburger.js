@@ -20,29 +20,30 @@ const NavHamburger = ({ toggleMenu, pageStyle }) => {
   </>);
 };
 
-const Logo = styled.div`
+const GlobalDiv = styled.div`
   position: absolute;
   z-index:999;
-  left:0;
-
-  width: 36px;
-  margin: 5vw 0 0 5vw;
-`;
-const Hamburger = styled.div`
-  position: absolute;
-  z-index: 999;
-  right: 0;
-
-  margin: 5vw 5vw 0 0;
+  top: 40px;
   &:hover{
     cursor: pointer;
   }
+  @media screen and (max-width: 945px) {
+    top: 5vw;
+  }
+`;
+const Logo = styled(GlobalDiv)`
+  left:0;
+  width: 36px;
+  margin-right: 5vw;
+`;
+const Hamburger = styled(GlobalDiv)`
+  right: 0;
+  margin-left: 5vw;
+
   section {
     margin: 6px 0;
     width: 35px;
     height: 4px;
-  }
-  @media screen and (max-width: 945px) {
   }
 `;
 
