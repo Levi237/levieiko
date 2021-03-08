@@ -8,8 +8,6 @@ import { ReactComponent as Instagram }  from '../svg/iconfinder_instagram.svg';
 import { ReactComponent as Linkedin }   from '../svg/iconfinder_linkedin.svg';
 import { ReactComponent as Github }     from '../svg/iconfinder_github.svg';
 
-import { ReactComponent as LogoSVG } from '../svg/logo.svg';
-
 const AboutPage = () => { 
   return(
     <AboutContainer>
