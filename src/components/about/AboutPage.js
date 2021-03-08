@@ -40,16 +40,16 @@ const AboutPage = () => {
           </p>
           <section>
             <a target="_blank" href="https://github.com/Levi237">
-              <Github class="svg-link"/>
+              <Github className="svg-link"/>
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
-              <Linkedin class="svg-link"/>
+              <Linkedin className="svg-link"/>
             </a>
             <a target="_blank" href="https://www.instagram.com/levi_eiko/">
-              <Instagram class="svg-link"/>
+              <Instagram className="svg-link"/>
             </a>
             <NavLink to={routes.MAIL}>
-              <Mail class="svg-link"/>
+              <Mail className="svg-link"/>
             </NavLink>
           </section>
         </div>

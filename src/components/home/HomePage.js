@@ -3,13 +3,14 @@ import styled      from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
-import { ReactComponent as LogoSVG } from '../svg/logo.svg';
+import LogoSVGJS from './../svg/LogoSVGJS';
+// import { ReactComponent as LogoSVG } from '../svg/logo.svg';
 
 const HomePage = () => {
   return(
     <LocalWrapper>
       <NavLink to={routes.PORT}>
-        <LogoSVG class="animate-svg"/>
+        <LogoSVGJS className="animate-svg"/>
       </NavLink>
     </LocalWrapper>
   );

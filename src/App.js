@@ -2,7 +2,7 @@ import React, { Component }           from 'react';
 import { Switch, Route, NavLink }     from 'react-router-dom';
 import styled                         from 'styled-components';
 
-import { ReactComponent as LogoSVG }  from './components/svg/logo.svg';
+import { ReactComponent as LogoSVGapp }  from './components/svg/logo.svg';
 
 import * as routes                    from './constants/routes';
 import ModalWindow                    from './components/Modal';
@@ -71,7 +71,7 @@ export default class App extends Component {
     return (
       <AppContainer>
 
-        <LogoSVG class="" style={{width: '0', height: '0', position: 'absolute'}}/>
+        {/* <LogoSVGapp class=Name"" style={{width: '0', height: '0', position: 'absolute'}}/> */}
 
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
