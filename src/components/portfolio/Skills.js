@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Skills =({skills})=> {
-  const skillsList = skills.map(skill => {
-    return <>{skill}<span></span></>
+  const skillsList = skills.map((skill, k) => {
+    return <span key={k}>{skill}</span>
   })
   return(
       <Container>
@@ -29,12 +29,12 @@ const Container = styled.div`
     display: none;
   }
   section {
-    >span::before {
-      content: ' | ';
-    }
-    >span:last-of-type::before   {
-      content: '';
-    }
+      >span::after {
+        content: ' | ';
+      }
+      >span:last-of-type::after   {
+        content: '';
+      }
   }
   @media screen and (max-width: 400px){
   }
@@ -42,27 +42,29 @@ const Container = styled.div`
     section {
       margin: 0 auto;
 
-      >span::before {
-        content: ' | ';
-      }
-      >span:nth-of-type(5)::before,
-      >span:nth-of-type(9)::before {
-        content: '';
-        display: block;
-      }
+        >span::after {
+          content: ' | ';
+        }
+        >span:nth-of-type(5)::after,
+        >span:nth-of-type(9)::after {
+          content: '';
+          display: block;
+        }
+
     }
   }
   @media screen and (max-width: 1200px){
     section {
       margin: 0 auto;
 
-      >span::before {
-        content: ' | ';
-      }
-      >span:nth-of-type(9)::before {
-        content: '';
-        display: block;
-      }
+        >span::after {
+          content: ' | ';
+        }
+        >span:nth-of-type(9)::after {
+          content: '';
+          display: block;
+        }
+
     }
   }
 `;
