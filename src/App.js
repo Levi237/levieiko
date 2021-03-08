@@ -34,7 +34,7 @@ export default class App extends Component {
         title: 'portfolio',
         color: '#fff',
         displayLogo: 'inline-block',
-        fill: 'url(#skyGradient)',
+        fill: '#fff',
       },
       mail: {
         title: 'contact',

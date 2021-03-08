@@ -11,10 +11,10 @@
       fill: url(#skyGradient);
     }
     svg:not(.animate-svg):hover path {
-      fill: url(#skyGradient);
+      fill: #303030;
     }
     svg:is(.animate-svg):hover path {
-      fill: #fff;
+      <!-- fill: #fff; -->
     }
   </style>
 

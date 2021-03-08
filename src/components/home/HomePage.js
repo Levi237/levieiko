@@ -10,7 +10,7 @@ const HomePage = ({pageStyle}) => {
   return(
     <LocalWrapper>
       <NavLink to={routes.PORT}>
-        <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
+        <LogoSVG className="animate-svg" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
       </NavLink>
     </LocalWrapper>
   );
