@@ -7,7 +7,7 @@ export default class Clients extends Component {
         title: "Andrea Sells Maui",
             image: "./clients/andreasellsmaui.png",
             link: "andreasellsmaui.com",
-            statement: "Maui resident and real estate agent serving the local community",
+            statement: "Maui real estate agent serving her local community",
             responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic design"],
             technologies: ["WordPress", "CSS3", "HTML5", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker"]
         },{
