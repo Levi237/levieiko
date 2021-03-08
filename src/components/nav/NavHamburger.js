@@ -32,13 +32,11 @@ const GlobalDiv = styled.div`
   }
 `;
 const Logo = styled(GlobalDiv)`
-  left:0;
+  left: 5vw;
   width: 36px;
-  margin-right: 5vw;
 `;
 const Hamburger = styled(GlobalDiv)`
-  right: 0;
-  margin-left: 5vw;
+  right: 5vw;
 
   section {
     margin: 6px 0;
