@@ -76,6 +76,9 @@ const Container = styled.div`
     transition: .3s ease;
     &:hover {
       color: var(--blue);
+      > svg * {
+        fill: var(--blue)!important;
+      }
     }
   }
   div {

@@ -29,9 +29,6 @@ a {
 svg * {
   transition: .3s ease;
 }
-svg.svg-link *:hover {
-  fill: var(--blue);
-}
 
 h1 {
   font-family: 'Big Shoulders Stencil Text', courier;
