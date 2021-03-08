@@ -3,13 +3,13 @@ import styled      from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
-import { ReactComponent as LogoSVGtwo } from '../svg/logo.svg';
+import { ReactComponent as LogoSVG } from '../svg/logo.svg';
 
 const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
       <NavLink to={routes.HOME}>
-        <LogoSVGtwo className="" style={{fill: pageStyle.fill, display: pageStyle.displayLogo}}/>
+        <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.displayLogo}}/>
       </NavLink>
     </Logo>
     <Hamburger name="toggleMenu" onClick={(e) => toggleMenu(e)}>

@@ -39,6 +39,7 @@ export default class App extends Component {
       mail: {
         title: 'contact',
         color: '#fff',
+        fill: 'fff',
         displayLogo: 'inline-block',
       },
       root: {
@@ -71,7 +72,7 @@ export default class App extends Component {
     return (
       <AppContainer>
 
-        {/* <LogoSVGapp class=Name"" style={{width: '0', height: '0', position: 'absolute'}}/> */}
+        {/* <LogoSVGapp className="" style={{width: '0', height: '0', position: 'absolute'}}/> */}
 
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
@@ -99,8 +100,8 @@ export default class App extends Component {
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
-              <Route path={routes.HOME} exact render={() => <HomePage/> }/>
-              <Route path={routes.ROOT} render={() => <HomePage/> }/>
+              <Route path={routes.HOME} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
