@@ -55,7 +55,6 @@ export default class EmailForm extends Component {
                 id="mc-embedded-subscribe-form" 
                 name="mc-embedded-subscribe-form" 
                 className="validate" 
-                target="_blank" 
                 novalidate 
             >
                 {this.props.children}
