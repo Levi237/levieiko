@@ -6,17 +6,7 @@
   viewBox="0 0 500 500"
   >
 
-  <style type="text/css">
-    svg.animate-svg path {
-      fill: url(#skyGradient);
-    }
-    svg:not(.animate-svg):hover path {
-      fill: #303030;
-    }
-    svg:is(.animate-svg):hover path {
-      <!-- fill: #fff; -->
-    }
-  </style>
+
 
   <defs>
       <linearGradient id="skyGradient" x1="100%" y1="100%">
