@@ -71,7 +71,7 @@ export default class App extends Component {
 
     return (
       <AppContainer>
-
+        {/* <HomePage pageStyle={pageStyle.home}/> */}
         <LogoSVG className="" style={{width: '0', height: '0', position: 'absolute'}}/>
 
         <NavMenu toggleMenu={this.toggleMenu}/>
