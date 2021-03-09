@@ -24,6 +24,7 @@ const GlobalDiv = styled.div`
   z-index:999;
   top: 40px;
   width: 36px;
+  height: 36px;
   &:hover{
     cursor: pointer;
   }
