@@ -28,7 +28,7 @@ const AboutPage = () => {
           <p>
             <b>What I do:</b>
             &emsp;I help businesses enhance their online presence.{" "}
-            Stores, blogs, email automations, photoshop, <u>yes</u>.{" "}
+            E-commerce stores, blogs, email automations, photoshop, <u>yes</u>.{" "}
             I can build/enhance your website for that extra digital edge.
           </p>
           <p>
@@ -75,6 +75,7 @@ const Container = styled.div`
     margin: 2.5%;
   }
   a {
+    font-weight: 500;
     color: var(--darkblue);
     transition: .3s ease;
     &:hover {

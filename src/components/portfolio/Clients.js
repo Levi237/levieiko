@@ -88,7 +88,6 @@ export default class Clients extends Component {
         })
         return(
             <Container>
-                <h1>Clients</h1>
                     {mapClientList}                
             </Container>
         );
