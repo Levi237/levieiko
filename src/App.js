@@ -78,20 +78,20 @@ export default class App extends Component {
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
-          <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
           <Route path={routes.MAIL} exact render={() => <GoblinValleyImageAnimation/>}/>
           <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
+          <Route path={routes.ROOT} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
             <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
             <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
@@ -100,7 +100,7 @@ export default class App extends Component {
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
-              <Route path={routes.HOME} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
           </ContentContainer>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default class Clients extends Component {
     state = {
         clientList: [{
-        title: "Andrea Sells Maui",
+            title: "Andrea Sells Maui",
             image: "./clients/andreasellsmaui.png",
             link: "andreasellsmaui.com",
             statement: "Maui real estate agent serving her local community",

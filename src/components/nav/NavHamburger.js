@@ -9,7 +9,7 @@ import { ReactComponent as HamburgerSVG } from '../../svg/hamburger.svg';
 const NavHamburger = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
-      <NavLink to={routes.HOME}>
+      <NavLink to={routes.ROOT}>
         <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.displayLogo}}/>
       </NavLink>
     </Logo>
