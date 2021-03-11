@@ -168,19 +168,3 @@ const GoblinValleyImageAnimation = styled(GoblinValleyImage)`
   background-repeat: repeat-x;
   animation: slideleft 1200s infinite linear;
 `;
-
-const HomeLogo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  a {
-    height: 150px;
-    width: 150px;
-    display: inline-block;
-  }
-  svg {
-    height: 150px;
-    width: 150px;
-  }
-`;
