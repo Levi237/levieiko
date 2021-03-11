@@ -6,7 +6,7 @@ import * as routes from '../../constants/routes';
 import { ReactComponent as LogoSVG }      from '../../svg/logo.svg';
 import { ReactComponent as HamburgerSVG } from '../../svg/hamburger.svg';
 
-const NavHamburger = ({ toggleMenu, pageStyle }) => {
+const NavBar = ({ toggleMenu, pageStyle }) => {
   return(<>
     <Logo>
       <NavLink to={routes.ROOT}>
@@ -39,4 +39,4 @@ const Hamburger = styled(GlobalDiv)`
   right: 5vw;
 `;
 
-export default NavHamburger;
+export default NavBar;

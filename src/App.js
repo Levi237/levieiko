@@ -7,7 +7,7 @@ import { ReactComponent as LogoSVG }  from './svg/logo.svg';
 import * as routes                    from './constants/routes';
 import ModalWindow                    from './components/Modal';
 import NavMenu                        from './components/nav/NavMenu';
-import NavHamburger                   from './components/nav/NavHamburger';
+import NavBar                         from './components/nav/NavBar';
 
 import AboutPage                      from './components/about';
 import HomePage                       from './components/home';
@@ -85,12 +85,12 @@ export default class App extends Component {
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
-            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
-            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
+            <Route path={routes.CNFM} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.MAIL} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
+            <Route path={routes.PORT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
+            <Route path={routes.INFO} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.ROOT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.ROOT} render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
             <Switch>         
