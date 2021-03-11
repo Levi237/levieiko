@@ -269,6 +269,9 @@ const Form = styled.form`
             margin: 0 auto!important;
         }
     }
+    @media screen and (max-width: 900px) {
+        width: 84%;
+    }
 `;
 
 
