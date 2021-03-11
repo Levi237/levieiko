@@ -1,5 +1,5 @@
 import React, { Component }           from 'react';
-import { Switch, Route, NavLink }     from 'react-router-dom';
+import { Switch, Route }              from 'react-router-dom';
 import styled                         from 'styled-components';
 
 import { ReactComponent as LogoSVG }  from './svg/logo.svg';
@@ -71,9 +71,7 @@ export default class App extends Component {
 
     return (
       <AppContainer>
-        {/* <HomePage pageStyle={pageStyle.home}/> */}
-        <LogoSVG className="" style={{width: '0', height: '0', position: 'absolute'}}/>
-
+        <LogoSVG className="establish-logo" style={{width: '0', height: '0', position: 'absolute'}}/>
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 

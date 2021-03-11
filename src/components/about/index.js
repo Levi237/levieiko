@@ -41,13 +41,13 @@ const AboutPage = () => {
             me by clicking the envelope below!
           </p>
           <section>
-            <a target="_blank" href="https://github.com/Levi237">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
               <Github className="svg-link"/>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
               <Linkedin className="svg-link"/>
             </a>
-            <a target="_blank" href="https://www.instagram.com/levi_eiko/">
+            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
               <Instagram className="svg-link"/>
             </a>
             <NavLink to={routes.MAIL}>
