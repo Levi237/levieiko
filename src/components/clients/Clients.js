@@ -4,10 +4,10 @@ import styled from 'styled-components';
 export default class Clients extends Component {
     state = {
         clientList: [{
-        title: "Andrea Sells Maui",
+            title: "Andrea Sells Maui",
             image: "./clients/andreasellsmaui.png",
             link: "andreasellsmaui.com",
-            statement: "Maui resident and real estate agent serving the local community",
+            statement: "Maui real estate agent serving her local community",
             responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic design"],
             technologies: ["WordPress", "CSS3", "HTML5", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker"]
         },{
@@ -32,17 +32,19 @@ export default class Clients extends Component {
             responsibilities: ["Custom email: design & marketing", "Web development, design & troubleshooting", "Graphic design"],
             technologies: ["React","Liquid","CSS3","HTML5","WordPress", "Shopify", "Photoshop","Figma","MailChimp"]
         },{
-        //     title: "IT After Hours",
-        //     link: "it-afterhours.com",
-        //     image: "./clients/it-afterhours.png",
-        //     statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-        //     responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
-        //     technologies: ["WordPress", "CSS3", "HTML5"]
-        // },{
+            title: "IT After Hours",
+            link: "it-afterhours.com",
+            image: "./clients/it-afterhours.png",
+            statement: "CURRENTLY ON HOLD",
+            // statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
+            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+            technologies: ["WordPress", "CSS3", "HTML5"]
+        },{
             title: "HeatSeeker Hot Sauce",
             link: "heatseekersauce.com",
             image: "./clients/heatseeker.png",
-            statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
+            statement: "CURRENTLY ON HOLD DUE TO PANDEMIC",
+            // statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
             responsibilities: ["Re-design eCommerce website", "Streamline content & UX"],
             technologies: ["Shopify", "Liquid", "CSS3", "HTML5", "Photoshop", "Figma"]
         }]
@@ -88,7 +90,6 @@ export default class Clients extends Component {
         })
         return(
             <Container>
-                <h1>Clients</h1>
                     {mapClientList}                
             </Container>
         );

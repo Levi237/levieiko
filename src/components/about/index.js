@@ -28,23 +28,26 @@ const AboutPage = () => {
           <p>
             <b>What I do:</b>
             &emsp;I help businesses enhance their online presence.{" "}
-            Stores, blogs, email automations, photoshop, <u>yes</u>.{" "}
-            I can build/upgrade your website for that extra digital edge.
+            E-commerce stores, blogs, email automations, photoshop,{" "}
+            <u>yes</u>.{" "}
+            I can build/enhance your website for that extra digital edge.
           </p>
           <p>
-            If you have a project you want to come to life, an existing{" "}
-            page that needs an upgrade or email marketing assitance,{" "}
+            <b>WHY??</b>
+            &emsp;If you have a project you want to come{" "}
+            to life, an existing pagethat needs upgrades,{" "}
+            some graphic design or email marketing assitance,{" "}
             <NavLink to={routes.MAIL}>contact</NavLink>{" "}
             me by clicking the envelope below!
           </p>
           <section>
-            <a target="_blank" href="https://github.com/Levi237">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
               <Github className="svg-link"/>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/leviwinans">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
               <Linkedin className="svg-link"/>
             </a>
-            <a target="_blank" href="https://www.instagram.com/levi_eiko/">
+            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
               <Instagram className="svg-link"/>
             </a>
             <NavLink to={routes.MAIL}>
@@ -73,6 +76,7 @@ const Container = styled.div`
     margin: 2.5%;
   }
   a {
+    font-weight: 500;
     color: var(--darkblue);
     transition: .3s ease;
     &:hover {

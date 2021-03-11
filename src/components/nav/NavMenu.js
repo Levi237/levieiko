@@ -8,8 +8,8 @@ const NavMenu = ({ toggleMenu }) => {
     return(
         <NavContainer id="menu" className="inactive">
             <div>
-                <NavLink activeClassName="nav-active" to={routes.HOME} onClick={() => {toggleMenu()}}>HOME</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>PORTFOLIO</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.ROOT} onClick={() => {toggleMenu()}}>HOME</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>CLIENTS</NavLink>
                 <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
                 <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
             </div>

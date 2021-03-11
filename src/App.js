@@ -1,5 +1,5 @@
 import React, { Component }           from 'react';
-import { Switch, Route, NavLink }     from 'react-router-dom';
+import { Switch, Route }              from 'react-router-dom';
 import styled                         from 'styled-components';
 
 import { ReactComponent as LogoSVG }  from './svg/logo.svg';
@@ -9,11 +9,11 @@ import ModalWindow                    from './components/Modal';
 import NavMenu                        from './components/nav/NavMenu';
 import NavHamburger                   from './components/nav/NavHamburger';
 
-import HomePage                       from './components/home/HomePage';
-import AboutPage                      from './components/about/AboutPage';
-import ContactPage                    from './components/contact/ContactPage';
+import AboutPage                      from './components/about';
+import HomePage                       from './components/home';
+import PortfolioPage                  from './components/clients';
+import ContactPage                    from './components/contact';
 import EmailConfirmation              from './components/contact/EmailConfirmation';
-import PortfolioPage                  from './components/portfolio/PortfolioPage';
 
 export default class App extends Component {
   state = {
@@ -71,27 +71,25 @@ export default class App extends Component {
 
     return (
       <AppContainer>
-
-        <LogoSVG className="" style={{width: '0', height: '0', position: 'absolute'}}/>
-
+        <LogoSVG className="establish-logo" style={{width: '0', height: '0', position: 'absolute'}}/>
         <NavMenu toggleMenu={this.toggleMenu}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
-          <Route path={routes.HOME} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
           <Route path={routes.MAIL} exact render={() => <GoblinValleyImageAnimation/>}/>
           <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
+          <Route path={routes.ROOT} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.HOME} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
             <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
             <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
@@ -100,7 +98,7 @@ export default class App extends Component {
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
-              <Route path={routes.HOME} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
           </ContentContainer>
