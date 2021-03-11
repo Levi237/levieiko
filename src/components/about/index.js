@@ -28,13 +28,14 @@ const AboutPage = () => {
           <p>
             <b>What I do:</b>
             &emsp;I help businesses enhance their online presence.{" "}
-            E-commerce stores, blogs, email automations, photoshop, <u>yes</u>.{" "}
+            E-commerce stores, blogs, email automations, photoshop,{" "}
+            <u>yes</u>.{" "}
             I can build/enhance your website for that extra digital edge.
           </p>
           <p>
-            <b>WHY?</b>
+            <b>WHY??</b>
             &emsp;If you have a project you want to come{" "}
-            to life,an existing pagethat needs upgrades,{" "}
+            to life, an existing pagethat needs upgrades,{" "}
             some graphic design or email marketing assitance,{" "}
             <NavLink to={routes.MAIL}>contact</NavLink>{" "}
             me by clicking the envelope below!

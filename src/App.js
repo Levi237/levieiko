@@ -9,11 +9,11 @@ import ModalWindow                    from './components/Modal';
 import NavMenu                        from './components/nav/NavMenu';
 import NavHamburger                   from './components/nav/NavHamburger';
 
-import HomePage                       from './components/home/HomePage';
-import AboutPage                      from './components/about/AboutPage';
-import ContactPage                    from './components/contact/ContactPage';
+import AboutPage                      from './components/about';
+import HomePage                       from './components/home';
+import PortfolioPage                  from './components/clients';
+import ContactPage                    from './components/contact';
 import EmailConfirmation              from './components/contact/EmailConfirmation';
-import PortfolioPage                  from './components/portfolio/PortfolioPage';
 
 export default class App extends Component {
   state = {
