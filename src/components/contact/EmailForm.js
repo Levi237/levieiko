@@ -153,9 +153,9 @@ const Form = styled.form`
     width: 66%;
     max-width: 700px;
     background-color: #fff;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     overflow: scroll;
-    margin: 20px auto;
+    margin: 40px auto;
 
     h3 {
         padding: 20px 0 10px;

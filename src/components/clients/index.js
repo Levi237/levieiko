@@ -70,7 +70,11 @@ const Container = styled.div`
     background-color: rgba(19,17,17,.8);
     padding: 80px 0;
     margin: 0 auto!important;
+
     @media screen and (max-width: 745px){
         padding-top: 60px;
+        > h1 {
+            padding: 20px;
+        }
     }
 `;
