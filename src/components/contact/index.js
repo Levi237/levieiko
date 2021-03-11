@@ -19,12 +19,13 @@ const Container = styled.div`
     padding-top: 0;
     position: fixed;
     overflow: scroll;
-    .svg> path:hover {
+    .svg > path:hover {
         fill: #ccc!important;
     }
     h1 {
         color: rgba(75, 125, 190, 1);
         padding-top: 40px;
+        padding-bottom: 20px;
         margin: 0 auto!important;
     }
     p {
@@ -36,6 +37,7 @@ const Container = styled.div`
         align-items: start;
         h1 {
             padding-top: 0;
+            padding-bottom: 10px;
         }
         p {
             margin-top: 20px;

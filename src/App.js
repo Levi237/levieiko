@@ -7,7 +7,7 @@ import { ReactComponent as LogoSVG }  from './svg/logo.svg';
 import * as routes                    from './constants/routes';
 import ModalWindow                    from './components/Modal';
 import NavMenu                        from './components/nav/NavMenu';
-import NavHamburger                   from './components/nav/NavHamburger';
+import NavBar                         from './components/nav/NavBar';
 
 import AboutPage                      from './components/about';
 import HomePage                       from './components/home';
@@ -66,7 +66,6 @@ export default class App extends Component {
   };
 
   render (){
-
     const { modalType, pageStyle } = this.state
 
     return (
@@ -76,26 +75,26 @@ export default class App extends Component {
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
-          <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
           <Route path={routes.MAIL} exact render={() => <GoblinValleyImageAnimation/>}/>
           <Route path={routes.CNFM} exact render={() => <HeroImageDivAnimation/>}/>
+          <Route path={routes.PORT} exact render={() => <HeroImageDiv/>}/>
           <Route path={routes.ROOT} exact render={() => <HeroImageDivAnimation/>}/>
           <Route path={routes.ROOT} render={() => <HeroImageDivAnimation/>}/>
         </Switch>
 
         <BodyContainer>
           <Switch>         
-            <Route path={routes.CNFM} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
-            <Route path={routes.MAIL} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
-            <Route path={routes.PORT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
-            <Route path={routes.INFO} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
-            <Route path={routes.ROOT} exact render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
-            <Route path={routes.ROOT} render={() => <NavHamburger toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
+            <Route path={routes.MAIL} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.mail}/> }/>
+            <Route path={routes.CNFM} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.PORT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
+            <Route path={routes.INFO} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.ROOT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
+            <Route path={routes.ROOT} render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
           <ContentContainer>
             <Switch>         
-              <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
+              <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
               <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
@@ -112,14 +111,12 @@ export default class App extends Component {
 const ContentContainer = styled.div`
   color: #fff;
   height: 100vh;
-  // scroll-snap-align: start;
   position: relative;
 `;
 
 const BodyContainer = styled.div`
   height: 100vh;
   overflow-y: scroll;
-  // scroll-snap-type: y proximity;
 `;
 const AppContainer = styled.div`
   h1,h2,h3,ul {
@@ -167,20 +164,4 @@ const GoblinValleyImage = styled.div`
 const GoblinValleyImageAnimation = styled(GoblinValleyImage)`
   background-repeat: repeat-x;
   animation: slideleft 1200s infinite linear;
-`;
-
-const HomeLogo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  a {
-    height: 150px;
-    width: 150px;
-    display: inline-block;
-  }
-  svg {
-    height: 150px;
-    width: 150px;
-  }
 `;
