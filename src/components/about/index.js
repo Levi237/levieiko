@@ -7,8 +7,6 @@ import { ReactComponent as Mail }       from '../../svg/iconfinder_mail.svg';
 import { ReactComponent as Instagram }  from '../../svg/iconfinder_instagram.svg';
 import { ReactComponent as Linkedin }   from '../../svg/iconfinder_linkedin.svg';
 import { ReactComponent as Github }     from '../../svg/iconfinder_github.svg';
-import { ReactComponent as LeviSVG }       from '../../svg/Levi.svg';
-import { ReactComponent as EikoSVG }       from '../../svg/Eiko.svg';
 
 
 const AboutPage = () => { 
@@ -16,10 +14,7 @@ const AboutPage = () => {
     <AboutContainer>
       <Container>
         <div>
-          <h2 style={{display: 'inline-block'}}> Meet Levi Eiko</h2>
-           <LeviSVG style={{display: 'inline-block'}}/>
-           <EikoSVG style={{display: 'inline-block'}}/>
-          
+          <h2> Meet Levi</h2>
           <p>
             <b>Who am I?</b>
             &emsp;A web developer, LEGO enthusaist, camping{" "}
@@ -151,6 +146,13 @@ const AboutContainer = styled.div`
       height: 100vh;
       background-size: cover!important;
       background-position: 70% center;
+  }
+  .name-svg {
+    height: 32px!important;
+    display: inline-block;
+    &:first-of-type {
+      margin-right: 16px;
+    }
   }
 `;
 
