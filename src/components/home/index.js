@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
 // import LogoSVGJS from './../svg/LogoSVGJS';
-import { ReactComponent as NameSVG } from '../../svg/Levi.svg';
-// import { ReactComponent as LogoSVG } from '../../svg/logo.svg';
+// import { ReactComponent as NameSVG } from '../../svg/name.svg';
+import { ReactComponent as LogoSVG } from '../../svg/logo.svg';
 
 const HomePage = ({pageStyle}) => {
   return(
     <LocalWrapper>
       <NavLink to={routes.PORT}>
-        {/* <NameSVG className="" style={{fill: pageStyle.color, display: pageStyle.display}}/> */}
+        <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
       </NavLink>
     </LocalWrapper>
   );
