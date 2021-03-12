@@ -97,7 +97,7 @@ export default class Clients extends Component {
 };
 
 const ClientContainer = styled.div`
-    margin: 0 auto;
+    margin: 40px auto;
     max-width: 800px;
     text-align: center;
 
