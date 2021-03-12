@@ -46,16 +46,16 @@ const AboutPage = () => {
           </p>
           <section>
             <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
-              <Github className="svg-link"/>
+              <Github className="svg-about-link"/>
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
-              <Linkedin className="svg-link"/>
+              <Linkedin className="svg-about-link"/>
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
-              <Instagram className="svg-link"/>
+              <Instagram className="svg-about-link"/>
             </a>
             <NavLink to={routes.MAIL}>
-              <Mail className="svg-link"/>
+              <Mail className="svg-about-link"/>
             </NavLink>
           </section>
         </div>
@@ -74,7 +74,7 @@ const Container = styled.div`
   width: 50%;
   max-width: 50%;
   vertical-align: top;
-  svg {
+  svg.svg-about-link {
     width: 40px;
     height: 40px;
     margin: 2.5%;
@@ -85,7 +85,7 @@ const Container = styled.div`
     transition: .3s ease;
     &:hover {
       color: var(--blue);
-      > svg * {
+      > svg.svg-about-link * {
         fill: var(--blue)!important;
       }
     }
@@ -146,7 +146,6 @@ const AboutContainer = styled.div`
   background-size: cover;
 
   position: relative;
-  // scroll-snap-align: start;
 
   @media screen and (max-width: 900px) {
       height: 100vh;
