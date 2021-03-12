@@ -7,15 +7,19 @@ import { ReactComponent as Mail }       from '../../svg/iconfinder_mail.svg';
 import { ReactComponent as Instagram }  from '../../svg/iconfinder_instagram.svg';
 import { ReactComponent as Linkedin }   from '../../svg/iconfinder_linkedin.svg';
 import { ReactComponent as Github }     from '../../svg/iconfinder_github.svg';
+import { ReactComponent as LeviSVG }       from '../../svg/Levi.svg';
+import { ReactComponent as EikoSVG }       from '../../svg/Eiko.svg';
+
 
 const AboutPage = () => { 
   return(
     <AboutContainer>
       <Container>
         <div>
-          <h2>
-            Meet Levi
-          </h2>
+          <h2 style={{display: 'inline-block'}}> Meet Levi Eiko</h2>
+           <LeviSVG style={{display: 'inline-block'}}/>
+           <EikoSVG style={{display: 'inline-block'}}/>
+          
           <p>
             <b>Who am I?</b>
             &emsp;A web developer, LEGO enthusaist, camping{" "}
