@@ -2,7 +2,7 @@ import React, { Component }           from 'react';
 import { Switch, Route }              from 'react-router-dom';
 import styled                         from 'styled-components';
 
-import { ReactComponent as LogoSVG }  from './svg/logo.svg';
+import { ReactComponent as LogoSVG }  from './svg/brand/logo.svg';
 
 import * as routes                    from './constants/routes';
 import ModalWindow                    from './components/Modal';
