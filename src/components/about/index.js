@@ -135,7 +135,7 @@ const AboutContainer = styled.div`
 
   background-attachment: fixed;
   background-color: #fff;
-  background-image: url(about.png);
+  background-image: url(background/about.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
