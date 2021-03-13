@@ -8,8 +8,8 @@
     >
     <style>
         svg#merkaba {
-            -webkit-filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .5));
-            filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .5));
+            -webkit-filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .33));
+            filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .33));
         }
         svg#merkaba .triangle {
             stroke: transparent;
