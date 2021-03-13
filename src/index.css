@@ -4,6 +4,12 @@
   --black: rgb(24, 23, 23);
   --blue: rgb(75, 125, 190);
   --darkblue: rgb(0, 54, 110);
+
+  --drv-blue: rgb(85, 205, 252);
+  --drv-pink: rgb(247, 168, 184);
+  --drv-periwinkle: rgb(166,187,218);
+  --drv-lavender: rgb(169, 170, 219);
+  --drv-black: rgb(48, 48, 48);
 }
 
 body {
