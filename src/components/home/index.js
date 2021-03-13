@@ -25,8 +25,8 @@ const LocalWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     a {
-        height: 150px!important;
-        width: 150px!important;
+      height: 150px!important;
+      width: 150px!important;
     }
     
 `;
