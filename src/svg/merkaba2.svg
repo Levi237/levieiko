@@ -7,36 +7,36 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     >
     <style>
-        svg.merkaba {
-            -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-            filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+        svg#merkaba {
+            -webkit-filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .5));
+            filter: drop-shadow( 3px 13px 2px rgba(0, 0, 0, .5));
         }
-        .triangle {
+        svg#merkaba .triangle {
             stroke: transparent;
             stroke-width: 0;
         }
-        .white {
+        svg#merkaba .white {
             fill: #fff;
         }
-        .blue {
+        svg#merkaba .blue {
             fill: dodgerblue!important;
         }
-        .pink {
+        svg#merkaba .pink {
             fill: pink!important;
         }
-        .transparent {
+        svg#merkaba .transparent {
             fill: transparent;
         }
-        .glow {
+        svg#merkaba .glow {
             fill: url(#radialGradientWhite);
         }
-        .deep-shadow {
+        svg#merkaba .deep-shadow {
             fill: url(#radialGradientBlack);
         }
-        .center-under-shadow {
+        svg#merkaba .center-under-shadow {
             fill: url(#radialGradientCenterBlack);
         }
-        .lines {
+        svg#merkaba .lines {
             stroke: black;
             stroke-width: 1;
         }
