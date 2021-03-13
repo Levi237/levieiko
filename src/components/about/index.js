@@ -34,7 +34,7 @@ const AboutPage = () => {
           <p>
             <b>WHY??</b>
             &emsp;If you have a project you want to come{" "}
-            to life, an existing pagethat needs upgrades,{" "}
+            to life, an existing page that needs upgrades,{" "}
             some graphic design or email marketing assitance,{" "}
             <NavLink to={routes.MAIL}>contact</NavLink>{" "}
             me by clicking the envelope below!
