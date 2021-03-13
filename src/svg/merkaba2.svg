@@ -6,10 +6,10 @@
     >
     <style>
         svg#merkaba {
-            -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .33));
-            filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .33));
+            -webkit-filter: drop-shadow( 2px 3px 2px rgba(0, 0, 0, .2));
+            filter: drop-shadow( 2px 3px 2px rgba(0, 0, 0, .2));
         }
-        svg#merkaba .triangle {
+        svg#merkaba {
             stroke: transparent;
             stroke-width: 0;
         }
@@ -57,21 +57,21 @@
 
 <!-- Large Obtuse Triangles -->
     <g>
-        <path class="triangle large-up blue" d="M300,100 L124,400 300,300 Z"/>
-        <path class="triangle large-up pink" d="M300,100 L300,300 473,400 Z"/>
-        <path class="triangle large-up white" d="M300,300 L124,400 473,400 Z"/>
-        <path class="triangle large-up deep-shadow" d="M300,100 L124,400 473,400 Z"/>
+        <path class="large-up blue" d="M300,100 L124,400 300,300 Z"/>
+        <path class="large-up pink" d="M300,100 L300,300 473,400 Z"/>
+        <path class="large-up white" d="M300,300 L124,400 473,400 Z"/>
+        <path class="large-up deep-shadow" d="M300,100 L124,400 473,400 Z"/>
 
     <!-- Large Outer Triangles -->
-        <path class="triangle large-down blue" d="M212,350 L124,200 300,200 Z"/>
-        <path class="triangle large-down pink" d="M386.5,350 L300,200 473,200 Z"/>
-        <path class="triangle large-down white" d="M300,500 L212,350 386.5,350 Z"/>
-        <path class="triangle large-down transparent glow" d="M300,500 L124,200 473,200 Z"/>       
+        <path class="large-down blue" d="M212,350 L124,200 300,200 Z"/>
+        <path class="large-down pink" d="M386.5,350 L300,200 473,200 Z"/>
+        <path class="large-down white" d="M300,500 L212,350 386.5,350 Z"/>
+        <path class="large-down transparent glow" d="M300,500 L124,200 473,200 Z"/>       
     <!-- Small Obtuse Triangles -->
-        <path class="triangle small-up white" d="M300,200 212,350 386.5,350 Z"/>
-        <path class="triangle center-left blue" d="M300,300 L300,200 212,350 Z" />
-        <path class="triangle center-right pink" d="M300,300 L300,200 386.5,350 Z"/>
-        <path class="triangle center-bottom center-under-shadow" d="M300,300 L212,350 386.5,350 Z"/>
+        <path class="small-up white" d="M300,200 212,350 386.5,350 Z"/>
+        <path class="center-left blue" d="M300,300 L300,200 212,350 Z" />
+        <path class="center-right pink" d="M300,300 L300,200 386.5,350 Z"/>
+        <path class="center-bottom center-under-shadow" d="M300,300 L212,350 386.5,350 Z"/>
     </g>
 <!-- Lines -->
     <!-- <path class="lines" d="M300,100 300,500 Z M124,400, 473,200 Z M473,400 124,200 Z"/> -->
