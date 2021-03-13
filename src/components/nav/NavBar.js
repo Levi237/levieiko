@@ -3,8 +3,8 @@ import styled      from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 
-import { ReactComponent as LogoSVG }      from '../../svg/logo.svg';
-import { ReactComponent as HamburgerSVG } from '../../svg/hamburger.svg';
+import { ReactComponent as LogoSVG }      from '../../svg/brand/logo.svg';
+import { ReactComponent as HamburgerSVG } from '../../svg/icons/hamburger.svg';
 
 const NavBar = ({ toggleMenu, pageStyle }) => {
   return(<>

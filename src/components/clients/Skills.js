@@ -45,7 +45,8 @@ const Container = styled.div`
         content: ' | ';
       }
       >span:nth-of-type(5)::after,
-      >span:nth-of-type(9)::after {
+      >span:nth-of-type(9)::after,
+      >span:nth-of-type(12)::after {
         content: '';
         display: block;
       }

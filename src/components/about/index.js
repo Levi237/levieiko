@@ -3,19 +3,18 @@ import styled                           from 'styled-components';
 import { NavLink }                      from 'react-router-dom';
 import * as routes                      from '../../constants/routes';
 
-import { ReactComponent as Mail }       from '../../svg/iconfinder_mail.svg';
-import { ReactComponent as Instagram }  from '../../svg/iconfinder_instagram.svg';
-import { ReactComponent as Linkedin }   from '../../svg/iconfinder_linkedin.svg';
-import { ReactComponent as Github }     from '../../svg/iconfinder_github.svg';
+import { ReactComponent as Mail }       from '../../svg/icons/iconfinder_mail.svg';
+import { ReactComponent as Instagram }  from '../../svg/icons/iconfinder_instagram.svg';
+import { ReactComponent as Linkedin }   from '../../svg/icons/iconfinder_linkedin.svg';
+import { ReactComponent as Github }     from '../../svg/icons/iconfinder_github.svg';
+
 
 const AboutPage = () => { 
   return(
     <AboutContainer>
       <Container>
         <div>
-          <h2>
-            Meet Levi
-          </h2>
+          <h2> Meet Levi</h2>
           <p>
             <b>Who am I?</b>
             &emsp;A web developer, LEGO enthusaist, camping{" "}
@@ -42,16 +41,16 @@ const AboutPage = () => {
           </p>
           <section>
             <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
-              <Github className="svg-link"/>
+              <Github className="svg-about-link"/>
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
-              <Linkedin className="svg-link"/>
+              <Linkedin className="svg-about-link"/>
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
-              <Instagram className="svg-link"/>
+              <Instagram className="svg-about-link"/>
             </a>
             <NavLink to={routes.MAIL}>
-              <Mail className="svg-link"/>
+              <Mail className="svg-about-link"/>
             </NavLink>
           </section>
         </div>
@@ -70,7 +69,7 @@ const Container = styled.div`
   width: 50%;
   max-width: 50%;
   vertical-align: top;
-  svg {
+  svg.svg-about-link {
     width: 40px;
     height: 40px;
     margin: 2.5%;
@@ -81,7 +80,7 @@ const Container = styled.div`
     transition: .3s ease;
     &:hover {
       color: var(--blue);
-      > svg * {
+      > svg.svg-about-link * {
         fill: var(--blue)!important;
       }
     }
@@ -142,12 +141,18 @@ const AboutContainer = styled.div`
   background-size: cover;
 
   position: relative;
-  // scroll-snap-align: start;
 
   @media screen and (max-width: 900px) {
       height: 100vh;
       background-size: cover!important;
       background-position: 70% center;
+  }
+  .name-svg {
+    height: 32px!important;
+    display: inline-block;
+    &:first-of-type {
+      margin-right: 16px;
+    }
   }
 `;
 

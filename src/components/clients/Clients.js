@@ -90,14 +90,14 @@ export default class Clients extends Component {
         })
         return(
             <Container>
-                    {mapClientList}                
+                {mapClientList}                
             </Container>
         );
     };
 };
 
 const ClientContainer = styled.div`
-    margin: 0 auto;
+    margin: 40px auto;
     max-width: 800px;
     text-align: center;
 
@@ -148,7 +148,7 @@ const ClientContainer = styled.div`
         font-size: 14px;
     }
     ul {
-        margin-bottom: 10px!important;
+        margin: 10px auto!important;
     }
     >hr {
         width: 100%;
