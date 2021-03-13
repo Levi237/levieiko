@@ -5,7 +5,7 @@ import * as routes from '../../constants/routes';
 
 // import LogoSVGJS from './../svg/LogoSVGJS';
 // import { ReactComponent as NameSVG } from '../../svg/name.svg';
-import { ReactComponent as LogoSVG } from '../../svg/logo.svg';
+import { ReactComponent as LogoSVG } from '../../svg/merkaba2.svg';
 
 const HomePage = ({pageStyle}) => {
   return(

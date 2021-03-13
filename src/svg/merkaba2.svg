@@ -1,0 +1,80 @@
+<svg 
+    id="merkaba"
+    width="600" 
+    height="601" 
+    viewBox="0 0 600 400" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+    <style>
+        svg.merkaba {
+            -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+            filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+        }
+        .triangle {
+            stroke: transparent;
+            stroke-width: 0;
+        }
+        .white {
+            fill: #fff;
+        }
+        .blue {
+            fill: dodgerblue!important;
+        }
+        .pink {
+            fill: pink!important;
+        }
+        .transparent {
+            fill: transparent;
+        }
+        .glow {
+            fill: url(#radialGradientWhite);
+        }
+        .deep-shadow {
+            fill: url(#radialGradientBlack);
+        }
+        .center-under-shadow {
+            fill: url(#radialGradientCenterBlack);
+        }
+        .lines {
+            stroke: black;
+            stroke-width: 1;
+        }
+    </style>
+
+    <defs>
+        <radialGradient id="radialGradientCenterBlack" cx=".5" cy="1.33" r=".75">
+            <stop offset="10%" stop-color="rgba(0,0,0,.125)" />
+            <stop offset="90%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+        <radialGradient id="radialGradientBlack" cx=".5" cy="0.66" r=".5">
+            <stop offset="10%" stop-color="rgba(0,0,0,.5)" />
+            <stop offset="90%" stop-color="rgba(0,0,0,0)" />
+        </radialGradient>
+        <radialGradient id="radialGradientWhite" cx=".5" cy="0.33" r=".4">
+            <stop offset="10%" stop-color="rgba(255,255,255,.5 )" />
+            <stop offset="90%" stop-color="rgba(255,255,255,0)" />
+        </radialGradient>
+    </defs>
+
+<!-- Large Obtuse Triangles -->
+    <g>
+        <path class="triangle large-up blue" d="M300,0 L124,300 300,200 Z"/>
+        <path class="triangle large-up pink" d="M300,0 L300,200 473,300 Z"/>
+        <path class="triangle large-up white" d="M300,200 L124,300 473,300 Z"/>
+        <path class="triangle large-up deep-shadow" d="M300,0 L124,300 473,300 Z"/>
+
+    <!-- Large Outer Triangles -->
+        <path class="triangle large-down blue" d="M212,250 L124,100 300,100 Z"/>
+        <path class="triangle large-down pink" d="M386.5,250 L300,100 473,100 Z"/>
+        <path class="triangle large-down white" d="M300,400 L212,250 386.5,250 Z"/>
+        <path class="triangle large-down transparent glow" d="M300,400 L124,100 473,100 Z"/>       
+    <!-- Small Obtuse Triangles -->
+        <path class="triangle small-up white" d="M300,100 212,250 386.5,250 Z"/>
+        <path class="triangle center-left blue" d="M300,200 L300,100 212,250 Z" />
+        <path class="triangle center-right pink" d="M300,200 L300,100 386.5,250 Z"/>
+        <path class="triangle center-bottom center-under-shadow" d="M300,200 L212,250 386.5,250 Z"/>
+    </g>
+<!-- Lines -->
+    <!-- <path class="lines" d="M300,0 300,400 Z M124,300, 473,100 Z M473,300 124,100 Z"/> -->
+</svg>

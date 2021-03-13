@@ -22,7 +22,7 @@ export default class App extends Component {
       home: {
         title: '',
         color: '#fff',
-        fill: 'url(#skyGradient)',
+        // fill: 'url(#skyGradient)',
         displayLogo: 'none',
       },
       about: {
