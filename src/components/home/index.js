@@ -18,17 +18,16 @@ const HomePage = ({pageStyle}) => {
 };
 
 const LocalWrapper = styled.div`
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    a {
-      height: 150px!important;
-      width: 150px!important;
-    }
-    
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  a {
+    height: 150px!important;
+    width: 150px!important;
+  } 
 `;
 
 export default HomePage;
