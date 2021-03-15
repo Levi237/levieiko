@@ -14,11 +14,11 @@ const ContactPage = () => {
 };
 
 const Container = styled.div`
+    position: fixed;
     width: 100vw;
     height: calc(100vh);
-    padding-top: 0;
-    position: fixed;
     overflow: scroll;
+    padding-top: 0;
     .svg > path:hover {
         fill: #ccc!important;
     }

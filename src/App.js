@@ -95,7 +95,7 @@ export default class App extends Component {
             <Switch>         
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
-              <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
+              <Route path={routes.PORT} render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
               <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>

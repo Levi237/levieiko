@@ -78,12 +78,4 @@ const CardContainer = styled.div`
     }
 `;
 
-const FlipCard = styled.div`
-`;
-const FlipCardInner = styled.div`
-`;
-const FlipCardFront = styled.section`
-`;
-const FlipCardBack = styled(FlipCardFront)`
-`;
 export default FlipCards;

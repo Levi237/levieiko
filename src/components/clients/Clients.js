@@ -4,35 +4,35 @@ import styled from 'styled-components';
 export default class Clients extends Component {
     state = {
         clientList: [{
-            title: `Andrea Sells Maui`,
-            image: `./clients/andreasellsmaui.png`,
-            link: `andreasellsmaui.com`,
-            status: `live`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Maui real estate agent serving her local community`,
-            responsibilities: [`Build custom real estate website`, `Integrate IDX Broker`, `Graphic design`],
-            technologies: [`WordPress`, `CSS3`, `HTML5`, `Javascript`, `VanillaJs`, `Photoshop`, `Figma`, `IDX Broker`]
+            title: "Andrea Sells Maui",
+            image: "./clients/andreasellsmaui.png",
+            link: "andreasellsmaui.com",
+            status: "live",
+            startDate: "",
+            endDate: "",
+            statement: "Maui real estate agent serving her local community",
+            responsibilities: ["Build custom real estate website", "Integrate IDX Broker", "Graphic design"],
+            technologies: ["WordPress", "CSS3", "HTML5", "Javascript", "VanillaJs", "Photoshop", "Figma", "IDX Broker"]
         },{
-            title: `Momo[Muscle]`,
-            image: `./clients/momomuscle.png`,
-            link: `momomuscle.co`,
-            status: `live`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.`,
-            responsibilities: [`Build custom eCommerce website`, `custom Quiz w/ email campaign`, `MailChimp email marketing`, `Graphic design`],
-            technologies: [`Shopify`, `CSS3`, `HTML5`, `Liquid`, `Javascript`, `VanillaJs`, `Photoshop`, `Figma`, `MailChimp`]
+            title: "Momo[Muscle]",
+            image: "./clients/momomuscle.png",
+            link: "momomuscle.co",
+            status: "live",
+            startDate: "",
+            endDate: "",
+            statement: "Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.",
+            responsibilities: ["Build custom eCommerce website", "custom Quiz w/ email campaign", "MailChimp email marketing", "Graphic design"],
+            technologies: ["Shopify", "CSS3", "HTML5", "Liquid", "Javascript", "VanillaJs", "Photoshop", "Figma", "MailChimp"]
         },{
-            title: `Prana Wellness`,
-            image: `./clients/prana-wellness.png`,
-            link: `pranawellnessworks.com`,
-            status: `live`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.`,
-            responsibilities: [`Build custom business website`, `Automate email campaign with MailChimp`, `Graphic design`],
-            technologies: [`React`, `Javascript`, `VanillaJs`, `CSS3`, `HTML5`, `Firebase`, `Photoshop`, `Figma`, `MailChimp`]
+            title: "Prana Wellness",
+            image: "./clients/prana-wellness.png",
+            link: "pranawellnessworks.com",
+            status: "live",
+            startDate: "",
+            endDate: "",
+            statement: "Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.",
+            responsibilities: ["Build custom business website", "Automate email campaign with MailChimp", "Graphic design"],
+            technologies: ["React", "Javascript", "VanillaJs", "CSS3", "HTML5", "Firebase", "Photoshop", "Figma", "MailChimp"]
         }]
     }
     render(){

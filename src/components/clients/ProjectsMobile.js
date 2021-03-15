@@ -20,7 +20,7 @@ export default class ProjectsMobile extends Component {
                         rel="noopener noreferrer"
                         href={x.link}
                         >
-                        <img src={x.image}/>
+                        <img src={x.image} alt={x.title}/>
                     </a>
                 </div>
             )

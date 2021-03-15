@@ -55,7 +55,7 @@ export default class PortfolioPage extends Component {
         }]
     }
     render(){
-        const { projects, skills } = this.state
+        const { projects, skills } = this.state;
         return (
             <Container>
                 <h1 className='titleDecoration'>CLIENTS</h1>
@@ -63,8 +63,7 @@ export default class PortfolioPage extends Component {
                 <h1 className='titleDecoration'>PAST CLIENTS</h1>
                 <PastClients/>
                 <Skills skills={skills}/>
-                <ProjectsFlip projects={projects} />
-                <ProjectsMobile projects={projects} />
+                <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
                 {/* <Photography/> */}
             </Container>
         );

@@ -4,45 +4,45 @@ import styled from 'styled-components';
 export default class PastClients extends Component {
     state = {
         pastClientList: [{
-            title: `FITPLAN`,
-            link: `fitplanapp.com`,
-            image: `./clients/fitplan-giftcard.png`,
-            status: `live`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Workout with elite personal trainers.`,
-            responsibilities: [`Custom email: design & marketing`, `Web development, design & troubleshooting`, `Graphic design`],
-            technologies: [`React`,`Liquid`,`CSS3`,`HTML5`,`WordPress`, `Shopify`, `Photoshop`,`Figma`,`MailChimp`]
+            title: "FITPLAN",
+            link: "fitplanapp.com",
+            image: "./clients/fitplan-giftcard.png",
+            status: "live",
+            startDate: "",
+            endDate: "",
+            statement: "Workout with elite personal trainers.",
+            responsibilities: ["Custom email: design & marketing", "Web development, design & troubleshooting", "Graphic design"],
+            technologies: ["React","Liquid","CSS3","HTML5","WordPress", "Shopify", "Photoshop","Figma","MailChimp"]
         },{
-            title: `IT After Hours`,
-            link: `it-afterhours.com`,
-            image: `./clients/it-afterhours.png`,
-            status: `inactive`,
-            startDate: ``,
-            endDate: ``,
-            statement: `IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.`,
-            responsibilities: [`Streamline WordPress & resolve bugs`, `Customize CSS3 code upgrades`, `Make mobile friendly`, `Currently undergoing host & server`],
-            technologies: [`WordPress`, `CSS3`, `HTML5`]
+            title: "IT After Hours",
+            link: "it-afterhours.com",
+            image: "./clients/it-afterhours.png",
+            status: "inactive",
+            startDate: "",
+            endDate: "",
+            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
+            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+            technologies: ["WordPress", "CSS3", "HTML5"]
         },{
-            title: `HeatSeeker Hot Sauce`,
-            link: `heatseekersauce.com`,
-            image: `./clients/heatseeker.png`,
-            status: `inactive`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.`,
-            responsibilities: [`Re-design eCommerce website`, `Streamline content & UX`],
-            technologies: [`Shopify`, `Liquid`, `CSS3`, `HTML5`, `Photoshop`, `Figma`]
+            title: "HeatSeeker Hot Sauce",
+            link: "heatseekersauce.com",
+            image: "./clients/heatseeker.png",
+            status: "inactive",
+            startDate: "",
+            endDate: "",
+            statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
+            responsibilities: ["Re-design eCommerce website", "Streamline content & UX"],
+            technologies: ["Shopify", "Liquid", "CSS3", "HTML5", "Photoshop", "Figma"]
         },{
-            title: `La Madre is Watching`,
-            image: `./clients/lamadreiswatching-ongina.JPG`,
-            link: `lamadreiswatching.com`,
-            status: `inactive`,
-            startDate: ``,
-            endDate: ``,
-            statement: `Photographing the edgy side of the Los Angeles night scene.`,
-            responsibilities: [`Build custom social media website`, `Party events shareable photo gallery`, `Graphic design`],
-            technologies: [`HTML`, `CSS`, `Javascript`]
+            title: "La Madre is Watching",
+            image: "./clients/lamadreiswatching-ongina.JPG",
+            link: "lamadreiswatching.com",
+            status: "inactive",
+            startDate: "",
+            endDate: "",
+            statement: "Photographing the edgy side of the Los Angeles night scene.",
+            responsibilities: ["Build custom social media website", "Party events shareable photo gallery", "Graphic design"],
+            technologies: ["HTML", "CSS", "Javascript"]
         }]
     }
     render(){
