@@ -3,6 +3,7 @@ import styled               from 'styled-components';
 
 import Skills               from './Skills';
 import Clients              from './Clients';
+import PastClients          from './PastClients';
 import ProjectsFlip         from './ProjectsFlip';
 import ProjectsMobile       from './ProjectsMobile';
 // import Photography          from './Photography';
@@ -59,6 +60,8 @@ export default class PortfolioPage extends Component {
             <Container>
                 <h1 className='titleDecoration'>CLIENTS</h1>
                 <Clients/>
+                <h1 className='titleDecoration'>PAST CLIENTS</h1>
+                <PastClients/>
                 <Skills skills={skills}/>
                 <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
                 {/* <Photography/> */}

@@ -1,43 +1,53 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export default class Clients extends Component {
+export default class PastClients extends Component {
     state = {
-        clientList: [{
-            title: `Andrea Sells Maui`,
-            image: `./clients/andreasellsmaui.png`,
-            link: `andreasellsmaui.com`,
+        pastClientList: [{
+            title: `FITPLAN`,
+            link: `fitplanapp.com`,
+            image: `./clients/fitplan-giftcard.png`,
             status: `live`,
             startDate: ``,
             endDate: ``,
-            statement: `Maui real estate agent serving her local community`,
-            responsibilities: [`Build custom real estate website`, `Integrate IDX Broker`, `Graphic design`],
-            technologies: [`WordPress`, `CSS3`, `HTML5`, `Javascript`, `VanillaJs`, `Photoshop`, `Figma`, `IDX Broker`]
+            statement: `Workout with elite personal trainers.`,
+            responsibilities: [`Custom email: design & marketing`, `Web development, design & troubleshooting`, `Graphic design`],
+            technologies: [`React`,`Liquid`,`CSS3`,`HTML5`,`WordPress`, `Shopify`, `Photoshop`,`Figma`,`MailChimp`]
         },{
-            title: `Momo[Muscle]`,
-            image: `./clients/momomuscle.png`,
-            link: `momomuscle.co`,
-            status: `live`,
+            title: `IT After Hours`,
+            link: `it-afterhours.com`,
+            image: `./clients/it-afterhours.png`,
+            status: `inactive`,
             startDate: ``,
             endDate: ``,
-            statement: `Basically, I design tools to teach women & AFAB babes to see sustainable results in less time. I want you to feel more like yourself & fitness is the catalyst.`,
-            responsibilities: [`Build custom eCommerce website`, `custom Quiz w/ email campaign`, `MailChimp email marketing`, `Graphic design`],
-            technologies: [`Shopify`, `CSS3`, `HTML5`, `Liquid`, `Javascript`, `VanillaJs`, `Photoshop`, `Figma`, `MailChimp`]
+            statement: `IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.`,
+            responsibilities: [`Streamline WordPress & resolve bugs`, `Customize CSS3 code upgrades`, `Make mobile friendly`, `Currently undergoing host & server`],
+            technologies: [`WordPress`, `CSS3`, `HTML5`]
         },{
-            title: `Prana Wellness`,
-            image: `./clients/prana-wellness.png`,
-            link: `pranawellnessworks.com`,
-            status: `live`,
+            title: `HeatSeeker Hot Sauce`,
+            link: `heatseekersauce.com`,
+            image: `./clients/heatseeker.png`,
+            status: `inactive`,
             startDate: ``,
             endDate: ``,
-            statement: `Prana is Sanskrit for breath, considered as a life-giving force.  Prana is seen as a universal energy, which flows in currents in and around the body.`,
-            responsibilities: [`Build custom business website`, `Automate email campaign with MailChimp`, `Graphic design`],
-            technologies: [`React`, `Javascript`, `VanillaJs`, `CSS3`, `HTML5`, `Firebase`, `Photoshop`, `Figma`, `MailChimp`]
+            statement: `Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.`,
+            responsibilities: [`Re-design eCommerce website`, `Streamline content & UX`],
+            technologies: [`Shopify`, `Liquid`, `CSS3`, `HTML5`, `Photoshop`, `Figma`]
+        },{
+            title: `La Madre is Watching`,
+            image: `./clients/lamadreiswatching-ongina.JPG`,
+            link: `lamadreiswatching.com`,
+            status: `inactive`,
+            startDate: ``,
+            endDate: ``,
+            statement: `Photographing the edgy side of the Los Angeles night scene.`,
+            responsibilities: [`Build custom social media website`, `Party events shareable photo gallery`, `Graphic design`],
+            technologies: [`HTML`, `CSS`, `Javascript`]
         }]
     }
     render(){
-        const { clientList } = this.state
-        const mapClientList = clientList.map((client, key) => {
+        const { pastClientList } = this.state
+        const mappastClientList = pastClientList.map((client, key) => {
             const responsibilitiesList = client.responsibilities.map((r, k) => {
                 return <li key={k}>{r}</li>
             })
@@ -51,9 +61,9 @@ export default class Clients extends Component {
                         <h2>
                             {client.title}
                         </h2>
-                        <a target="_blank" rel="noopener noreferrer" href={`https://${client.link}`}>
+                        <>
                             {client.link}
-                        </a>
+                        </>
                         <p>
                             “{client.statement}”
                         </p>
@@ -76,7 +86,7 @@ export default class Clients extends Component {
         })
         return(
             <Container>
-                {mapClientList}                
+                {mappastClientList}                
             </Container>
         );
     };
