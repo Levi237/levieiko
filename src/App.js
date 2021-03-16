@@ -119,11 +119,6 @@ const BodyContainer = styled.div`
   overflow-y: scroll;
 `;
 const AppContainer = styled.div`
-  h1,h2,h3,ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    line-height: 100%;
-  }
   h1 {
     text-align: center;
     text-transform: uppercase;
