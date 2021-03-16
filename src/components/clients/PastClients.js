@@ -20,8 +20,8 @@ export default class PastClients extends Component {
             status: "inactive",
             startDate: "",
             endDate: "",
-            statement: "IT After Hours is the only professional, affordable computer service company conveniently available evenings and weekends. IT After Hours started when a passion for computers turned into a career in Information Technology.",
-            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code upgrades", "Make mobile friendly", "Currently undergoing host & server"],
+            statement: "Professional, affordable computer service company",
+            responsibilities: ["Streamline WordPress & resolve bugs", "Customize CSS3 code", "Mobile friendly upgrade", "Currently undergoing host & server"],
             technologies: ["WordPress", "CSS3", "HTML5"]
         },{
             title: "HeatSeeker Hot Sauce",
@@ -30,7 +30,7 @@ export default class PastClients extends Component {
             status: "inactive",
             startDate: "",
             endDate: "",
-            statement: "Bold and minimal, pure and simple. We believe that it shouldn't take 57 ingredients to create something amazing, but instead, a few, simple ingredients expertly combined for that perfect balance of flavor and heat. That's what we do.",
+            statement: "Bold and minimal, pure and simple... That's what we do.",
             responsibilities: ["Re-design eCommerce website", "Streamline content & UX"],
             technologies: ["Shopify", "Liquid", "CSS3", "HTML5", "Photoshop", "Figma"]
         },{
@@ -42,45 +42,35 @@ export default class PastClients extends Component {
             endDate: "",
             statement: "Photographing the edgy side of the Los Angeles night scene.",
             responsibilities: ["Build custom social media website", "Party events shareable photo gallery", "Graphic design"],
-            technologies: ["HTML", "CSS", "Javascript"]
+            technologies: ["HTML", "CSS", "Javascript", "Photoshop"]
         }]
     }
     render(){
         const { pastClientList } = this.state
         const mappastClientList = pastClientList.map((client, key) => {
-            const responsibilitiesList = client.responsibilities.map((r, k) => {
-                return <li key={k}>{r}</li>
-            })
             const technologiesList = client.technologies.map((c, k) => {
                 return <span key={k}>{c}</span>
             })
             return(
                 <ClientContainer key={key}>
-                    <MobileImg src={client.image} alt={client.title}/>
+                    <section>
+                        <img src={client.image} alt={client.title}/>
+                    </section>
                     <section>
                         <h2>
                             {client.title}
                         </h2>
-                        <>
+                        <h4>
                             {client.link}
-                        </>
+                        </h4>
                         <p>
                             “{client.statement}”
                         </p>
                         <h3>
-                            Responsibilities: 
-                        </h3>
-                        <ul>
-                            {responsibilitiesList}
-                        </ul>
-                        <h3>
                             Technologies: 
                         </h3>
                             {technologiesList}
-                        <hr/>   
                     </section>
-                    <DesktopImg src={client.image} alt={client.title}/>
-                    <hr/>
                 </ClientContainer>
             )
         })
@@ -94,16 +84,20 @@ export default class PastClients extends Component {
 
 const ClientContainer = styled.div`
     margin: 40px auto;
-    max-width: 800px;
     text-align: center;
 
+    width: 21%;
+    margin: 0 1%;
+    display: inline-block;
+    vertical-align: top;
     section {
-        width: 40%;
-        padding: 5%;
-        max-width: 400px;
-        display: inline-block;
-        vertical-align: top;
         text-align: left;
+        &:first-of-type {
+            max-height: 160px;
+            height: 13.33vw;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
         span::after {
             content ' | ';
         }
@@ -113,15 +107,9 @@ const ClientContainer = styled.div`
     }
     
     img {
-        width: 50%;
-        max-width: 400px;
+        width: 100%;
         margin-top: 5%;
-        box-shadow: 0 1px 12px rgba(0,0,0,.2);
     }
-    &:nth-of-type(odd) img:last-of-type {
-        float: left;
-    }
-
     a {
         color: grey!important;
         text-decoration: none;
@@ -132,8 +120,15 @@ const ClientContainer = styled.div`
     h1 {
         margin-bottom: 10px!important;
     }
+    h2 {
+        font-size: 21px;
+    }
     h3 {
         font-size: 16px;
+    }
+    h4 {
+        font-size: 14px;
+        font-weight: 100;
     }
     p {
         font-style: italic;
@@ -146,55 +141,45 @@ const ClientContainer = styled.div`
     ul {
         margin: 10px auto!important;
     }
-    >hr {
-        width: 100%;
-        margin: 40px auto 20px;
-    }
-    >hr:last-of-type {
-        margin: 40px auto 0;
-    }
-    section > hr {
-        display: none;
-    }
-    @media screen and (max-width: 900px) {
-        >hr {
-            display: none;
+    @media screen and (max-width: 640px) {
+        width: 45%;
+        margin: 0 0%;
+        section {
+            text-align: left;
+            &:first-of-type {
+                height: 21.33vw;
+            }
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
         }
-        section > hr {
-            display: block;
-            width: 80%;
-            margin: 5% auto;
+        h2 {
+            font-size: 4.6vw;
         }
+        h3 {
+
+        }
+        h4 {
+            padding-top: 1vw;
+        }
+        h3, h4, p, ul, li, span{
+            font-size: 3.6vw;
+        }
+
     }
 `;
 
-const DesktopImg = styled.img`
-    display: inline-block;
-    @media screen and (max-width: 900px) {
-        display: none;
-    }
-`;
 
-const MobileImg = styled.img`
-    display: none;
-    @media screen and (max-width: 900px) {
-        display: block;
-`;
 const Container = styled.div`
     position: relative;
-    hr {
-        height: 1px;
-        background-color: #fff;
-        border: none;
-    }
-
-    @media screen and (max-width: 900px) {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media screen and (max-width: 640px) {
+        max-width: 600px;
         section, img {
             width: 90%;
             margin: auto;
-        }
-        >hr {
-            display: none;
         }
     }
 `;
