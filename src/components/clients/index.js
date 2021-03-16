@@ -58,9 +58,9 @@ export default class PortfolioPage extends Component {
         const { projects, skills } = this.state;
         return (
             <Container>
-                <h1 className='titleDecoration'>CLIENTS</h1>
+                <h1 className="titleDecoration">CLIENTS</h1>
                 <Clients/>
-                <h1 className='titleDecoration'>PAST CLIENTS</h1>
+                <h1>PAST CLIENTS</h1>
                 <PastClients/>
                 <Skills skills={skills}/>
                 <ProjectsFlip projects={projects} /><ProjectsMobile projects={projects} />
