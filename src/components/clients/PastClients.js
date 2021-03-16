@@ -83,19 +83,17 @@ export default class PastClients extends Component {
 };
 
 const ClientContainer = styled.div`
-    margin: 40px auto;
-    text-align: center;
-
-    width: 21%;
-    margin: 0 1%;
     display: inline-block;
     vertical-align: top;
+    width: 21%;
+    margin: 40px 1%;
+    text-align: center;
     section {
         text-align: left;
         &:first-of-type {
-            max-height: 160px;
-            height: 13.33vw;
             overflow: hidden;
+            height: 13.33vw;
+            max-height: 160px;
             margin-bottom: 20px;
         }
         span::after {
@@ -131,9 +129,9 @@ const ClientContainer = styled.div`
         font-weight: 100;
     }
     p {
+        margin: 10px auto;
         font-style: italic;
         font-size: 14px;
-        margin: 10px auto;
     }
     ul, span {
         font-size: 14px;
@@ -156,9 +154,6 @@ const ClientContainer = styled.div`
         h2 {
             font-size: 4.6vw;
         }
-        h3 {
-
-        }
         h4 {
             padding-top: 1vw;
         }
@@ -169,12 +164,11 @@ const ClientContainer = styled.div`
     }
 `;
 
-
 const Container = styled.div`
     position: relative;
-    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
     @media screen and (max-width: 640px) {
         max-width: 600px;
         section, img {
