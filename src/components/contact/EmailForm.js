@@ -51,6 +51,7 @@ export default class EmailForm extends Component {
         return(<>
             <Form 
                 action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
+                // action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/contact-form/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_IDXXX}`}
                 method="POST" 
                 id="mc-embedded-subscribe-form" 
                 name="mc-embedded-subscribe-form" 
