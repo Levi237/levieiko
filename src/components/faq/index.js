@@ -17,7 +17,7 @@ const FAQPage = () => {
           <section>
             <h2>How much does a website cost?</h2>
             <p>
-              Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.
+              <i>Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.</i>
               <br/>
               A small business website can run anywere from $500 for a single page portfolio to $10,000 high-end eCommerce boutique.  
               You can always start small and build up.  
