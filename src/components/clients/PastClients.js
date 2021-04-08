@@ -88,6 +88,7 @@ const ClientContainer = styled.div`
     width: 21%;
     margin: 40px 1%;
     text-align: center;
+    
     section {
         text-align: left;
         &:first-of-type {
