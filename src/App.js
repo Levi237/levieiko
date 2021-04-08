@@ -10,6 +10,7 @@ import NavMenu                        from './components/nav/NavMenu';
 import NavBar                         from './components/nav/NavBar';
 
 import AboutPage                      from './components/about';
+import FAQPage                        from './components/faq';
 import HomePage                       from './components/home';
 import PortfolioPage                  from './components/clients';
 import ContactPage                    from './components/contact';
@@ -22,7 +23,7 @@ export default class App extends Component {
       home: {
         title: '',
         color: '#fff',
-        fill: 'url(#skyGradient)',
+        fill: '#fff',
         displayLogo: 'none',
       },
       about: {
@@ -35,6 +36,12 @@ export default class App extends Component {
         color: '#fff',
         displayLogo: 'inline-block',
         fill: '#fff',
+      },
+      faq: {
+        title: 'faq',
+        color: '#181717',
+        fill: '#181717',
+        displayLogo: 'inline-block',
       },
       mail: {
         title: 'contact',
@@ -88,6 +95,7 @@ export default class App extends Component {
             <Route path={routes.CNFM} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.PORT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.portfolio}/> }/>
             <Route path={routes.INFO} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.about}/> }/>
+            <Route path={routes.FAQS} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.faq}/> }/>
             <Route path={routes.ROOT} exact render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.home}/> }/>
             <Route path={routes.ROOT} render={() => <NavBar toggleMenu={this.toggleMenu} pageStyle={pageStyle.root}/> }/>
           </Switch>
@@ -97,6 +105,7 @@ export default class App extends Component {
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.PORT} render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
+              <Route path={routes.FAQS} exact render={() => <FAQPage/> }/>
               <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
