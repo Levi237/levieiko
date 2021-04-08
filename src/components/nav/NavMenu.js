@@ -11,8 +11,8 @@ const NavMenu = ({ toggleMenu }) => {
                 <NavLink activeClassName="nav-active" to={routes.ROOT} onClick={() => {toggleMenu()}}>HOME</NavLink>
                 <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>CLIENTS</NavLink>
                 <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.FAQS} onClick={() => {toggleMenu()}}>FAQ</NavLink>
                 <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.FAQS} onClick={() => {toggleMenu()}}>FAQ</NavLink>
             </div>
         </NavContainer>
     );

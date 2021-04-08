@@ -15,17 +15,6 @@ const FAQPage = () => {
         <h1 className="titleDecoration">FAQ</h1>
         <div>
           <section>
-            <h2>Mobile-first website OR an APP?</h2>
-            <p>
-              It really depends on the complexity.  
-              Apps sound glamorous but there are a few things to consider.  
-              Apps are only intended for mobile and tablets.  
-              They need to be downloaded and take up space on peoples phones.
-              <br/>
-              Most businesses can create the same experience with a mobile-first designed website with added versatility.
-            </p>
-          </section>
-          <section>
             <h2>How much does a website cost?</h2>
             <p>
               Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.
@@ -33,6 +22,25 @@ const FAQPage = () => {
               A small business website can run anywere from $500 for a single page portfolio to $10,000 high-end eCommerce boutique.  
               You can always start small and build up.  
               The sooner you start generating revenue the sooner you can invest in yourself!
+            </p>
+          </section>
+          <section>
+            <h2>What is a Mobile-first design?</h2>
+            <p>
+              Essentially we are building a website intended to the best user experience on their mobile device.
+              More and more people are using their phones to surf the web.  
+              A mobile-first website doesn't have the barrier of a download requirement, giving people more of an opportunity to view your brand.
+            </p>
+          </section>
+          <section>
+            <h2>Mobile-first Website -OR- APP?</h2>
+            <p>
+              It really depends on the complexity.  
+              Apps sound glamorous but there are a few things to consider.  
+              Apps are limited on which devices you can view them.  
+              Apps need to be downloaded and take up space on peoples phones.
+              <br/>
+              Most businesses can create the same experience with a mobile-first designed website with added versatility.
             </p>
           </section>
           <section>
@@ -95,8 +103,13 @@ const Container = styled.div`
   margin: 0 auto!important;
   div {
     margin: 60px auto;
-    width: 70%;
-    max-width: 800px;
+    &:first-of-type {
+      width: 65%;
+      max-width: 800px;
+    }
+    &:last-of-type {
+      text-align: center;
+    }
   }
   section {
     margin-bottom: 60px;
@@ -109,11 +122,15 @@ const Container = styled.div`
   svg {
     height: 40px;
     width: 40px;
+    margin: 10px;
   }
   @media screen and (max-width: 745px){
       padding-top: 60px;
       > h1 {
           padding: 20px;
+      }
+      h2 {
+        font-size: 22px;
       }
   }
 `;
