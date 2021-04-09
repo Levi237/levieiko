@@ -49,9 +49,32 @@ const FAQPage = () => {
           <section>
             <h2>Should I code my website or use a builder/generator like Shopify?</h2>
             <p>
-              When it comes to legal stuff and e-commerce, I would say why re-invent the wheel?  If you're a small business, let's do it through Shopify or WordPress!
-              Sometimes you need to integrate third party technologies.  WordPress could have a plugin that will save you time and money in development.
+              If you have to integrate with a lot of third-party technologies or handles payments, it is best to use a builder/generator that can handle future updates better and offer a higher level of e-commerce needs.
+              <br/>
+              <small>Example: <a href="https://momomuscle.co">MomoMuscle.co</a></small>
+              <br/><br/>
+              If you want a website that looks super cool and you don't want to pay monthly fees, a coded website gives you the freedom to be creative.  
+              I usually use Firebase for hosting since it is free to small busineses and only starts charging when you gain a lot of traffic.
+              It also offers a free SSL, that's nice too.
+              <br/>
+              <small>Example: <a href="https:/pranawellnessworks.com">PranaWellnessWorks.com</a></small>
             </p>
+          </section>
+          <section>
+            <h2>What is an SSL certificate?</h2>
+            <div>
+              <p style={{textAlign: 'right'}}>
+                Ever see this? 👉 
+              </p>
+              <p>
+                It's the <i>s</i> in "https", meaning <i>Secure</i>
+              </p>
+              <p>
+                SSL stands for Secure Sockets Layer.
+                An SSL Certificate authenticates you as a legitimate domaine to bypass these firewalls and ensure your users that your site is safe.
+              </p>
+            </div>
+            <img src="/faq/no-ssl_example.png"/>
           </section>
           <section>
             <h2>This is a lot to process, where do I start?</h2>
@@ -130,23 +153,53 @@ const Container = styled.div`
     section {
       margin-bottom: 60px;
     }
-    ul {
-      line-height: 150%;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      ul {
-        font-size: 14px;
+    > section {
+      > div {
+        width: 40%;
+        margin: 4px 10% 0 0;
+        display: inline-block;
+        vertical-align: top;
+      }
+      > img {
+        width: 40%;
+        margin: 20px 0 0 0;
+        display: inline-block;
       }
     }
   }
+  > ul {
+    line-height: 150%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    > ul {
+      font-size: 14px;
+    }
+  }
   @media screen and (max-width: 745px){
-      padding-top: 60px;  
-      > h1 {
-          padding: 20px;
+    padding-top: 60px;  
+    > h1 {
+        padding: 20px;
+    }
+    > div {
+      > section {
+        h2 {
+          font-size: 22px;
+        }
+        > div {
+          width: 100%;
+          margin: 0 auto;
+          display: block;
+          > p:first-of-type {
+            display: none;
+          }
+        }
+        > img {
+          width: 100%;
+          margin: 20px auto;
+          display: block;
+        }
       }
-      h2 {
-        font-size: 22px;
-      }
+    }
   }
 `;
 
