@@ -1,48 +1,87 @@
 import React  from 'react';
 import styled from 'styled-components';
 
-const Footer =()=> {
+import { NavLink }                      from 'react-router-dom';
+import * as routes                      from './../constants/routes';
+
+import { ReactComponent as Mail }       from './../svg/icons/iconfinder_mail.svg';
+import { ReactComponent as Instagram }  from './../svg/icons/iconfinder_instagram.svg';
+import { ReactComponent as Linkedin }   from './../svg/icons/iconfinder_linkedin.svg';
+import { ReactComponent as Github }     from './../svg/icons/iconfinder_github.svg';
+
+const Footer = () => {
     return(
         <Container>
-          <Prayer></Prayer>
+          <div>
+
+            <section>
+              <h2>Quick Links</h2>
+              <NavLink to={routes.MAIL}>
+                Contact
+              </NavLink> 
+              <NavLink to={routes.INFO}>
+                About
+              </NavLink>    
+              <NavLink to={routes.PORT}>
+                Clients
+              </NavLink>             
+            </section>
+
+            <section>
+              <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
+                <Github className="svg-about-link"/>
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
+                <Linkedin className="svg-about-link"/>
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
+                <Instagram className="svg-about-link"/>
+              </a>
+              <NavLink to={routes.MAIL}>
+                <Mail className="svg-about-link"/>
+              </NavLink>
+            </section>
+
+
+
+            <section>
+              Built by LeviEiko.com
+            </section>
+
+          </div>
         </Container>
         );
 };
 
-const Prayer = styled.div`
 
-height: 100vh;
-background-image: url(om-mani-padme-hum.png);
-background-size: 30%;
-background-position: center;
-background-repeat: no-repeat;
-background-color: transparent;
-@media screen and (max-width: 900px) {
 
-    background-size: 80%;
-    background-position: center 20%;
-}
-`;
+const Container = styled.footer`
+  width: 100vw;
+  text-align: center;
+  > div {
+    width: 100vw;
+    > section {
+      display: inline-block;
+      &:first-of-type {
+        width: calc(33vw - 160px);
+        text-align: left;
+      }
+      &:nth-of-type(2) {
+        width: 33vw;
+        min-width: 320px;
 
-const Container = styled.div`
-height: 100vh;
-overflow: scroll;
-background-image: url(./background/goblin-valley.jpg);
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-background-color: white;
-
-  h2 {
-    padding-top: 2%;
+      }
+      &:last-of-type {
+        width: calc(33vw - 160px);
+        text-align: right;
+      }
+    }
+    svg {
+      height: 40px;
+      width: 40px;
+      margin: 10px;
+    }
   }
-  section {
-    padding: 2% 10%;
-    font-size: 14px;
-  }
-  @media screen and (max-width: 900px) {
-    background-size: cover!important;
-}
 `;
 
 export default Footer;
