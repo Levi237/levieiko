@@ -1,13 +1,5 @@
 import React                            from 'react';
 import styled                           from 'styled-components';
-import { NavLink }                      from 'react-router-dom';
-import * as routes                      from '../../constants/routes';
-
-import { ReactComponent as Mail }       from '../../svg/icons/iconfinder_mail.svg';
-import { ReactComponent as Instagram }  from '../../svg/icons/iconfinder_instagram.svg';
-import { ReactComponent as Linkedin }   from '../../svg/icons/iconfinder_linkedin.svg';
-import { ReactComponent as Github }     from '../../svg/icons/iconfinder_github.svg';
-
 
 const FAQPage = () => { 
   return(
@@ -17,10 +9,54 @@ const FAQPage = () => {
           <section>
             <h2>How much does a website cost?</h2>
             <p>
-              <i>Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.</i>
+              A small business website can run anywere from $500 for a single page portfolio to $10,000 high-end e-commerce boutique.  
+              Most small businesses start between $1,200 informative to $3,000 e-commerce.
               <br/>
-              A small business website can run anywere from $500 for a single page portfolio to $10,000 high-end eCommerce boutique.  
-              You can always start small and build up.  
+              <i>Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.</i>
+            </p>
+          </section>
+          {/* <section>
+            <h2>Website pricing examples:</h2>
+            <ul>
+              <li>static single page: $500+</li>
+              <li>static multi-page informational: $600 - $2,400+
+                <ul>
+                  <li><a href="https://LeviEiko.com">LeviEiko.com</a></li>
+                  <li><a href="https://pranawellnessworks.com">PranaWellnessWorks.com</a></li>
+                  <li><a href="https://AndreaSellsMaui.com">AndreaSellsMaui.com</a></li>
+                </ul>
+              </li>
+              <li>dynmaic: $600 - $2,400+
+                <ul>
+                  <li><a href="https://LeviEiko.com">LeviEiko.com</a></li>
+                  <li><a href="https://pranawellnessworks.com">PranaWellnessWorks.com</a></li>
+                  <li><a href="https://AndreaSellsMaui.com">AndreaSellsMaui.com</a></li>
+                </ul>
+              </li>
+              <li>technology / software integrated website: $1,200 - $10,000+</li>
+              <li>simple e-commerce store: $2,400 - $7,000
+                <ul>
+                  <li><a href="https://red5performance.com">Red5Performance.com</a></li>
+                </ul>
+              </li>
+              <li>high-end e-commerce store / high-tech website: $4,000 - $10,000+
+                <ul>
+                  <li><a href="https://MomoMuscle.co">MomoMuscle.co</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section> */}
+          <section>
+            <h2>Should I code my website or use a builder/generator like Shopify?</h2>
+            <p>
+              When it comes to legal stuff and e-commerce, I would say why re-invent the wheel?  If you're a small business, let's do it through Shopify or WordPress!
+              Sometimes you need to integrate third party technologies.  WordPress could have a plugin that will save you time and money in development.
+            </p>
+          </section>
+          <section>
+            <h2>This is a lot to process, where do I start?</h2>
+            <p>
+              I recommend starting with your minimum viable product (MVP).
               The sooner you start generating revenue the sooner you can invest in yourself!
             </p>
           </section>
@@ -62,8 +98,8 @@ const FAQPage = () => {
           <section>
             <h2>What if I have a great product or brand but I can’t afford the price?</h2>
             <p>
-              There are certain times when my gut tells me ‘this client is a good investment’ and I’m usually right.  
-              If you have someting started and see real potential in upping your game, I am down to chat.
+              There are certain times when my gut tells me ‘this project is a good investment.’  
+              I offer a complimentary consultation to discuss how I can assist you with your business plan and online presence.
             </p>
           </section>
           <section>
@@ -73,24 +109,10 @@ const FAQPage = () => {
               <li>set up & connect accounts</li>
               <li>create content & design</li>
               <li>develop website, test each step</li>
-              <li>test function & refine</li>
+              <li>test function & refine style</li>
               <li>LAUNCH!</li>
             </ul>
           </section>
-        </div>
-        <div>
-          <a target="_blank" rel="noreferrer" href="https://github.com/Levi237">
-            <Github className="svg-about-link"/>
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leviwinans">
-            <Linkedin className="svg-about-link"/>
-          </a>
-          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
-            <Instagram className="svg-about-link"/>
-          </a>
-          <NavLink to={routes.MAIL}>
-            <Mail className="svg-about-link"/>
-          </NavLink>
         </div>
     </Container>
   );
@@ -101,31 +123,24 @@ const Container = styled.div`
   color: #181717;
   padding: 80px 0;
   margin: 0 auto!important;
-  div {
+  > div {
     margin: 60px auto;
-    &:first-of-type {
-      width: 65%;
-      max-width: 800px;
+    width: 65%;
+    max-width: 800px;
+    section {
+      margin-bottom: 60px;
     }
-    &:last-of-type {
-      text-align: center;
+    ul {
+      line-height: 150%;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      ul {
+        font-size: 14px;
+      }
     }
-  }
-  section {
-    margin-bottom: 60px;
-  }
-  ul {
-    line-height: 150%;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-  }
-  svg {
-    height: 40px;
-    width: 40px;
-    margin: 10px;
   }
   @media screen and (max-width: 745px){
-      padding-top: 60px;
+      padding-top: 60px;  
       > h1 {
           padding: 20px;
       }
