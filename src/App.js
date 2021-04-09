@@ -8,6 +8,7 @@ import * as routes                    from './constants/routes';
 import ModalWindow                    from './components/Modal';
 import NavMenu                        from './components/nav/NavMenu';
 import NavBar                         from './components/nav/NavBar';
+import Footer                         from './components/Footer';
 
 import AboutPage                      from './components/about';
 import FAQPage                        from './components/faq';
@@ -105,7 +106,7 @@ export default class App extends Component {
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
               <Route path={routes.PORT} render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
-              <Route path={routes.FAQS} exact render={() => <FAQPage/> }/>
+              <Route path={routes.FAQS} exact render={() => <><FAQPage/><Footer/></> }/>
               <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
             </Switch>
