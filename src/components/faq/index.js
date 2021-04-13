@@ -6,104 +6,82 @@ const FAQPage = () => {
     <Container>
         <h1 className="titleDecoration">FAQ</h1>
         <div>
+          <h2>The Basics</h2>
           <section>
-            <h2>How much does a website cost?</h2>
+            <h3>Should I use a website builder like Shopify or have my site coded?</h3>
             <p>
-              A small business website can run anywere from $500 for a single page portfolio to $10,000 high-end e-commerce boutique.  
-              Most small businesses start between $1,200 informative to $3,000 e-commerce.
+              If you have to integrate with a lot of third-party technologies or process online payments, it is best to use a website generator that can handle future updates better and offer a higher level of e-commerce needs.
               <br/>
+              <span>Example: <a href="https://momomuscle.co">MomoMuscle.co</a></span>
+            </p>
+            <p>
+              DJs, photographers, coffee shops, etc.  Your identity and your brand are what get people to fall in love with you.  
+              Having a fully custom website gives you that extra professional look and <i><b>the freedom to really dream</b></i>.
+              If you see an animation you like, then it's possible to build it.  
+              Plus, with Firebase, hosting starts off free and only charges if you see a lot of traffic onto your site.
+              <br/>
+              <span>Example: <a href="https:/pranawellnessworks.com">PranaWellnessWorks.com</a></span>
+            </p>
+          </section>
+          <section>
+            <h3>Mobile-first Website -OR- APP?</h3>
+            <p>
+              In my humble opinion, mobile-first websites are the way of the future.  
+              They do not require a download or take up space on your users phone.  
+              You can view them on any device, which allows more people to access your brand.
+            </p>
+            <p>
+              Apps have limitations, with cross-platform challenges, and may be limited to certain devices. 
+              They do have their technical pros but it really depends on the scale of your audience and how much data you want to collect. 
+            </p>
+            <p>
+              <span>
+                Example: &nbsp;
+              </span>
+              I log onto FaceBook through Google Chrome because the FaceBook App file is too large and I don't want it digging more into my personal life.
+              <br/>
+              <i><small>(TBH, the only reason I am on FaceBook is because this is one of the few ways I get to see my nephews and neice.)</small></i>
+            </p>
+          </section>
+          <section>
+            <h3>What are alternatives to hiring a freelancer?</h3>
+            <p>
+              There are agencies that work in teams that can provide more services like copy writing, data analysis, surveys, etc.  
+              Or you can DIY with WIX, SquareSpace, Weebly, etc... make sure to uncheck those additional services boxes that may incur future charges.
+            </p>
+          </section>
+          <section>
+            <h3>How much does a website cost?</h3>
+            <p>
+              A small business website can run anywhere from $500 for a static single page portfolio to $10,000 high-end e-commerce boutique with animation and custom software programming.  
+              Most MVP websites range between $1,200 for a basic multi-page with lead capture to $3,000 for a store when getting started.
+              <br/>
+            </p>
+            <p>
               <i>Certain expenses vary, like hosting, domain name, SSL, email, thid party integrations and generally have monthly or annual expenses.</i>
             </p>
           </section>
-          {/* <section>
-            <h2>Website pricing examples:</h2>
-            <ul>
-              <li>static single page: $500+</li>
-              <li>static multi-page informational: $600 - $2,400+
-                <ul>
-                  <li><a href="https://LeviEiko.com">LeviEiko.com</a></li>
-                  <li><a href="https://pranawellnessworks.com">PranaWellnessWorks.com</a></li>
-                  <li><a href="https://AndreaSellsMaui.com">AndreaSellsMaui.com</a></li>
-                </ul>
-              </li>
-              <li>dynmaic: $600 - $2,400+
-                <ul>
-                  <li><a href="https://LeviEiko.com">LeviEiko.com</a></li>
-                  <li><a href="https://pranawellnessworks.com">PranaWellnessWorks.com</a></li>
-                  <li><a href="https://AndreaSellsMaui.com">AndreaSellsMaui.com</a></li>
-                </ul>
-              </li>
-              <li>technology / software integrated website: $1,200 - $10,000+</li>
-              <li>simple e-commerce store: $2,400 - $7,000
-                <ul>
-                  <li><a href="https://red5performance.com">Red5Performance.com</a></li>
-                </ul>
-              </li>
-              <li>high-end e-commerce store / high-tech website: $4,000 - $10,000+
-                <ul>
-                  <li><a href="https://MomoMuscle.co">MomoMuscle.co</a></li>
-                </ul>
-              </li>
-            </ul>
-          </section> */}
           <section>
-            <h2>Should I code my website or use a builder/generator like Shopify?</h2>
-            <p>
-              If you have to integrate with a lot of third-party technologies or handles payments, it is best to use a builder/generator that can handle future updates better and offer a higher level of e-commerce needs.
-              <br/>
-              <small>Example: <a href="https://momomuscle.co">MomoMuscle.co</a></small>
-              <br/><br/>
-              If you want a website that looks super cool and you don't want to pay monthly fees, a coded website gives you the freedom to be creative.  
-              I usually use Firebase for hosting since it is free to small busineses and only starts charging when you gain a lot of traffic.
-              It also offers a free SSL, that's nice too.
-              <br/>
-              <small>Example: <a href="https:/pranawellnessworks.com">PranaWellnessWorks.com</a></small>
-            </p>
-          </section>
-          <section>
-            <h2>What is an SSL certificate?</h2>
-            <div>
-              <p style={{textAlign: 'right'}}>
-                Ever see this? 👉 
-              </p>
-              <p>
-                It's the <i>s</i> in "https", meaning <i>Secure</i>
-              </p>
-              <p>
-                SSL stands for Secure Sockets Layer.
-                An SSL Certificate authenticates you as a legitimate domaine to bypass these firewalls and ensure your users that your site is safe.
-              </p>
-            </div>
-            <img src="/faq/no-ssl_example.png"/>
-          </section>
-          <section>
-            <h2>This is a lot to process, where do I start?</h2>
+            <h3>This is a lot to process, where do I start?</h3>
             <p>
               I recommend starting with your minimum viable product (MVP).
               The sooner you start generating revenue the sooner you can invest in yourself!
             </p>
           </section>
           <section>
-            <h2>What is a Mobile-first design?</h2>
-            <p>
-              Essentially we are building a website intended to the best user experience on their mobile device.
-              More and more people are using their phones to surf the web.  
-              A mobile-first website doesn't have the barrier of a download requirement, giving people more of an opportunity to view your brand.
-            </p>
+            <h3>What is the process like?</h3>
+            <ul>
+              <li>Consult & make a plan</li>
+              <li>Set up & connect accounts</li>
+              <li>Create content & design</li>
+              <li>Develop website, test each step</li>
+              <li>Troubleshoot & refine style</li>
+              <li>LAUNCH!</li>
+            </ul>
           </section>
+          <h2>The Business</h2>
           <section>
-            <h2>Mobile-first Website -OR- APP?</h2>
-            <p>
-              It really depends on the complexity.  
-              Apps sound glamorous but there are a few things to consider.  
-              Apps are limited on which devices you can view them.  
-              Apps need to be downloaded and take up space on peoples phones.
-              <br/>
-              Most businesses can create the same experience with a mobile-first designed website with added versatility.
-            </p>
-          </section>
-          <section>
-            <h2>What kind of web developer is Levi?</h2>
+            <h3>What kind of web developer is Levi?</h3>
             <p>
               I am a freelance full-stack <b>web developer</b> with <b>email marketing</b> and <b>graphic design</b> skills.  
               AKA a “ one man band.”  
@@ -112,30 +90,71 @@ const FAQPage = () => {
             </p>
           </section>
           <section>
-            <h2>What are alternatives to hiring a freelancer?</h2>
+            <h3>A little bit about me:</h3>
             <p>
-              There are agencies that work in teams that can provide more services like copy writing, data analysis, surveys, etc.  
-              Or you can DIY with WIX, SquareSpace, Weebly, etc... make sure to uncheck those additional services boxes that may incur future charges.
+              I have been building websites since I was in highschool when I bought my first book on HTML.
+              I consider myself to be more of the creative type that enjoys the technical side of art. 
+              Web and graphic design have always been two of my greatest passions.  
+            </p>
+            <p>
+              My other interests are in fitness and the outdoors. 
+              I lived in New York City for 7 years where I became a top-tier trainer at Equinox. 
+              My focus was on bio-mechanic, rehabilitative, full-body, rang-of-motion style training integrated with Yoga and Deep Tissue massage therapy.
+              As for the hippie in me... I still camp, spelunk, rock climb, or backpack when ever I can to keep that close connection with nature.
             </p>
           </section>
           <section>
-            <h2>What if I have a great product or brand but I can’t afford the price?</h2>
+            <h3>What if I have a great product or brand but I can’t afford the price?</h3>
             <p>
               There are certain times when my gut tells me ‘this project is a good investment.’  
               I offer a complimentary consultation to discuss how I can assist you with your business plan and online presence.
             </p>
           </section>
+          <h2>The "what the heck is this?" section</h2>
           <section>
-            <h2>What is the process like?</h2>
-            <ul>
-              <li>consult & make a plan</li>
-              <li>set up & connect accounts</li>
-              <li>create content & design</li>
-              <li>develop website, test each step</li>
-              <li>test function & refine style</li>
-              <li>LAUNCH!</li>
-            </ul>
+            <h3>What are wireframes?</h3>
+            <p>
+              A wireframe is essentially is the blueprint for your website.  
+              It can be drawn out on a chalk board or planned with design tools.
+            </p>
+            <div class="figma-example">
+              <a href="https://www.figma.com/file/2uzRBVfKXLIdZnhk5wlbMK/MoMoMuscle-Wireframe?node-id=0%3A1">
+                Final Product
+                <img src="faq/launch-example.png"/>
+              </a>
+            </div>
           </section>
+          <section>
+            <h3>What is FIGMA?</h3>
+            <p>
+              FIGMA is currently one of the best Free <i>"collaborative interface design tool(s)."</i>
+              <br/>
+              This is currently what I use to wireframe websites, and is an excellent way to share images.
+            </p>
+          </section>
+          <section>
+            <h3>What is an SSL certificate?</h3>
+            <div>
+              <p>
+                It's the <i>s</i> in <i>https</i>, meaning <i>Secure</i>.
+              </p>
+              <p>
+                SSL stands for "Secure Sockets Layer".
+                In a nutshell, it means that your site is legit.
+              </p>
+              <p>
+                Costs can be anywhere from a monthly fee, annual fee, or free with light traffic.
+                I currently use Firebase because my website offers a specialized product and won't be seeing as many visits as a store or blog.  
+              </p>
+            </div>
+            <div>
+                <p>
+                  Have you ever seen this? 👇
+                </p>
+              <img src="/faq/no-ssl_example.png"/>
+            </div>
+          </section>
+          <div style={{textAlign: 'center', marginTop: '200px', fontStyle: 'italic'}}>This FAQ was last updated April 2021.</div>
         </div>
     </Container>
   );
@@ -153,27 +172,48 @@ const Container = styled.div`
     section {
       margin-bottom: 60px;
     }
+    > h2 {
+      margin: 120px 0 40px;
+      font-size: 28px;
+      text-align: center;
+    }
     > section {
       > div {
         width: 40%;
         margin: 4px 10% 0 0;
         display: inline-block;
         vertical-align: top;
+        > img {
+          width: 90%;
+          display: inline-block;
+        }
       }
-      > img {
-        width: 40%;
-        margin: 20px 0 0 0;
-        display: inline-block;
+      > ul {
+        line-height: 150%;
+        margin-block-start: 1em;
+        margin-top: 20px;
+        margin-block-end: 1em;
+        > ul {
+          font-size: 14px;
+        }
       }
     }
   }
-  > ul {
-    line-height: 150%;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    > ul {
-      font-size: 14px;
-    }
+  span {
+    color: darkgrey;
+  }
+  .figma-example {
+    width: 45%;
+    margin: 2.5%;
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+  }
+  .figma-example a {
+    font-size: 16px;
+  }
+  .figma-example img {
+    width: 100%;
   }
   @media screen and (max-width: 745px){
     padding-top: 60px;  
@@ -182,23 +222,25 @@ const Container = styled.div`
     }
     > div {
       > section {
-        h2 {
+        h3 {
           font-size: 22px;
         }
         > div {
           width: 100%;
           margin: 0 auto;
           display: block;
-          > p:first-of-type {
-            display: none;
+          > img {
+            width: 100%;
           }
         }
-        > img {
-          width: 100%;
-          margin: 20px auto;
-          display: block;
-        }
       }
+    }
+    .figma-example {
+      width: 90%;
+      margin: 5%;
+      display: inline-block;
+      font-size: 0;
+      text-align: center;
     }
   }
 `;

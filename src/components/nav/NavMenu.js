@@ -34,7 +34,7 @@ const NavContainer = styled.div`
         display: block;
         height: 44px;
         padding-top: 20px;
-        color: #FFF;
+        color: #FFF!important;
     }
     a:hover {
         color: #29bfff;

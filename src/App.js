@@ -133,6 +133,12 @@ const AppContainer = styled.div`
     text-align: center;
     text-transform: uppercase;
   }
+  a {
+    color: var(--darkblue);
+    &:hover {
+      color: var(--blue);
+    }
+  }
 `;
 const HeroImageDiv = styled.div`
   height: 100vh;

@@ -110,7 +110,6 @@ const ClientContainer = styled.div`
         margin-top: 5%;
     }
     a {
-        color: grey!important;
         text-decoration: none;
         &:hover {
             text-decoration: underline;

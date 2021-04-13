@@ -76,10 +76,8 @@ const Container = styled.div`
   }
   a {
     font-weight: 500;
-    color: var(--darkblue);
     transition: .3s ease;
     &:hover {
-      color: var(--blue);
       > svg.svg-about-link * {
         fill: var(--blue)!important;
       }

@@ -24,6 +24,9 @@ const Footer = () => {
               </NavLink>    
               <NavLink to={routes.PORT}>
                 Clients
+              </NavLink>   
+              <NavLink to={routes.FAQS}>
+                FAQ
               </NavLink>             
             </section>
 
@@ -37,9 +40,9 @@ const Footer = () => {
               <a target="_blank" rel="noreferrer" href="https://www.instagram.com/levi_eiko/">
                 <Instagram className="svg-about-link"/>
               </a>
-              <NavLink to={routes.MAIL}>
+              {/* <NavLink to={routes.MAIL}>
                 <Mail className="svg-about-link"/>
-              </NavLink>
+              </NavLink> */}
             </section>
 
 
@@ -58,7 +61,7 @@ const Footer = () => {
 const Container = styled.footer`
   width: 100vw;
   text-align: center;
-  background-color: darkgrey;
+  background-color: #181717;
   > div {
     width: 100vw;
     > section {
@@ -116,10 +119,12 @@ const Container = styled.footer`
   }
     @media screen and (max-width: 745px){
       > div {
+        padding: 20px 0;
         > section {
-          width: 27vw;
-          padding: 3vw;
-          display: inline-block;
+          width: 90vw;
+          padding: 5vw;
+          display: block;
+          margin: 0 auto;
           &:first-of-type {
             text-align: left;
           }
