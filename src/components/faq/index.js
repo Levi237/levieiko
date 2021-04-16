@@ -129,7 +129,7 @@ const FAQPage = () => {
             <p>
               FIGMA is currently one of the best Free <i>"collaborative interface design tool(s)."</i>
               <br/>
-              This is currently what I use to wireframe websites, and is an excellent way to share images.
+              Right now this is what I use to wireframe websites, and is an excellent way to share images.
             </p>
           </section>
           <section>
