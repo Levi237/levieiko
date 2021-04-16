@@ -119,7 +119,7 @@ const FAQPage = () => {
             </p>
             <div class="figma-example">
               <a href="https://www.figma.com/file/2uzRBVfKXLIdZnhk5wlbMK/MoMoMuscle-Wireframe?node-id=0%3A1">
-                Final Product
+                MomoMuscle.co 2020
                 <img src="faq/launch-example.png"/>
               </a>
             </div>
