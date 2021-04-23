@@ -15,10 +15,15 @@ const ContactPage = () => {
 
 const Container = styled.div`
     position: fixed;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     width: 100vw;
     height: calc(100vh);
-    overflow: scroll;
     padding-top: 0;
+
     .svg > path:hover {
         fill: #ccc!important;
     }

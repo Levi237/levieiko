@@ -144,19 +144,22 @@ export default class EmailForm extends Component {
 };
 
 const AuthFilter = styled.div`
-    position: absolute; left: -5000px;
+    position: absolute;
+    left: -5000px;
 `;
 
 const Form = styled.form`
     position: relative;
     z-index: 90000000000000000;
-    text-align: center;
+    overflow: scroll;
+    display: inline-block;
+    vertical-align: middle;
     width: 66%;
     max-width: 700px;
-    background-color: #fff;
+    margin: 0 auto;
     padding: 0 0 20px 0;
-    overflow: scroll;
-    margin: 40px auto;
+    background-color: #fff;
+    text-align: center;
 
     h3 {
         padding: 20px 0 10px;
