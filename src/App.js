@@ -55,7 +55,23 @@ export default class App extends Component {
         color: '#fff',
         displayLogo: 'none',
       }
-    }
+    },
+    slideMe: ''
+  };
+
+  setslideMe = async () => {
+    this.setState({
+      slideMe: 'slideme',
+    });
+  };
+
+  animateSlideMe = async () => {
+    await this.setslideMe();
+    setTimeout(() => {
+      this.setState({
+        slideMe: '',
+      });
+    }, 1000);
   };
 
   toggleModal = (e) => {
@@ -74,12 +90,12 @@ export default class App extends Component {
   };
 
   render (){
-    const { modalType, pageStyle } = this.state
+    const { modalType, pageStyle , slideMe } = this.state;
 
     return (
       <AppContainer>
         <LogoSVG className="establish-logo" style={{width: '0', height: '0', position: 'absolute'}}/>
-        <NavMenu toggleMenu={this.toggleMenu}/>
+        <NavMenu resetslideMe={this.resetslideMe} toggleMenu={this.toggleMenu} animateSlideMe={this.animateSlideMe}/>
         <ModalWindow contactType={modalType} toggleModal={this.toggleModal}/>
 
         <Switch>
@@ -104,8 +120,8 @@ export default class App extends Component {
             <Switch>         
               <Route path={routes.MAIL} exact render={() => <ContactPage contactType={modalType}/> }/>
               <Route path={routes.CNFM} exact render={() => <EmailConfirmation/> }/>
-              <Route path={routes.PORT} render={() => <PortfolioPage/> }/>
-              <Route path={routes.INFO} exact render={() => <AboutPage/> }/>
+              <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
+              <Route path={routes.INFO} exact render={() => <AboutPage slideMe={slideMe} animateSlideMe={this.animateSlideMe}/> }/>
               <Route path={routes.FAQS} exact render={() => <><FAQPage/><Footer/></> }/>
               <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
               <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
@@ -115,8 +131,8 @@ export default class App extends Component {
 
       </AppContainer>
     );
-  }
-}
+  };
+};
 
 const ContentContainer = styled.div`
   color: #fff;

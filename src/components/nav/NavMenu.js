@@ -4,15 +4,15 @@ import styled               from 'styled-components';
 
 import * as routes          from '../../constants/routes';
 
-const NavMenu = ({ toggleMenu }) => {
+const NavMenu = ({ toggleMenu, animateSlideMe }) => {
     return(
         <NavContainer id="menu" className="inactive">
             <div>
-                <NavLink activeClassName="nav-active" to={routes.ROOT} onClick={() => {toggleMenu()}}>HOME</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu()}}>CLIENTS</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
-                <NavLink activeClassName="nav-active" to={routes.FAQS} onClick={() => {toggleMenu()}}>FAQ</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.ROOT} onClick={() => {toggleMenu(); animateSlideMe()}}>HOME</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.PORT} onClick={() => {toggleMenu(); animateSlideMe()}}>CLIENTS</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu(); animateSlideMe()}}>ABOUT</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu(); animateSlideMe()}}>CONTACT</NavLink>
+                <NavLink activeClassName="nav-active" to={routes.FAQS} onClick={() => {toggleMenu(); animateSlideMe()}}>FAQ</NavLink>
             </div>
         </NavContainer>
     );

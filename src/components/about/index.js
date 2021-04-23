@@ -9,11 +9,11 @@ import { ReactComponent as Linkedin }   from '../../svg/icons/iconfinder_linkedi
 import { ReactComponent as Github }     from '../../svg/icons/iconfinder_github.svg';
 
 
-const AboutPage = () => { 
+const AboutPage = ({ slideMe }) => { 
   return(
     <AboutContainer>
       <Container>
-        <div>
+        <div className={slideMe}>
           <h2> Meet Levi</h2>
           <p>
             <b>Who am I?</b>
@@ -86,6 +86,11 @@ const Container = styled.div`
   div {
     background-color: rgba(250,250,250,.8);
     padding: 30px 0;
+    transition: transform 1s ease;
+    transform: translateX(0)
+  }
+  div.slideme {
+    transform: translateX(-100vw)
   }
   h2 {
     margin: 0 10%;
