@@ -86,10 +86,10 @@ const Container = styled.div`
   div {
     background-color: rgba(250,250,250,.8);
     padding: 30px 0;
-    transition: transform 1s ease;
+    transition: transform 2s ease;
     transform: translateX(0)
   }
-  div.slideme {
+  > div.slideme {
     transform: translateX(-100vw)
   }
   h2 {
