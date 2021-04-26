@@ -9,12 +9,14 @@ import { ReactComponent as LogoSVG } from '../../svg/brand/logo.svg';
 
 const HomePage = ({pageStyle}) => {
   return(
-    <HomeHeroWrapper>
-      <NavLink to={routes.PORT}>
-        <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
-      </NavLink>
-      <HomeBodyWrapper>
+    <HomeWrapper>
+      <HomeHeroWrapper>
+        <NavLink to={routes.PORT}>
+          <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
+        </NavLink>
+      </HomeHeroWrapper>
         <header><h1>LEVIEIKO.COM</h1></header>
+      <HomeBodyWrapper>
         <InfoBox>
           <section>
             <div></div>
@@ -40,32 +42,21 @@ const HomePage = ({pageStyle}) => {
         </InfoBox>
         <Footer/>
       </HomeBodyWrapper>
-    </HomeHeroWrapper>
+    </HomeWrapper>
   );
 };
 
-const HomeHeroWrapper = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const HomeWrapper = styled.div`
+  scroll-snap-type: y mandatory;
   height: 100vh;
   width: 100vw;
-  a {
-    height: 150px!important;
-    width: 150px!important;
-  } 
-`;
-const HomeBodyWrapper = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  top: 100vh;
   overflow: scroll;
+  
   > header {
     height: 80px;
+    z-index: 2;
     background-color: var(--darkblue);
+    scroll-snap-align: start;
     > h1 {
       margin: 24px!important;
       display: inline-block;
@@ -73,6 +64,28 @@ const HomeBodyWrapper = styled.div`
       line-height: 100%;
     }
   }
+`;
+const HomeHeroWrapper = styled.div`
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  > a {
+    height: 150px!important;
+    width: 150px!important;
+  } 
+
+`;
+
+const HomeBodyWrapper = styled.div`
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: #fff;
+overflow: scroll;
   > h1 {
     color: var(--darkblue);
     font-size: 32px;
