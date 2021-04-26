@@ -44,9 +44,6 @@ const Footer = () => {
                 <Mail className="svg-about-link"/>
               </NavLink> */}
             </section>
-
-
-
             <section>
               Built by LeviEiko.com
             </section>
@@ -66,18 +63,22 @@ const Container = styled.footer`
   > div {
     width: 100vw;
     > section {
-      width: 27vw;
+      width: calc(42vw - 160px);
       padding: 3vw;
       display: inline-block;
       &:first-of-type {
         text-align: left;
+        padding: 3vw;
         vertical-align: top;
       }
       &:nth-of-type(2) {
+        width: 320px;
+        padding: 15vw 0;
         vertical-align: middle;
       }
       &:last-of-type {
         text-align: right;
+        padding: 3vw;
         vertical-align: bottom;
       }
     }
@@ -86,6 +87,9 @@ const Container = styled.footer`
       width: 40px;
       margin: 15x;
       fill: white;
+      &:hover {
+        fill: var(--lightgrey);
+      }
     }
     a {
       color: #fff;
@@ -95,20 +99,20 @@ const Container = styled.footer`
   @media screen and (max-width: 900px){
     > div {
       > section {
-        width: calc(22vw - 160px);
-        padding: 3vw;
-        display: inline-block;
+        // width: calc(22vw - 160px);
+        // padding: 3vw;
+        // display: inline-block;
         &:first-of-type {
-          text-align: left;
-          padding: 3vw;
+          // text-align: left;
+          // padding: 3vw;
         }
         &:nth-of-type(2) {
-          width: 320px;
-          padding: 15vw 0;
+          // width: 320px;
+          // padding: 15vw 0;
         }
         &:last-of-type {
-          text-align: right;
-          padding: 3vw;
+          // text-align: right;
+          // padding: 3vw;
         }
       }
       svg {
