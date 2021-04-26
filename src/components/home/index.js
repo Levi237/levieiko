@@ -202,15 +202,6 @@ const InfoBox = styled.section`
       
       top: 7.5vw;
       left: 15vw;
-      // position: absolute;
-      // width: 80vw;
-      // height: 120vw;
-      // max-width: 700px;
-      // max-height: 350px;
-      // border: 1px solid black;
-      // z-index: 0;
-      // top: 75vw;
-      // left: calc(10vw - 1px);
     }
     > section {
       position: relative;
@@ -251,6 +242,10 @@ const InfoBox = styled.section`
     }
   }
   @media screen and (min-width: 1000px) {
+    > div {
+      top: 75px;
+      left: 150px;
+    }
     > section {
       position: relative;
       height: 80%;
