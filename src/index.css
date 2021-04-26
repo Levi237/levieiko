@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Big+Shoulders+Stencil+Text:wght@100;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --black: rgb(24, 23, 23);
+  --black: rgb(0, 23, 47);
   --blue: rgb(75, 125, 190);
   --darkblue: rgb(0, 54, 110);
+  --darkgrey: #424656;
+  --lightgrey: #A6ABBD;
+  --darkbrown: #483300;
+  --lightbrown: #7C6225;
 
   --drv-blue: rgb(85, 205, 252);
   --drv-pink: rgb(247, 168, 184);
