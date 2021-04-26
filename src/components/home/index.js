@@ -15,7 +15,9 @@ const HomePage = ({pageStyle}) => {
           <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
         </NavLink>
       </HomeHeroWrapper>
-        <header><h1>LEVIEIKO.COM</h1></header>
+        <HomeSecondNav>
+          <h1>LEVIEIKO.COM</h1>
+        </HomeSecondNav>
       <HomeBodyWrapper>
         <InfoBox>
           <section>
@@ -51,20 +53,27 @@ const HomeWrapper = styled.div`
   height: 100vh;
   width: 100vw;
   overflow: scroll;
-  
-  > header {
-    height: 80px;
-    z-index: 2;
-    background-color: var(--darkblue);
-    scroll-snap-align: start;
+`;
+const HomeSecondNav = styled.nav`
+  height: calc(62px + 5vw);
+  z-index: 2;
+  background-color: var(--darkblue);
+  scroll-snap-align: start;
+  > h1 {
+    margin: 5vw!important;
+    display: inline-block;
+    font-size: 32px;
+    line-height: 100%;
+  }
+  @media screen and (min-width: 945px) {
+    height: 112px;
     > h1 {
-      margin: 24px!important;
-      display: inline-block;
-      font-size: 32px;
-      line-height: 100%;
+      margin: 40px!important;
     }
   }
+
 `;
+
 const HomeHeroWrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -77,21 +86,23 @@ const HomeHeroWrapper = styled.div`
     height: 150px!important;
     width: 150px!important;
   } 
-
 `;
 
 const HomeBodyWrapper = styled.div`
   position: relative;
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 5vw - 62px);
   background-color: #fff;
-overflow: scroll;
+  overflow: scroll;
   > h1 {
     color: var(--darkblue);
     font-size: 32px;
   }
   > section {
     width: 100%;
+  }
+  @media screen and (min-width: 945px) {
+    height: calc(100vh - 112px);
   }
 `;
 const InfoBox = styled.section`
