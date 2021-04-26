@@ -19,7 +19,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     width: 100vw;
     height: calc(100vh);
     padding-top: 0;
@@ -39,13 +39,13 @@ const Container = styled.div`
         color: rgba(24, 23, 23, .75);
     }
     @media screen and (max-width: 745px) {
-        align-items: start;
         h1 {
             padding-top: 0;
             padding-bottom: 10px;
         }
         p {
             margin-top: 20px;
+        }
     }
 `;
 
