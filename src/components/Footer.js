@@ -59,9 +59,10 @@ const Footer = () => {
 
 
 const Container = styled.footer`
+  margin-top: 120px;
   width: 100vw;
   text-align: center;
-  background-color: #181717;
+  background-color: var(--black);
   > div {
     width: 100vw;
     > section {
@@ -103,7 +104,7 @@ const Container = styled.footer`
         }
         &:nth-of-type(2) {
           width: 320px;
-          padding: 0 3vw;
+          padding: 15vw 0;
         }
         &:last-of-type {
           text-align: right;
