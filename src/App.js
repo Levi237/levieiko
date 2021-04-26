@@ -91,9 +91,6 @@ export default class App extends Component {
   btnScroll = () => {
     const scrollTo = document.getElementById('scroll-to'); 
     scrollTo.scrollIntoView({ behavior: 'smooth'});              
-    
-    console.log("click scrollTo")
-    
   }; 
   render (){
     const { modalType, pageStyle , slideMe } = this.state;
