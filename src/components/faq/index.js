@@ -110,18 +110,16 @@ const FAQPage = () => {
               I offer a complimentary consultation to discuss how I can assist you with your business plan and online presence.
             </p>
           </section>
-          <h2>The "what the heck is this?" section</h2>
+          <h2>Common Questions</h2>
           <section>
             <h3>What are wireframes?</h3>
             <p>
               A wireframe is essentially is the blueprint for your website.  
               It can be drawn out on a chalk board or planned with design tools.
             </p>
-            <div class="figma-example">
-              <a href="https://www.figma.com/file/2uzRBVfKXLIdZnhk5wlbMK/MoMoMuscle-Wireframe?node-id=0%3A1">
-                MomoMuscle.co 2020
-                <img src="faq/launch-example.png"/>
-              </a>
+            <div class="figma-example">              
+                <h3>MomoMuscle.co 2020</h3>
+                <img src="/faq/launch-example.png"/>
             </div>
           </section>
           <section>
@@ -203,7 +201,7 @@ const Container = styled.div`
     color: darkgrey;
   }
   .figma-example {
-    width: 45%;
+    width: 95%;
     margin: 2.5%;
     display: inline-block;
     font-size: 0;
@@ -214,6 +212,10 @@ const Container = styled.div`
   }
   .figma-example img {
     width: 100%;
+  }
+  .figma-example h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
   }
   @media screen and (max-width: 745px){
     padding-top: 60px;  
@@ -236,8 +238,8 @@ const Container = styled.div`
       }
     }
     .figma-example {
-      width: 90%;
-      margin: 5%;
+      width: 100%;
+      margin: 5% 0%;
       display: inline-block;
       font-size: 0;
       text-align: center;
