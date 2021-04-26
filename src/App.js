@@ -88,7 +88,13 @@ export default class App extends Component {
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
-
+  btnScroll = () => {
+    const scrollTo = document.getElementById('scroll-to'); 
+    scrollTo.scrollIntoView({ behavior: 'smooth'});              
+    
+    console.log("click scrollTo")
+    
+  }; 
   render (){
     const { modalType, pageStyle , slideMe } = this.state;
 
@@ -123,8 +129,8 @@ export default class App extends Component {
               <Route path={routes.PORT} exact render={() => <PortfolioPage/> }/>
               <Route path={routes.INFO} exact render={() => <AboutPage slideMe={slideMe} animateSlideMe={this.animateSlideMe}/> }/>
               <Route path={routes.FAQS} exact render={() => <><FAQPage/><Footer/></> }/>
-              <Route path={routes.ROOT} exact render={() => <HomePage pageStyle={pageStyle.home}/> }/>
-              <Route path={routes.ROOT} render={() => <HomePage pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.ROOT} exact render={() => <HomePage btnScroll={this.btnScroll} pageStyle={pageStyle.home}/> }/>
+              <Route path={routes.ROOT} render={() => <HomePage btnScroll={this.btnScroll} pageStyle={pageStyle.home}/> }/>
             </Switch>
           </ContentContainer>
         </BodyContainer>   
