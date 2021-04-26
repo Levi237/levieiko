@@ -1,4 +1,4 @@
-import React       from 'react';
+import React, { Component }     from 'react';
 import styled      from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../constants/routes';
@@ -7,18 +7,25 @@ import Footer      from '../Footer';
 
 import { ReactComponent as LogoSVG } from '../../svg/brand/logo.svg';
 
-const HomePage = ({pageStyle}) => {
+export default class HomePage extends Component {
+  render(){
+
+    const { pageStyle, btnScroll } = this.props
   return(
     <HomeWrapper>
       <HomeHeroWrapper>
         <NavLink to={routes.PORT}>
           <LogoSVG className="" style={{fill: pageStyle.fill, display: pageStyle.display}}/>
         </NavLink>
+        <div id="down-arrow-container" onClick={() => btnScroll()}>
+          <div id="down-arrow"></div>
+        </div>
       </HomeHeroWrapper>
-        <HomeSecondNav>
+        <HomeSecondNav id="scroll-to">
           <h1>LEVIEIKO.COM</h1>
         </HomeSecondNav>
       <HomeBodyWrapper>
+        <br/><br/><br/>
         <InfoBox>
           <section>
             <div></div>
@@ -47,6 +54,7 @@ const HomePage = ({pageStyle}) => {
     </HomeWrapper>
   );
 };
+}
 
 const HomeWrapper = styled.div`
   scroll-snap-type: y mandatory;
@@ -285,5 +293,3 @@ const InfoBox = styled.section`
     }
   }
 `;
-export default HomePage;
-
