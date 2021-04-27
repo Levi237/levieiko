@@ -7,7 +7,7 @@ export default class MailChimpBanner extends Component {
       <MailChimpBannerWrapper>
         <h1>Email Marketing Solutions</h1>
         <div>
-          <h3>How MailChimp can help you reach out to more people with less effort.</h3>
+          <h3>How we can use MailChimp to help you reach more people with less effort.</h3>
           <div>
           <section class="mobile">
             <img src="/mailchimp-automation.png"/>
@@ -24,7 +24,7 @@ export default class MailChimpBanner extends Component {
                   Engage with your audience
                 </li>
                 <li>
-                  Get in that Inbox, not SPAM
+                  Get in that Inbox, <b><i>not spam</i></b>
                 </li>
                 <li>
                   Promote sales &amp; launches
@@ -61,7 +61,7 @@ const MailChimpBannerWrapper = styled.section`
   padding-top: 10px;
   background-color: var(--lightgrey);
   > h1 {
-    font-size: 7.8vw;
+    font-size: 7.5vw;
     color: white;
     margin-top: 60px!important;
     margin-bottom: -3.3vw!important;
@@ -132,6 +132,7 @@ const MailChimpBannerWrapper = styled.section`
     width: 100vw;
     max-width: 100vw;
     height: 100%;
+    padding-bottom: 0px;
     padding-top: 10px;
     background-color: var(--lightgrey);
     > h1 {
