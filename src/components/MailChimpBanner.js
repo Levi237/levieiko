@@ -11,20 +11,27 @@ export default class MailChimpBanner extends Component {
           <div>
           <section class="mobile">
             <img src="/mailchimp-automation.png"/>
+            <img src="/mailchimp-forms.png"/>
           </section>
             <section>
               <ul>
                 <li>
-                  Affordable and easy
+                  Free & easy to start
                 </li>
                 <li>
-                  Email automations
-                </li>
-                <li>
-                  Engage with your audience
+                  Affordable, competitive rates 
                 </li>
                 <li>
                   Get in that Inbox, <b><i>not spam</i></b>
+                </li>
+                <li>
+                  Email automations & blasts
+                </li>
+                <li>
+                  Collect leads / manage CSV files
+                </li>
+                <li>
+                  Target specific audience segments
                 </li>
                 <li>
                   Promote sales &amp; launches
@@ -32,13 +39,11 @@ export default class MailChimpBanner extends Component {
                 <li>
                   Track opens and clicks
                 </li>
-                <li>
-                  Segment and tag contacts
-                </li>
               </ul>
             </section>
             <section class="desktop">
               <img src="/mailchimp-automation.png"/>
+              <img src="/mailchimp-forms.png"/>
             </section>
           </div>
         </div>
@@ -92,9 +97,18 @@ const MailChimpBannerWrapper = styled.section`
           width: 100%;
         }
         > img {
-          width: 90%;
+          width: 70%;
           margin: 5%;
+          &:last-of-type {
+            box-shadow: 0px 0px 4px rgba(0,0,0,.25);
+            margin-left: 25%;
+            margin-top: -25%;
+          }
         }
+        // > img {
+        //   width: 90%;
+        //   margin: 5%;
+        // }
         > ul {
           margin-left: 8%:
           display: inline-block;
@@ -102,7 +116,7 @@ const MailChimpBannerWrapper = styled.section`
           font-size: 3.6vw;
           color: white;
           li {
-            padding-bottom: 10px;
+            padding-bottom: 12px;
           }
         }
       }
@@ -131,8 +145,8 @@ const MailChimpBannerWrapper = styled.section`
     position: relative;
     width: 100vw;
     max-width: 100vw;
-    height: 100%;
-    padding-bottom: 0px;
+    height: auto;
+    padding-bottom: 120px;
     padding-top: 10px;
     background-color: var(--lightgrey);
     > h1 {
@@ -170,8 +184,12 @@ const MailChimpBannerWrapper = styled.section`
             width: 55%;
           }
           > img {
-            width: 90%;
+            width: 70%;
             margin: 5%;
+            &:last-of-type {
+              margin-left: 25%;
+              margin-top: -25%;
+            }
           }
           > ul {
             margin-left: 8%:
@@ -180,7 +198,7 @@ const MailChimpBannerWrapper = styled.section`
             font-size: 18px;
             color: white;
             li {
-              padding-bottom: 10px;
+              padding-bottom: 16px;
             }
           }
         }
