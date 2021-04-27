@@ -53,7 +53,7 @@ const FAQPage = () => {
           <section>
             <h3>How much does a website cost?</h3>
             <p>
-              A small business website can run anywhere from $500 for a static single page portfolio to $10,000 high-end e-commerce boutique with animation and custom software programming.  
+              A small business website can run anywhere from $500 for a static single page portfolio to $10,000 high-end e-commerce boutiques with animation and custom software programming.  
               Most MVP websites range between $1,200 for a basic multi-page with lead capture to $3,000 for a store when getting started.
               <br/>
             </p>
